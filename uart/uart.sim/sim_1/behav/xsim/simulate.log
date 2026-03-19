@@ -1,0 +1,3 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+$stop called at time : 644 ns : File "C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.srcs/sim_1/new/uart_tx_TB.v" Line 60
