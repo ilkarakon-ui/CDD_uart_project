@@ -67,7 +67,7 @@ input wire iRx;
 output wire oTx;
 
   uart_top #(
-    .NBYTES(12),
+    .NBYTES(128),
     .CLK_FREQ(125000000),
     .BAUD_RATE(115200)
   ) inst (

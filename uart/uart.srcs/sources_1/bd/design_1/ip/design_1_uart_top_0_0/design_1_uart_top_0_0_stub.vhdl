@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Thu Mar 19 16:26:33 2026
--- Host        : BOOK-EO0DQ4K5KU running 64-bit major release  (build 9200)
+-- Date        : Thu Apr  2 13:31:59 2026
+-- Host        : ILIAS-PC2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Emili/Desktop/CDD_uart_project/uart/uart.srcs/sources_1/bd/design_1/ip/design_1_uart_top_0_0/design_1_uart_top_0_0_stub.vhdl
+--               c:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/bd/design_1/ip/design_1_uart_top_0_0/design_1_uart_top_0_0_stub.vhdl
 -- Design      : design_1_uart_top_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
