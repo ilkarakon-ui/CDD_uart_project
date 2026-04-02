@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.srcs/constrs_1/new/PYNQ-Z2v1.0 rfile:../../../uart.srcs/constrs_1/new/PYNQ-Z2v1.0 id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.srcs/constrs_1/new/PYNQ-Z2v1.0 rfile:../../../uart.srcs/constrs_1/new/PYNQ-Z2v1.0 id:1} [current_design]
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H16  IOSTANDARD LVCMOS33 } [get_ports iClk];
 set_property src_info {type:XDC file:1 line:37 export:INPUT save:INPUT read:READ} [current_design]

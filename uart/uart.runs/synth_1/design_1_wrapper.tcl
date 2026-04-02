@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.runs/synth_1/design_1_wrapper.tcl"
+  variable script "C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.runs/synth_1/design_1_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,8 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 5
-set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 4
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -80,18 +79,18 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.cache/wt [current_project]
-set_property parent.project_path C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.cache/wt [current_project]
+set_property parent.project_path C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Emili/Desktop/CDD_uart_project/uart/uart.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-add_files C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+read_verilog -library xil_defaultlib C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -102,8 +101,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.srcs/constrs_1/new/PYNQ-Z2v1.0
-set_property used_in_implementation false [get_files C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.srcs/constrs_1/new/PYNQ-Z2v1.0]
+read_xdc C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.srcs/constrs_1/new/PYNQ-Z2v1.0
+set_property used_in_implementation false [get_files C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.srcs/constrs_1/new/PYNQ-Z2v1.0]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

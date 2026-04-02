@@ -1,3 +1,6 @@
 Vivado Simulator 2020.1
 Time resolution is 1 ps
-$stop called at time : 644 ns : File "C:/Users/ilkar/Documents/CDD_Labs/Lab2/uart/uart.srcs/sim_1/new/uart_tx_TB.v" Line 60
+342951248230122294549361859254880373000
+342951248230122294549361859254880373000
+Test Passed - Correct Addition
+$stop called at time : 480 ns : File "C:/Users/Emili/Desktop/CDD_uart_project/uart/uart.srcs/sim_1/new/mp_adder_TB.v" Line 68
