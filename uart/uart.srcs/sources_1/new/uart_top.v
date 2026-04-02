@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module uart_top #(
-    parameter   NBYTES        = 12,
+    parameter   NBYTES        = 128,
     parameter   CLK_FREQ      = 125_000_000,
     parameter   BAUD_RATE     = 115_200
   )  
@@ -14,12 +14,22 @@ module uart_top #(
   // Buffer to store received bytes and then transmit them
   reg [NBYTES*8-1:0] rBuffer;
   
+  
+  // Operands for Addition
+  wire [511:0] opA;
+  wire [511:0] opB;
+  
+  assign opA = rBuffer[1023:512];
+  assign opB = rBuffer[511:0];
+  
   // State definition  
-  localparam s_IDLE          = 3'b000;
-  localparam s_WAIT_RX       = 3'b001; // Collect NBYTES from laptop
-  localparam s_TX            = 3'b010; // Prepare to send byte
-  localparam s_WAIT_TX       = 3'b011; // Wait for TX to finish one byte
-  localparam s_DONE          = 3'b100; // Finish sequence
+  localparam s_IDLE        = 3'b000;
+localparam s_WAIT_RX     = 3'b001;
+localparam s_START_ADD   = 3'b010;
+localparam s_WAIT_ADD    = 3'b011;
+localparam s_TX          = 3'b100;
+localparam s_WAIT_TX     = 3'b101;
+localparam s_DONE        = 3'b110;
    
   reg [2:0]   rFSM;  
   reg [$clog2(NBYTES):0] rCnt;
@@ -29,6 +39,12 @@ module uart_top #(
   reg [7:0]   rTxByte;
   wire        wTxBusy;
   wire        wTxDone;
+  
+  // MP Adder stuff
+  wire [512:0] wResult;
+  wire wAddDone;
+  reg rAddStart;
+  reg [512:0] rResultBuffer;
        
   uart_tx #( .CLK_FREQ(CLK_FREQ), .BAUD_RATE(BAUD_RATE) )
   UART_TX_INST (
@@ -47,75 +63,192 @@ module uart_top #(
     .iRxSerial(iRx), .oRxByte(wRxByte), .oRxDone(wRxDone)
   );
   
-  always @(posedge iClk)
-  begin
-    if (iRst == 1) begin
-      rFSM <= s_IDLE;
-      rTxStart <= 0;
-      rCnt <= 0;
-      rTxByte <= 0;
-      rBuffer <= 0;
-    end 
-    else begin
-      case (rFSM)
+  // --- MP ADDER ---
+  mp_adder #(
+        .OPERAND_WIDTH(512),
+        .ADDER_WIDTH(16)
+        ) MP_ADDER_INST (
+        .iClk   (iClk),
+        .iRst   (iRst),
+        .iStart (rAddStart),
+        .iOpA   (opA),
+        .iOpB   (opB),
+        .oRes   (wResult),
+        .oDone  (wAddDone)
+    );
+    
+    always @(posedge iClk)
+begin
+  if (iRst == 1) begin
+    rFSM <= s_IDLE;
+    rTxStart <= 0;
+    rCnt <= 0;
+    rTxByte <= 0;
+    rBuffer <= 0;
+    rAddStart <= 0;
+    rResultBuffer <= 0;
+  end 
+  else begin
+    case (rFSM)
 
-        s_IDLE : begin
-          rCnt <= 0;
-          rFSM <= s_WAIT_RX;
+      // -------------------------
+      // IDLE
+      // -------------------------
+      s_IDLE : begin
+        rCnt <= 0;
+        rFSM <= s_WAIT_RX;
+      end
+
+      // -------------------------
+      // RECEIVE 128 BYTES
+      // -------------------------
+      s_WAIT_RX : begin
+        if (wRxDone) begin 
+          rBuffer <= {rBuffer[(NBYTES-1)*8-1:0], wRxByte};
+
+          if (rCnt == NBYTES - 1) begin
+            rCnt <= 0;
+            rFSM <= s_START_ADD;   // ? CHANGED
+          end else begin
+            rCnt <= rCnt + 1;
+          end
         end
-          
-        s_WAIT_RX : begin
-  // Check the signal coming FROM the uart_rx module
-  if (wRxDone == 1'b1) begin 
-    
-    // Shift the new byte into the buffer
-    // We take the current buffer, shift it left by 8 bits, 
-    // and put the new byte (wRxByte) at the end.
-    rBuffer <= {rBuffer[(NBYTES-1)*8-1:0], wRxByte};
-    
-    // Keep track of how many bytes we have collected
-    if (rCnt == NBYTES - 1) begin
-      rFSM <= s_TX;  // Once we have 12 bytes, go to transmit state
-      rCnt <= 0;     // Reset counter for the next phase
-    end else begin
-      rCnt <= rCnt + 1;
-    end
-  end
-  // If wRxDone is 0, we just stay in this state and wait
-end
-             
-        s_TX : begin
-          if (rCnt < NBYTES) begin
-            if (!wTxBusy) begin
-                rFSM <= s_WAIT_TX;
-                rTxStart <= 1; 
-                // Send the leftmost (oldest received) byte first
-                rTxByte <= rBuffer[NBYTES*8-1:NBYTES*8-8];        
-                // Shift the buffer left to prepare the next byte
-                rBuffer <= {rBuffer[(NBYTES-1)*8-1:0], 8'h00};    
-                rCnt <= rCnt + 1;
-            end
-          end 
-          else begin
-            rFSM <= s_DONE;
-          end
-        end 
-            
-        s_WAIT_TX : begin
-          rTxStart <= 0; // Pulse start only for one cycle
-          if (wTxDone) begin
-            rFSM <= s_TX;
-          end
-        end 
-              
-        s_DONE : begin
-          // Return to IDLE to allow a new string to be sent
-          rFSM <= s_IDLE;
-        end 
+      end
 
-        default : rFSM <= s_IDLE;
-      endcase
-    end
-  end       
+      // -------------------------
+      // START ADDER (1 cycle pulse)
+      // -------------------------
+      s_START_ADD : begin
+        rAddStart <= 1;           // pulse start
+        rFSM <= s_WAIT_ADD;
+      end
+
+      // -------------------------
+      // WAIT FOR ADDER
+      // -------------------------
+      s_WAIT_ADD : begin
+        rAddStart <= 0;
+
+        if (wAddDone) begin
+          rResultBuffer <= wResult; // store result
+          rCnt <= 0;
+          rFSM <= s_TX;
+        end
+      end
+
+      // -------------------------
+      // TRANSMIT RESULT (65 bytes)
+      // -------------------------
+      s_TX : begin
+        if (rCnt < 65) begin   // 513 bits = 65 bytes
+          if (!wTxBusy) begin
+            rTxStart <= 1;
+            rTxByte <= rResultBuffer[512:505]; // top byte
+
+            rResultBuffer <= {rResultBuffer[504:0], 8'b0};
+            rCnt <= rCnt + 1;
+
+            rFSM <= s_WAIT_TX;
+          end
+        end 
+        else begin
+          rFSM <= s_DONE;
+        end
+      end
+
+      // -------------------------
+      // WAIT TX DONE
+      // -------------------------
+      s_WAIT_TX : begin
+        rTxStart <= 0;
+        if (wTxDone) begin
+          rFSM <= s_TX;
+        end
+      end
+
+      // -------------------------
+      // DONE
+      // -------------------------
+      s_DONE : begin
+        rFSM <= s_IDLE;
+      end
+
+      default : rFSM <= s_IDLE;
+
+    endcase
+  end
+end
+  
+  
+//  always @(posedge iClk)
+//  begin
+//    if (iRst == 1) begin
+//      rFSM <= s_IDLE;
+//      rTxStart <= 0;
+//      rCnt <= 0;
+//      rTxByte <= 0;
+//      rBuffer <= 0;
+//    end 
+//    else begin
+//      case (rFSM)
+
+//        s_IDLE : begin
+//          rCnt <= 0;
+//          rFSM <= s_WAIT_RX;
+//        end
+          
+//        s_WAIT_RX : begin
+//  // Check the signal coming FROM the uart_rx module
+//  if (wRxDone == 1'b1) begin 
+    
+//    // Shift the new byte into the buffer
+//    // We take the current buffer, shift it left by 8 bits, 
+//    // and put the new byte (wRxByte) at the end.
+//    rBuffer <= {rBuffer[(NBYTES-1)*8-1:0], wRxByte};
+    
+//    // Keep track of how many bytes we have collected
+//    if (rCnt == NBYTES - 1) begin
+//      rFSM <= s_TX;  // Once we have 12 bytes, go to transmit state
+//      rCnt <= 0;     // Reset counter for the next phase
+//    end else begin
+//      rCnt <= rCnt + 1;
+//    end
+//  end
+//  // If wRxDone is 0, we just stay in this state and wait
+//end
+             
+//        s_TX : begin
+//          if (rCnt < NBYTES) begin
+//            if (!wTxBusy) begin
+//                rFSM <= s_WAIT_TX;
+//                rTxStart <= 1; 
+//                // Send the leftmost (oldest received) byte first
+//                rTxByte <= rBuffer[NBYTES*8-1:NBYTES*8-8];        
+//                // Shift the buffer left to prepare the next byte
+//                rBuffer <= {rBuffer[(NBYTES-1)*8-1:0], 8'h00};    
+//                rCnt <= rCnt + 1;
+//            end
+//          end 
+//          else begin
+//            rFSM <= s_DONE;
+//          end
+//        end 
+            
+//        s_WAIT_TX : begin
+//          rTxStart <= 0; // Pulse start only for one cycle
+//          if (wTxDone) begin
+//            rFSM <= s_TX;
+//          end
+//        end 
+              
+//        s_DONE : begin
+//          // Return to IDLE to allow a new string to be sent
+//          rFSM <= s_IDLE;
+//        end 
+
+//        default : rFSM <= s_IDLE;
+//      endcase
+//    end
+//  end       
     
 endmodule

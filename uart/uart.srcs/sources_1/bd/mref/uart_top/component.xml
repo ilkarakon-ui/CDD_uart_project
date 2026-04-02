@@ -15,7 +15,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>91fced69</spirit:value>
+            <spirit:value>f0155f56</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -28,7 +28,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>91fced69</spirit:value>
+            <spirit:value>f0155f56</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -99,7 +99,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>NBYTES</spirit:name>
         <spirit:displayName>Nbytes</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NBYTES">12</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NBYTES">128</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CLK_FREQ</spirit:name>
@@ -129,7 +129,7 @@
     <spirit:parameter>
       <spirit:name>NBYTES</spirit:name>
       <spirit:displayName>Nbytes</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NBYTES">12</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NBYTES">128</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLK_FREQ</spirit:name>
@@ -161,7 +161,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-03-19T15:25:04Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2026-04-02T11:10:43Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>

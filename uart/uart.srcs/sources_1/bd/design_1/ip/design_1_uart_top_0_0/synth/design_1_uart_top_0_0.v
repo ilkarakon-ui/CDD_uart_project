@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "uart_top,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_uart_top_0_0,uart_top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_uart_top_0_0,uart_top,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=uart_top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NBYTES=12,CLK_FREQ=125000000,BAUD_RATE=115200}" *)
+(* CORE_GENERATION_INFO = "design_1_uart_top_0_0,uart_top,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=uart_top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NBYTES=128,CLK_FREQ=125000000,BAUD_RATE=115200}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_uart_top_0_0 (
@@ -68,7 +68,7 @@ input wire iRx;
 output wire oTx;
 
   uart_top #(
-    .NBYTES(12),
+    .NBYTES(128),
     .CLK_FREQ(125000000),
     .BAUD_RATE(115200)
   ) inst (
