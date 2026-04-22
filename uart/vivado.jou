@@ -2,16 +2,24 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+<<<<<<< HEAD
 # Start of session at: Thu Apr  2 13:05:02 2026
 # Process ID: 18116
 # Current directory: C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart
 # Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17828 C:\Users\ilkar\Documents\CDD_Labs\CDD_uart_project\uart\uart.xpr
+=======
+# Start of session at: Thu Apr  2 13:27:10 2026
+# Process ID: 18136
+# Current directory: C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23828 C:\Users\ilkar\Documents\CDD_Labs\CDD_uart_project\uart\uart.xpr
+>>>>>>> temp-branch
 # Log file: C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/vivado.log
 # Journal file: C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.xpr
 update_compile_order -fileset sources_1
+<<<<<<< HEAD
 close [ open C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/new/Full_Adder.v w ]
 add_files C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/new/Full_Adder.v
 update_compile_order -fileset sources_1
@@ -25,6 +33,20 @@ update_module_reference design_1_uart_top_0_0
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 22
 wait_on_run impl_1
+=======
+export_ip_user_files -of_objects  [get_files {{C:/Users/ilkar/Documents/CDD_Labs/Lab1 2/Lab1/Lab1.srcs/sources_1/new/Full_Adder.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/ilkar/Documents/CDD_Labs/Lab1 2/Lab1/Lab1.srcs/sources_1/new/Half_Adder.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/ilkar/Documents/CDD_Labs/Lab1 2/Lab1/Lab1.srcs/sources_1/new/ripple_carry_adder_Nb.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/ilkar/Documents/CDD_Labs/Lab1 2/Lab1/Lab1.srcs/sources_1/new/Full_Adder.v} {C:/Users/ilkar/Documents/CDD_Labs/Lab1 2/Lab1/Lab1.srcs/sources_1/new/Half_Adder.v} {C:/Users/ilkar/Documents/CDD_Labs/Lab1 2/Lab1/Lab1.srcs/sources_1/new/ripple_carry_adder_Nb.v}}
+close [ open C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/new/Half_Adder.v w ]
+add_files C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/new/Half_Adder.v
+close [ open C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/new/ripple_carry_adder_Nb.v w ]
+add_files C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/new/ripple_carry_adder_Nb.v
+close [ open C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/new/Full_Adder.v w ]
+add_files C:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/new/Full_Adder.v
+update_compile_order -fileset sources_1
+update_module_reference design_1_uart_top_0_0
+>>>>>>> temp-branch
 update_compile_order -fileset sources_1
 update_module_reference design_1_uart_top_0_0
 reset_run synth_1

@@ -1,7 +1,11 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+<<<<<<< HEAD
 // Date        : Thu Apr  2 13:11:22 2026
+=======
+// Date        : Wed Apr 22 19:29:15 2026
+>>>>>>> temp-branch
 // Host        : ILIAS-PC2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/ilkar/Documents/CDD_Labs/CDD_uart_project/uart/uart.srcs/sources_1/bd/design_1/ip/design_1_uart_top_0_0/design_1_uart_top_0_0_sim_netlist.v
@@ -40,6 +44,7 @@ endmodule
 (* ORIG_REF_NAME = "mp_adder" *) 
 module design_1_uart_top_0_0_mp_adder
    (wAddDone,
+<<<<<<< HEAD
     E,
     D,
     iRst,
@@ -75,6 +80,41 @@ module design_1_uart_top_0_0_mp_adder
   input \rResultBuffer_reg[256] ;
   input \rResultBuffer_reg[136] ;
   input \rResultBuffer_reg[128] ;
+=======
+    D,
+    E,
+    iRst,
+    iClk,
+    Q,
+    \rCountToSend_reg[0][0] ,
+    \rResultBuffer_reg[392] ,
+    \rResultBuffer_reg[512] ,
+    \rResultBuffer_reg[399] ,
+    \rResultBuffer_reg[391] ,
+    \rResultBuffer_reg[264] ,
+    \rResultBuffer_reg[109] ,
+    \rResultBuffer_reg[136] ,
+    \rResultBuffer_reg[205] ,
+    \rResultBuffer_reg[0] ,
+    \FSM_sequential_rFSM_current_reg[0]_0 );
+  output wAddDone;
+  output [512:0]D;
+  output [0:0]E;
+  input iRst;
+  input iClk;
+  input [1023:0]Q;
+  input [3:0]\rCountToSend_reg[0][0] ;
+  input \rResultBuffer_reg[392] ;
+  input [504:0]\rResultBuffer_reg[512] ;
+  input \rResultBuffer_reg[399] ;
+  input \rResultBuffer_reg[391] ;
+  input \rResultBuffer_reg[264] ;
+  input \rResultBuffer_reg[109] ;
+  input \rResultBuffer_reg[136] ;
+  input \rResultBuffer_reg[205] ;
+  input \rResultBuffer_reg[0] ;
+  input \FSM_sequential_rFSM_current_reg[0]_0 ;
+>>>>>>> temp-branch
 
   wire [512:0]D;
   wire [0:0]E;
@@ -146,6 +186,7 @@ module design_1_uart_top_0_0_mp_adder
   wire \rCnt_Current[4]_i_2_n_0 ;
   wire \rCnt_Current[5]_i_1__1_n_0 ;
   wire \rCnt_Current[5]_i_2__0_n_0 ;
+<<<<<<< HEAD
   wire \rCnt_reg[0] ;
   wire [0:0]\rCnt_reg[0]_0 ;
   wire [2:0]rFSM__0;
@@ -153,6 +194,14 @@ module design_1_uart_top_0_0_mp_adder
   wire \rResultBuffer_reg[128] ;
   wire \rResultBuffer_reg[136] ;
   wire \rResultBuffer_reg[256] ;
+=======
+  wire [3:0]\rCountToSend_reg[0][0] ;
+  wire [2:0]rFSM_current;
+  wire \rResultBuffer_reg[0] ;
+  wire \rResultBuffer_reg[109] ;
+  wire \rResultBuffer_reg[136] ;
+  wire \rResultBuffer_reg[205] ;
+>>>>>>> temp-branch
   wire \rResultBuffer_reg[264] ;
   wire \rResultBuffer_reg[391] ;
   wire \rResultBuffer_reg[392] ;
@@ -1186,6 +1235,7 @@ module design_1_uart_top_0_0_mp_adder
         .D(\FSM_sequential_rFSM_current[2]_rep_i_1__7_n_0 ),
         .Q(\FSM_sequential_rFSM_current_reg[2]_rep__7_n_0 ),
         .R(iRst));
+<<<<<<< HEAD
   LUT6 #(
     .INIT(64'h30303030BB33B833)) 
     \rCnt[7]_i_1 
@@ -1196,6 +1246,8 @@ module design_1_uart_top_0_0_mp_adder
         .I4(\rCnt_reg[0]_0 ),
         .I5(\rResultBuffer_reg[391] ),
         .O(E));
+=======
+>>>>>>> temp-branch
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h0054)) 
@@ -1317,6 +1369,7 @@ module design_1_uart_top_0_0_mp_adder
         .D(\rCnt_Current[5]_i_1__1_n_0 ),
         .Q(rCnt_Current[5]),
         .R(iRst));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT2 #(
     .INIT(4'h2)) 
@@ -5420,6 +5473,4121 @@ module design_1_uart_top_0_0_mp_adder
         .I1(wResult[9]),
         .I2(rFSM__0[0]),
         .I3(\rResultBuffer_reg[512] [1]),
+=======
+  LUT6 #(
+    .INIT(64'h0000000002000000)) 
+    \rCountToSend[3][7]_i_1 
+       (.I0(\rResultBuffer_reg[399] ),
+        .I1(\rCountToSend_reg[0][0] [3]),
+        .I2(\rCountToSend_reg[0][0] [2]),
+        .I3(\rCountToSend_reg[0][0] [1]),
+        .I4(wAddDone),
+        .I5(iRst),
+        .O(E));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \rResultBuffer[0]_i_1 
+       (.I0(wResult[0]),
+        .I1(\rCountToSend_reg[0][0] [2]),
+        .I2(\rResultBuffer_reg[0] ),
+        .O(D[0]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[100]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [92]),
+        .I3(wResult[100]),
+        .O(D[100]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[101]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [93]),
+        .I3(wResult[101]),
+        .O(D[101]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[102]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [94]),
+        .I3(wResult[102]),
+        .O(D[102]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[103]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [95]),
+        .I3(wResult[103]),
+        .O(D[103]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[104]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [96]),
+        .I3(wResult[104]),
+        .O(D[104]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[105]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [97]),
+        .I3(wResult[105]),
+        .O(D[105]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[106]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [98]),
+        .I3(wResult[106]),
+        .O(D[106]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[107]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [99]),
+        .I3(wResult[107]),
+        .O(D[107]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[108]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [100]),
+        .I3(wResult[108]),
+        .O(D[108]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[109]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [101]),
+        .I3(wResult[109]),
+        .O(D[109]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[10]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [2]),
+        .I3(wResult[10]),
+        .O(D[10]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[110]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [102]),
+        .I3(wResult[110]),
+        .O(D[110]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[111]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [103]),
+        .I3(wResult[111]),
+        .O(D[111]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[112]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [104]),
+        .I3(wResult[112]),
+        .O(D[112]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[113]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [105]),
+        .I3(wResult[113]),
+        .O(D[113]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[114]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [106]),
+        .I3(wResult[114]),
+        .O(D[114]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[115]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [107]),
+        .I3(wResult[115]),
+        .O(D[115]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[116]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [108]),
+        .I3(wResult[116]),
+        .O(D[116]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[117]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [109]),
+        .I3(wResult[117]),
+        .O(D[117]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[118]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [110]),
+        .I3(wResult[118]),
+        .O(D[118]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[119]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [111]),
+        .I3(wResult[119]),
+        .O(D[119]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[11]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [3]),
+        .I3(wResult[11]),
+        .O(D[11]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[120]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [112]),
+        .I3(wResult[120]),
+        .O(D[120]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[121]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [113]),
+        .I3(wResult[121]),
+        .O(D[121]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[122]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [114]),
+        .I3(wResult[122]),
+        .O(D[122]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[123]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [115]),
+        .I3(wResult[123]),
+        .O(D[123]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[124]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [116]),
+        .I3(wResult[124]),
+        .O(D[124]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[125]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [117]),
+        .I3(wResult[125]),
+        .O(D[125]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[126]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [118]),
+        .I3(wResult[126]),
+        .O(D[126]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[127]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [119]),
+        .I3(wResult[127]),
+        .O(D[127]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[128]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [120]),
+        .I3(wResult[128]),
+        .O(D[128]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[129]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [121]),
+        .I3(wResult[129]),
+        .O(D[129]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[12]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [4]),
+        .I3(wResult[12]),
+        .O(D[12]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[130]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [122]),
+        .I3(wResult[130]),
+        .O(D[130]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[131]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [123]),
+        .I3(wResult[131]),
+        .O(D[131]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[132]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [124]),
+        .I3(wResult[132]),
+        .O(D[132]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[133]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [125]),
+        .I3(wResult[133]),
+        .O(D[133]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[134]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [126]),
+        .I3(wResult[134]),
+        .O(D[134]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[135]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [127]),
+        .I3(wResult[135]),
+        .O(D[135]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[136]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [128]),
+        .I3(wResult[136]),
+        .O(D[136]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[137]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [129]),
+        .I3(wResult[137]),
+        .O(D[137]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[138]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [130]),
+        .I3(wResult[138]),
+        .O(D[138]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[139]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [131]),
+        .I3(wResult[139]),
+        .O(D[139]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[13]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [5]),
+        .I3(wResult[13]),
+        .O(D[13]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[140]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [132]),
+        .I3(wResult[140]),
+        .O(D[140]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[141]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [133]),
+        .I3(wResult[141]),
+        .O(D[141]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[142]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [134]),
+        .I3(wResult[142]),
+        .O(D[142]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[143]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [135]),
+        .I3(wResult[143]),
+        .O(D[143]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[144]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [136]),
+        .I3(wResult[144]),
+        .O(D[144]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[145]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [137]),
+        .I3(wResult[145]),
+        .O(D[145]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[146]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [138]),
+        .I3(wResult[146]),
+        .O(D[146]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[147]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [139]),
+        .I3(wResult[147]),
+        .O(D[147]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[148]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [140]),
+        .I3(wResult[148]),
+        .O(D[148]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[149]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [141]),
+        .I3(wResult[149]),
+        .O(D[149]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[14]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [6]),
+        .I3(wResult[14]),
+        .O(D[14]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[150]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [142]),
+        .I3(wResult[150]),
+        .O(D[150]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[151]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [143]),
+        .I3(wResult[151]),
+        .O(D[151]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[152]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [144]),
+        .I3(wResult[152]),
+        .O(D[152]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[153]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [145]),
+        .I3(wResult[153]),
+        .O(D[153]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[154]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [146]),
+        .I3(wResult[154]),
+        .O(D[154]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[155]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [147]),
+        .I3(wResult[155]),
+        .O(D[155]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[156]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [148]),
+        .I3(wResult[156]),
+        .O(D[156]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[157]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [149]),
+        .I3(wResult[157]),
+        .O(D[157]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[158]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [150]),
+        .I3(wResult[158]),
+        .O(D[158]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[159]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [151]),
+        .I3(wResult[159]),
+        .O(D[159]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[15]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [7]),
+        .I3(wResult[15]),
+        .O(D[15]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[160]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [152]),
+        .I3(wResult[160]),
+        .O(D[160]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[161]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [153]),
+        .I3(wResult[161]),
+        .O(D[161]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[162]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [154]),
+        .I3(wResult[162]),
+        .O(D[162]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[163]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [155]),
+        .I3(wResult[163]),
+        .O(D[163]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[164]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [156]),
+        .I3(wResult[164]),
+        .O(D[164]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[165]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [157]),
+        .I3(wResult[165]),
+        .O(D[165]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[166]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [158]),
+        .I3(wResult[166]),
+        .O(D[166]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[167]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [159]),
+        .I3(wResult[167]),
+        .O(D[167]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[168]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [160]),
+        .I3(wResult[168]),
+        .O(D[168]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[169]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [161]),
+        .I3(wResult[169]),
+        .O(D[169]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[16]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [8]),
+        .I3(wResult[16]),
+        .O(D[16]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[170]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [162]),
+        .I3(wResult[170]),
+        .O(D[170]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[171]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [163]),
+        .I3(wResult[171]),
+        .O(D[171]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[172]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [164]),
+        .I3(wResult[172]),
+        .O(D[172]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[173]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [165]),
+        .I3(wResult[173]),
+        .O(D[173]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[174]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [166]),
+        .I3(wResult[174]),
+        .O(D[174]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[175]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [167]),
+        .I3(wResult[175]),
+        .O(D[175]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[176]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [168]),
+        .I3(wResult[176]),
+        .O(D[176]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[177]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [169]),
+        .I3(wResult[177]),
+        .O(D[177]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[178]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [170]),
+        .I3(wResult[178]),
+        .O(D[178]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[179]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [171]),
+        .I3(wResult[179]),
+        .O(D[179]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[17]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [9]),
+        .I3(wResult[17]),
+        .O(D[17]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[180]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [172]),
+        .I3(wResult[180]),
+        .O(D[180]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[181]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [173]),
+        .I3(wResult[181]),
+        .O(D[181]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[182]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [174]),
+        .I3(wResult[182]),
+        .O(D[182]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[183]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [175]),
+        .I3(wResult[183]),
+        .O(D[183]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[184]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [176]),
+        .I3(wResult[184]),
+        .O(D[184]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[185]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [177]),
+        .I3(wResult[185]),
+        .O(D[185]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[186]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [178]),
+        .I3(wResult[186]),
+        .O(D[186]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[187]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [179]),
+        .I3(wResult[187]),
+        .O(D[187]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[188]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [180]),
+        .I3(wResult[188]),
+        .O(D[188]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[189]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [181]),
+        .I3(wResult[189]),
+        .O(D[189]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[18]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [10]),
+        .I3(wResult[18]),
+        .O(D[18]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[190]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [182]),
+        .I3(wResult[190]),
+        .O(D[190]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[191]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [183]),
+        .I3(wResult[191]),
+        .O(D[191]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[192]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [184]),
+        .I3(wResult[192]),
+        .O(D[192]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[193]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [185]),
+        .I3(wResult[193]),
+        .O(D[193]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[194]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [186]),
+        .I3(wResult[194]),
+        .O(D[194]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[195]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [187]),
+        .I3(wResult[195]),
+        .O(D[195]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[196]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [188]),
+        .I3(wResult[196]),
+        .O(D[196]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[197]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [189]),
+        .I3(wResult[197]),
+        .O(D[197]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[198]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [190]),
+        .I3(wResult[198]),
+        .O(D[198]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[199]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [191]),
+        .I3(wResult[199]),
+        .O(D[199]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[19]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [11]),
+        .I3(wResult[19]),
+        .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \rResultBuffer[1]_i_1 
+       (.I0(wResult[1]),
+        .I1(\rCountToSend_reg[0][0] [2]),
+        .I2(\rResultBuffer_reg[0] ),
+        .O(D[1]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[200]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [192]),
+        .I3(wResult[200]),
+        .O(D[200]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[201]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [193]),
+        .I3(wResult[201]),
+        .O(D[201]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[202]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [194]),
+        .I3(wResult[202]),
+        .O(D[202]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[203]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [195]),
+        .I3(wResult[203]),
+        .O(D[203]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[204]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [196]),
+        .I3(wResult[204]),
+        .O(D[204]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[205]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [197]),
+        .I3(wResult[205]),
+        .O(D[205]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[206]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [198]),
+        .I3(wResult[206]),
+        .O(D[206]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[207]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [199]),
+        .I3(wResult[207]),
+        .O(D[207]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[208]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [200]),
+        .I3(wResult[208]),
+        .O(D[208]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[209]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [201]),
+        .I3(wResult[209]),
+        .O(D[209]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[20]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [12]),
+        .I3(wResult[20]),
+        .O(D[20]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[210]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [202]),
+        .I3(wResult[210]),
+        .O(D[210]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[211]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [203]),
+        .I3(wResult[211]),
+        .O(D[211]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[212]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [204]),
+        .I3(wResult[212]),
+        .O(D[212]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[213]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [205]),
+        .I3(wResult[213]),
+        .O(D[213]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[214]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [206]),
+        .I3(wResult[214]),
+        .O(D[214]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[215]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [207]),
+        .I3(wResult[215]),
+        .O(D[215]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[216]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [208]),
+        .I3(wResult[216]),
+        .O(D[216]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[217]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [209]),
+        .I3(wResult[217]),
+        .O(D[217]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[218]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [210]),
+        .I3(wResult[218]),
+        .O(D[218]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[219]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [211]),
+        .I3(wResult[219]),
+        .O(D[219]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[21]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [13]),
+        .I3(wResult[21]),
+        .O(D[21]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[220]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [212]),
+        .I3(wResult[220]),
+        .O(D[220]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[221]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [213]),
+        .I3(wResult[221]),
+        .O(D[221]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[222]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [214]),
+        .I3(wResult[222]),
+        .O(D[222]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[223]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [215]),
+        .I3(wResult[223]),
+        .O(D[223]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[224]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [216]),
+        .I3(wResult[224]),
+        .O(D[224]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[225]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [217]),
+        .I3(wResult[225]),
+        .O(D[225]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[226]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [218]),
+        .I3(wResult[226]),
+        .O(D[226]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[227]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [219]),
+        .I3(wResult[227]),
+        .O(D[227]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[228]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [220]),
+        .I3(wResult[228]),
+        .O(D[228]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[229]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [221]),
+        .I3(wResult[229]),
+        .O(D[229]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[22]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [14]),
+        .I3(wResult[22]),
+        .O(D[22]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[230]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [222]),
+        .I3(wResult[230]),
+        .O(D[230]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[231]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [223]),
+        .I3(wResult[231]),
+        .O(D[231]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[232]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [224]),
+        .I3(wResult[232]),
+        .O(D[232]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[233]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [225]),
+        .I3(wResult[233]),
+        .O(D[233]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[234]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [226]),
+        .I3(wResult[234]),
+        .O(D[234]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[235]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [227]),
+        .I3(wResult[235]),
+        .O(D[235]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[236]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [228]),
+        .I3(wResult[236]),
+        .O(D[236]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[237]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [229]),
+        .I3(wResult[237]),
+        .O(D[237]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[238]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [230]),
+        .I3(wResult[238]),
+        .O(D[238]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[239]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [231]),
+        .I3(wResult[239]),
+        .O(D[239]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[23]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [15]),
+        .I3(wResult[23]),
+        .O(D[23]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[240]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [232]),
+        .I3(wResult[240]),
+        .O(D[240]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[241]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [233]),
+        .I3(wResult[241]),
+        .O(D[241]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[242]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [234]),
+        .I3(wResult[242]),
+        .O(D[242]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[243]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [235]),
+        .I3(wResult[243]),
+        .O(D[243]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[244]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [236]),
+        .I3(wResult[244]),
+        .O(D[244]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[245]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [237]),
+        .I3(wResult[245]),
+        .O(D[245]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[246]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [238]),
+        .I3(wResult[246]),
+        .O(D[246]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[247]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [239]),
+        .I3(wResult[247]),
+        .O(D[247]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[248]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [240]),
+        .I3(wResult[248]),
+        .O(D[248]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[249]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [241]),
+        .I3(wResult[249]),
+        .O(D[249]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[24]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [16]),
+        .I3(wResult[24]),
+        .O(D[24]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[250]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [242]),
+        .I3(wResult[250]),
+        .O(D[250]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[251]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [243]),
+        .I3(wResult[251]),
+        .O(D[251]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[252]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [244]),
+        .I3(wResult[252]),
+        .O(D[252]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[253]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [245]),
+        .I3(wResult[253]),
+        .O(D[253]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[254]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [246]),
+        .I3(wResult[254]),
+        .O(D[254]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[255]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [247]),
+        .I3(wResult[255]),
+        .O(D[255]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[256]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [248]),
+        .I3(wResult[256]),
+        .O(D[256]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[257]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [249]),
+        .I3(wResult[257]),
+        .O(D[257]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[258]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [250]),
+        .I3(wResult[258]),
+        .O(D[258]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[259]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [251]),
+        .I3(wResult[259]),
+        .O(D[259]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[25]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [17]),
+        .I3(wResult[25]),
+        .O(D[25]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[260]_i_1 
+       (.I0(\rResultBuffer_reg[205] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [252]),
+        .I3(wResult[260]),
+        .O(D[260]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[261]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [253]),
+        .I3(wResult[261]),
+        .O(D[261]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[262]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [254]),
+        .I3(wResult[262]),
+        .O(D[262]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[263]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rResultBuffer_reg[136] ),
+        .I2(\rResultBuffer_reg[512] [255]),
+        .I3(wResult[263]),
+        .O(D[263]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[264]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [256]),
+        .I3(wResult[264]),
+        .O(D[264]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[265]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [257]),
+        .I3(wResult[265]),
+        .O(D[265]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[266]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [258]),
+        .I3(wResult[266]),
+        .O(D[266]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[267]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [259]),
+        .I3(wResult[267]),
+        .O(D[267]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[268]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [260]),
+        .I3(wResult[268]),
+        .O(D[268]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[269]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [261]),
+        .I3(wResult[269]),
+        .O(D[269]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[26]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [18]),
+        .I3(wResult[26]),
+        .O(D[26]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[270]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [262]),
+        .I3(wResult[270]),
+        .O(D[270]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[271]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [263]),
+        .I3(wResult[271]),
+        .O(D[271]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[272]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [264]),
+        .I3(wResult[272]),
+        .O(D[272]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[273]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [265]),
+        .I3(wResult[273]),
+        .O(D[273]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[274]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [266]),
+        .I3(wResult[274]),
+        .O(D[274]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[275]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [267]),
+        .I3(wResult[275]),
+        .O(D[275]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[276]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [268]),
+        .I3(wResult[276]),
+        .O(D[276]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[277]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [269]),
+        .I3(wResult[277]),
+        .O(D[277]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[278]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [270]),
+        .I3(wResult[278]),
+        .O(D[278]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[279]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [271]),
+        .I3(wResult[279]),
+        .O(D[279]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[27]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [19]),
+        .I3(wResult[27]),
+        .O(D[27]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[280]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [272]),
+        .I3(wResult[280]),
+        .O(D[280]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[281]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [273]),
+        .I3(wResult[281]),
+        .O(D[281]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[282]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [274]),
+        .I3(wResult[282]),
+        .O(D[282]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[283]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [275]),
+        .I3(wResult[283]),
+        .O(D[283]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[284]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [276]),
+        .I3(wResult[284]),
+        .O(D[284]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[285]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [277]),
+        .I3(wResult[285]),
+        .O(D[285]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[286]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [278]),
+        .I3(wResult[286]),
+        .O(D[286]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[287]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [279]),
+        .I3(wResult[287]),
+        .O(D[287]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[288]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [280]),
+        .I3(wResult[288]),
+        .O(D[288]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[289]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [281]),
+        .I3(wResult[289]),
+        .O(D[289]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[28]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [20]),
+        .I3(wResult[28]),
+        .O(D[28]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[290]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [282]),
+        .I3(wResult[290]),
+        .O(D[290]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[291]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [283]),
+        .I3(wResult[291]),
+        .O(D[291]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[292]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [284]),
+        .I3(wResult[292]),
+        .O(D[292]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[293]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [285]),
+        .I3(wResult[293]),
+        .O(D[293]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[294]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [286]),
+        .I3(wResult[294]),
+        .O(D[294]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[295]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [287]),
+        .I3(wResult[295]),
+        .O(D[295]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[296]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [288]),
+        .I3(wResult[296]),
+        .O(D[296]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[297]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [289]),
+        .I3(wResult[297]),
+        .O(D[297]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[298]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [290]),
+        .I3(wResult[298]),
+        .O(D[298]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[299]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [291]),
+        .I3(wResult[299]),
+        .O(D[299]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[29]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [21]),
+        .I3(wResult[29]),
+        .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \rResultBuffer[2]_i_1 
+       (.I0(wResult[2]),
+        .I1(\rCountToSend_reg[0][0] [2]),
+        .I2(\rResultBuffer_reg[0] ),
+        .O(D[2]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[300]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [292]),
+        .I3(wResult[300]),
+        .O(D[300]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[301]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [293]),
+        .I3(wResult[301]),
+        .O(D[301]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[302]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [294]),
+        .I3(wResult[302]),
+        .O(D[302]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[303]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [295]),
+        .I3(wResult[303]),
+        .O(D[303]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[304]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [296]),
+        .I3(wResult[304]),
+        .O(D[304]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[305]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [297]),
+        .I3(wResult[305]),
+        .O(D[305]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[306]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [298]),
+        .I3(wResult[306]),
+        .O(D[306]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[307]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [299]),
+        .I3(wResult[307]),
+        .O(D[307]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[308]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [300]),
+        .I3(wResult[308]),
+        .O(D[308]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[309]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [301]),
+        .I3(wResult[309]),
+        .O(D[309]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[30]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [22]),
+        .I3(wResult[30]),
+        .O(D[30]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[310]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [302]),
+        .I3(wResult[310]),
+        .O(D[310]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[311]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [303]),
+        .I3(wResult[311]),
+        .O(D[311]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[312]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [304]),
+        .I3(wResult[312]),
+        .O(D[312]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[313]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [305]),
+        .I3(wResult[313]),
+        .O(D[313]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[314]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [306]),
+        .I3(wResult[314]),
+        .O(D[314]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[315]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [307]),
+        .I3(wResult[315]),
+        .O(D[315]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[316]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [308]),
+        .I3(wResult[316]),
+        .O(D[316]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[317]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [309]),
+        .I3(wResult[317]),
+        .O(D[317]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[318]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [310]),
+        .I3(wResult[318]),
+        .O(D[318]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[319]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [311]),
+        .I3(wResult[319]),
+        .O(D[319]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[31]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [23]),
+        .I3(wResult[31]),
+        .O(D[31]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[320]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [312]),
+        .I3(wResult[320]),
+        .O(D[320]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[321]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [313]),
+        .I3(wResult[321]),
+        .O(D[321]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[322]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [314]),
+        .I3(wResult[322]),
+        .O(D[322]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[323]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [315]),
+        .I3(wResult[323]),
+        .O(D[323]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[324]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [316]),
+        .I3(wResult[324]),
+        .O(D[324]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[325]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [317]),
+        .I3(wResult[325]),
+        .O(D[325]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[326]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [318]),
+        .I3(wResult[326]),
+        .O(D[326]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[327]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [319]),
+        .I3(wResult[327]),
+        .O(D[327]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[328]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [320]),
+        .I3(wResult[328]),
+        .O(D[328]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[329]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [321]),
+        .I3(wResult[329]),
+        .O(D[329]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[32]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [24]),
+        .I3(wResult[32]),
+        .O(D[32]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[330]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [322]),
+        .I3(wResult[330]),
+        .O(D[330]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[331]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [323]),
+        .I3(wResult[331]),
+        .O(D[331]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[332]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [324]),
+        .I3(wResult[332]),
+        .O(D[332]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[333]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [325]),
+        .I3(wResult[333]),
+        .O(D[333]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[334]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [326]),
+        .I3(wResult[334]),
+        .O(D[334]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[335]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [327]),
+        .I3(wResult[335]),
+        .O(D[335]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[336]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [328]),
+        .I3(wResult[336]),
+        .O(D[336]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[337]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [329]),
+        .I3(wResult[337]),
+        .O(D[337]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[338]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [330]),
+        .I3(wResult[338]),
+        .O(D[338]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[339]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [331]),
+        .I3(wResult[339]),
+        .O(D[339]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[33]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [25]),
+        .I3(wResult[33]),
+        .O(D[33]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[340]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [332]),
+        .I3(wResult[340]),
+        .O(D[340]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[341]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [333]),
+        .I3(wResult[341]),
+        .O(D[341]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[342]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [334]),
+        .I3(wResult[342]),
+        .O(D[342]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[343]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [335]),
+        .I3(wResult[343]),
+        .O(D[343]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[344]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [336]),
+        .I3(wResult[344]),
+        .O(D[344]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[345]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [337]),
+        .I3(wResult[345]),
+        .O(D[345]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[346]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [338]),
+        .I3(wResult[346]),
+        .O(D[346]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[347]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [339]),
+        .I3(wResult[347]),
+        .O(D[347]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[348]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [340]),
+        .I3(wResult[348]),
+        .O(D[348]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[349]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [341]),
+        .I3(wResult[349]),
+        .O(D[349]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[34]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [26]),
+        .I3(wResult[34]),
+        .O(D[34]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[350]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [342]),
+        .I3(wResult[350]),
+        .O(D[350]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[351]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [343]),
+        .I3(wResult[351]),
+        .O(D[351]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[352]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [344]),
+        .I3(wResult[352]),
+        .O(D[352]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[353]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [345]),
+        .I3(wResult[353]),
+        .O(D[353]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[354]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [346]),
+        .I3(wResult[354]),
+        .O(D[354]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[355]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [347]),
+        .I3(wResult[355]),
+        .O(D[355]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[356]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [348]),
+        .I3(wResult[356]),
+        .O(D[356]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[357]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [349]),
+        .I3(wResult[357]),
+        .O(D[357]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[358]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [350]),
+        .I3(wResult[358]),
+        .O(D[358]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[359]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [351]),
+        .I3(wResult[359]),
+        .O(D[359]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[35]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [27]),
+        .I3(wResult[35]),
+        .O(D[35]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[360]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [352]),
+        .I3(wResult[360]),
+        .O(D[360]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[361]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [353]),
+        .I3(wResult[361]),
+        .O(D[361]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[362]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [354]),
+        .I3(wResult[362]),
+        .O(D[362]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[363]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [355]),
+        .I3(wResult[363]),
+        .O(D[363]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[364]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [356]),
+        .I3(wResult[364]),
+        .O(D[364]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[365]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [357]),
+        .I3(wResult[365]),
+        .O(D[365]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[366]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [358]),
+        .I3(wResult[366]),
+        .O(D[366]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[367]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [359]),
+        .I3(wResult[367]),
+        .O(D[367]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[368]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [360]),
+        .I3(wResult[368]),
+        .O(D[368]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[369]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [361]),
+        .I3(wResult[369]),
+        .O(D[369]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[36]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [28]),
+        .I3(wResult[36]),
+        .O(D[36]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[370]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [362]),
+        .I3(wResult[370]),
+        .O(D[370]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[371]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [363]),
+        .I3(wResult[371]),
+        .O(D[371]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[372]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [364]),
+        .I3(wResult[372]),
+        .O(D[372]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[373]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [365]),
+        .I3(wResult[373]),
+        .O(D[373]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[374]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [366]),
+        .I3(wResult[374]),
+        .O(D[374]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[375]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [367]),
+        .I3(wResult[375]),
+        .O(D[375]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[376]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [368]),
+        .I3(wResult[376]),
+        .O(D[376]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[377]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [369]),
+        .I3(wResult[377]),
+        .O(D[377]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[378]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [370]),
+        .I3(wResult[378]),
+        .O(D[378]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[379]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [371]),
+        .I3(wResult[379]),
+        .O(D[379]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[37]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [29]),
+        .I3(wResult[37]),
+        .O(D[37]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[380]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [372]),
+        .I3(wResult[380]),
+        .O(D[380]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[381]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [373]),
+        .I3(wResult[381]),
+        .O(D[381]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[382]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [374]),
+        .I3(wResult[382]),
+        .O(D[382]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[383]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [375]),
+        .I3(wResult[383]),
+        .O(D[383]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[384]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [376]),
+        .I3(wResult[384]),
+        .O(D[384]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[385]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [377]),
+        .I3(wResult[385]),
+        .O(D[385]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[386]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [378]),
+        .I3(wResult[386]),
+        .O(D[386]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[387]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [379]),
+        .I3(wResult[387]),
+        .O(D[387]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[388]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [380]),
+        .I3(wResult[388]),
+        .O(D[388]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[389]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [381]),
+        .I3(wResult[389]),
+        .O(D[389]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[38]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [30]),
+        .I3(wResult[38]),
+        .O(D[38]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[390]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [382]),
+        .I3(wResult[390]),
+        .O(D[390]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[391]_i_1 
+       (.I0(\rResultBuffer_reg[391] ),
+        .I1(\rResultBuffer_reg[264] ),
+        .I2(\rResultBuffer_reg[512] [383]),
+        .I3(wResult[391]),
+        .O(D[391]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[392]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [384]),
+        .I3(wResult[392]),
+        .O(D[392]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[393]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [385]),
+        .I3(wResult[393]),
+        .O(D[393]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[394]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [386]),
+        .I3(wResult[394]),
+        .O(D[394]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[395]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [387]),
+        .I3(wResult[395]),
+        .O(D[395]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[396]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [388]),
+        .I3(wResult[396]),
+        .O(D[396]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[397]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [389]),
+        .I3(wResult[397]),
+        .O(D[397]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[398]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [390]),
+        .I3(wResult[398]),
+        .O(D[398]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[399]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [391]),
+        .I3(wResult[399]),
+        .O(D[399]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[39]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [31]),
+        .I3(wResult[39]),
+        .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \rResultBuffer[3]_i_1 
+       (.I0(wResult[3]),
+        .I1(\rCountToSend_reg[0][0] [2]),
+        .I2(\rResultBuffer_reg[0] ),
+        .O(D[3]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[400]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [392]),
+        .I3(wResult[400]),
+        .O(D[400]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[401]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [393]),
+        .I3(wResult[401]),
+        .O(D[401]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[402]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [394]),
+        .I3(wResult[402]),
+        .O(D[402]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[403]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [395]),
+        .I3(wResult[403]),
+        .O(D[403]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[404]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [396]),
+        .I3(wResult[404]),
+        .O(D[404]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[405]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [397]),
+        .I3(wResult[405]),
+        .O(D[405]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[406]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [398]),
+        .I3(wResult[406]),
+        .O(D[406]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[407]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [399]),
+        .I3(wResult[407]),
+        .O(D[407]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[408]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [400]),
+        .I3(wResult[408]),
+        .O(D[408]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[409]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [401]),
+        .I3(wResult[409]),
+        .O(D[409]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[40]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [32]),
+        .I3(wResult[40]),
+        .O(D[40]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[410]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [402]),
+        .I3(wResult[410]),
+        .O(D[410]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[411]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [403]),
+        .I3(wResult[411]),
+        .O(D[411]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[412]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [404]),
+        .I3(wResult[412]),
+        .O(D[412]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[413]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [405]),
+        .I3(wResult[413]),
+        .O(D[413]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[414]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [406]),
+        .I3(wResult[414]),
+        .O(D[414]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[415]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [407]),
+        .I3(wResult[415]),
+        .O(D[415]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[416]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [408]),
+        .I3(wResult[416]),
+        .O(D[416]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[417]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [409]),
+        .I3(wResult[417]),
+        .O(D[417]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[418]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [410]),
+        .I3(wResult[418]),
+        .O(D[418]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[419]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [411]),
+        .I3(wResult[419]),
+        .O(D[419]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[41]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [33]),
+        .I3(wResult[41]),
+        .O(D[41]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[420]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [412]),
+        .I3(wResult[420]),
+        .O(D[420]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[421]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [413]),
+        .I3(wResult[421]),
+        .O(D[421]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[422]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [414]),
+        .I3(wResult[422]),
+        .O(D[422]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[423]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [415]),
+        .I3(wResult[423]),
+        .O(D[423]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[424]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [416]),
+        .I3(wResult[424]),
+        .O(D[424]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[425]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [417]),
+        .I3(wResult[425]),
+        .O(D[425]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[426]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [418]),
+        .I3(wResult[426]),
+        .O(D[426]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[427]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [419]),
+        .I3(wResult[427]),
+        .O(D[427]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[428]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [420]),
+        .I3(wResult[428]),
+        .O(D[428]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[429]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [421]),
+        .I3(wResult[429]),
+        .O(D[429]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[42]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [34]),
+        .I3(wResult[42]),
+        .O(D[42]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[430]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [422]),
+        .I3(wResult[430]),
+        .O(D[430]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[431]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [423]),
+        .I3(wResult[431]),
+        .O(D[431]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[432]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [424]),
+        .I3(wResult[432]),
+        .O(D[432]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[433]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [425]),
+        .I3(wResult[433]),
+        .O(D[433]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[434]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [426]),
+        .I3(wResult[434]),
+        .O(D[434]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[435]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [427]),
+        .I3(wResult[435]),
+        .O(D[435]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[436]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [428]),
+        .I3(wResult[436]),
+        .O(D[436]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[437]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [429]),
+        .I3(wResult[437]),
+        .O(D[437]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[438]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [430]),
+        .I3(wResult[438]),
+        .O(D[438]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[439]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [431]),
+        .I3(wResult[439]),
+        .O(D[439]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[43]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [35]),
+        .I3(wResult[43]),
+        .O(D[43]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[440]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [432]),
+        .I3(wResult[440]),
+        .O(D[440]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[441]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [433]),
+        .I3(wResult[441]),
+        .O(D[441]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[442]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [434]),
+        .I3(wResult[442]),
+        .O(D[442]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[443]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [435]),
+        .I3(wResult[443]),
+        .O(D[443]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[444]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [436]),
+        .I3(wResult[444]),
+        .O(D[444]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[445]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [437]),
+        .I3(wResult[445]),
+        .O(D[445]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[446]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [438]),
+        .I3(wResult[446]),
+        .O(D[446]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[447]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [439]),
+        .I3(wResult[447]),
+        .O(D[447]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[448]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [440]),
+        .I3(wResult[448]),
+        .O(D[448]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[449]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [441]),
+        .I3(wResult[449]),
+        .O(D[449]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[44]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [36]),
+        .I3(wResult[44]),
+        .O(D[44]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[450]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [442]),
+        .I3(wResult[450]),
+        .O(D[450]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[451]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [443]),
+        .I3(wResult[451]),
+        .O(D[451]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[452]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [444]),
+        .I3(wResult[452]),
+        .O(D[452]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[453]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [445]),
+        .I3(wResult[453]),
+        .O(D[453]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[454]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [446]),
+        .I3(wResult[454]),
+        .O(D[454]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[455]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [447]),
+        .I3(wResult[455]),
+        .O(D[455]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[456]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [448]),
+        .I3(wResult[456]),
+        .O(D[456]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[457]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [449]),
+        .I3(wResult[457]),
+        .O(D[457]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[458]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [450]),
+        .I3(wResult[458]),
+        .O(D[458]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[459]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [451]),
+        .I3(wResult[459]),
+        .O(D[459]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[45]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [37]),
+        .I3(wResult[45]),
+        .O(D[45]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[460]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [452]),
+        .I3(wResult[460]),
+        .O(D[460]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[461]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [453]),
+        .I3(wResult[461]),
+        .O(D[461]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[462]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [454]),
+        .I3(wResult[462]),
+        .O(D[462]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[463]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [455]),
+        .I3(wResult[463]),
+        .O(D[463]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[464]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [456]),
+        .I3(wResult[464]),
+        .O(D[464]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[465]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [457]),
+        .I3(wResult[465]),
+        .O(D[465]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[466]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [458]),
+        .I3(wResult[466]),
+        .O(D[466]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[467]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [459]),
+        .I3(wResult[467]),
+        .O(D[467]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[468]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [460]),
+        .I3(wResult[468]),
+        .O(D[468]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[469]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [461]),
+        .I3(wResult[469]),
+        .O(D[469]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[46]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [38]),
+        .I3(wResult[46]),
+        .O(D[46]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[470]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [462]),
+        .I3(wResult[470]),
+        .O(D[470]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[471]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [463]),
+        .I3(wResult[471]),
+        .O(D[471]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[472]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [464]),
+        .I3(wResult[472]),
+        .O(D[472]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[473]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [465]),
+        .I3(wResult[473]),
+        .O(D[473]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[474]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [466]),
+        .I3(wResult[474]),
+        .O(D[474]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[475]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [467]),
+        .I3(wResult[475]),
+        .O(D[475]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[476]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [468]),
+        .I3(wResult[476]),
+        .O(D[476]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[477]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [469]),
+        .I3(wResult[477]),
+        .O(D[477]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[478]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [470]),
+        .I3(wResult[478]),
+        .O(D[478]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[479]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [471]),
+        .I3(wResult[479]),
+        .O(D[479]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[47]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [39]),
+        .I3(wResult[47]),
+        .O(D[47]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[480]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [472]),
+        .I3(wResult[480]),
+        .O(D[480]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[481]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [473]),
+        .I3(wResult[481]),
+        .O(D[481]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[482]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [474]),
+        .I3(wResult[482]),
+        .O(D[482]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[483]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [475]),
+        .I3(wResult[483]),
+        .O(D[483]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[484]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [476]),
+        .I3(wResult[484]),
+        .O(D[484]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[485]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [477]),
+        .I3(wResult[485]),
+        .O(D[485]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[486]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [478]),
+        .I3(wResult[486]),
+        .O(D[486]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[487]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [479]),
+        .I3(wResult[487]),
+        .O(D[487]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[488]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [480]),
+        .I3(wResult[488]),
+        .O(D[488]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[489]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [481]),
+        .I3(wResult[489]),
+        .O(D[489]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[48]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [40]),
+        .I3(wResult[48]),
+        .O(D[48]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[490]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [482]),
+        .I3(wResult[490]),
+        .O(D[490]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[491]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [483]),
+        .I3(wResult[491]),
+        .O(D[491]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[492]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [484]),
+        .I3(wResult[492]),
+        .O(D[492]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[493]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [485]),
+        .I3(wResult[493]),
+        .O(D[493]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[494]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [486]),
+        .I3(wResult[494]),
+        .O(D[494]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[495]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [487]),
+        .I3(wResult[495]),
+        .O(D[495]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[496]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [488]),
+        .I3(wResult[496]),
+        .O(D[496]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[497]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [489]),
+        .I3(wResult[497]),
+        .O(D[497]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[498]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [490]),
+        .I3(wResult[498]),
+        .O(D[498]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[499]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [491]),
+        .I3(wResult[499]),
+        .O(D[499]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[49]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [41]),
+        .I3(wResult[49]),
+        .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \rResultBuffer[4]_i_1 
+       (.I0(wResult[4]),
+        .I1(\rCountToSend_reg[0][0] [2]),
+        .I2(\rResultBuffer_reg[0] ),
+        .O(D[4]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[500]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [492]),
+        .I3(wResult[500]),
+        .O(D[500]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[501]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [493]),
+        .I3(wResult[501]),
+        .O(D[501]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[502]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [494]),
+        .I3(wResult[502]),
+        .O(D[502]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[503]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [495]),
+        .I3(wResult[503]),
+        .O(D[503]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[504]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [496]),
+        .I3(wResult[504]),
+        .O(D[504]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[505]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [497]),
+        .I3(wResult[505]),
+        .O(D[505]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[506]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [498]),
+        .I3(wResult[506]),
+        .O(D[506]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[507]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [499]),
+        .I3(wResult[507]),
+        .O(D[507]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[508]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [500]),
+        .I3(wResult[508]),
+        .O(D[508]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[509]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [501]),
+        .I3(wResult[509]),
+        .O(D[509]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[50]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [42]),
+        .I3(wResult[50]),
+        .O(D[50]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[510]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [502]),
+        .I3(wResult[510]),
+        .O(D[510]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[511]_i_1 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[399] ),
+        .I2(\rResultBuffer_reg[512] [503]),
+        .I3(wResult[511]),
+        .O(D[511]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[512]_i_2 
+       (.I0(\rCountToSend_reg[0][0] [3]),
+        .I1(\rResultBuffer_reg[392] ),
+        .I2(\rResultBuffer_reg[512] [504]),
+        .I3(wResult[512]),
+        .O(D[512]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[51]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [43]),
+        .I3(wResult[51]),
+        .O(D[51]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[52]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [44]),
+        .I3(wResult[52]),
+        .O(D[52]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[53]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [45]),
+        .I3(wResult[53]),
+        .O(D[53]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[54]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [46]),
+        .I3(wResult[54]),
+        .O(D[54]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[55]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [47]),
+        .I3(wResult[55]),
+        .O(D[55]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[56]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [48]),
+        .I3(wResult[56]),
+        .O(D[56]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[57]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [49]),
+        .I3(wResult[57]),
+        .O(D[57]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[58]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [50]),
+        .I3(wResult[58]),
+        .O(D[58]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[59]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [51]),
+        .I3(wResult[59]),
+        .O(D[59]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \rResultBuffer[5]_i_1 
+       (.I0(wResult[5]),
+        .I1(\rCountToSend_reg[0][0] [2]),
+        .I2(\rResultBuffer_reg[0] ),
+        .O(D[5]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[60]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [52]),
+        .I3(wResult[60]),
+        .O(D[60]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[61]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [53]),
+        .I3(wResult[61]),
+        .O(D[61]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[62]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [54]),
+        .I3(wResult[62]),
+        .O(D[62]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[63]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [55]),
+        .I3(wResult[63]),
+        .O(D[63]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[64]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [56]),
+        .I3(wResult[64]),
+        .O(D[64]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[65]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [57]),
+        .I3(wResult[65]),
+        .O(D[65]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[66]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [58]),
+        .I3(wResult[66]),
+        .O(D[66]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[67]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [59]),
+        .I3(wResult[67]),
+        .O(D[67]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[68]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [60]),
+        .I3(wResult[68]),
+        .O(D[68]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[69]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [61]),
+        .I3(wResult[69]),
+        .O(D[69]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \rResultBuffer[6]_i_1 
+       (.I0(wResult[6]),
+        .I1(\rCountToSend_reg[0][0] [2]),
+        .I2(\rResultBuffer_reg[109] ),
+        .O(D[6]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[70]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [62]),
+        .I3(wResult[70]),
+        .O(D[70]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[71]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [63]),
+        .I3(wResult[71]),
+        .O(D[71]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[72]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [64]),
+        .I3(wResult[72]),
+        .O(D[72]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[73]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [65]),
+        .I3(wResult[73]),
+        .O(D[73]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[74]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [66]),
+        .I3(wResult[74]),
+        .O(D[74]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[75]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [67]),
+        .I3(wResult[75]),
+        .O(D[75]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[76]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [68]),
+        .I3(wResult[76]),
+        .O(D[76]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[77]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [69]),
+        .I3(wResult[77]),
+        .O(D[77]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[78]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [70]),
+        .I3(wResult[78]),
+        .O(D[78]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[79]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [71]),
+        .I3(wResult[79]),
+        .O(D[79]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \rResultBuffer[7]_i_1 
+       (.I0(wResult[7]),
+        .I1(\rCountToSend_reg[0][0] [2]),
+        .I2(\rResultBuffer_reg[109] ),
+        .O(D[7]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[80]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [72]),
+        .I3(wResult[80]),
+        .O(D[80]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[81]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [73]),
+        .I3(wResult[81]),
+        .O(D[81]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[82]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [74]),
+        .I3(wResult[82]),
+        .O(D[82]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[83]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [75]),
+        .I3(wResult[83]),
+        .O(D[83]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[84]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [76]),
+        .I3(wResult[84]),
+        .O(D[84]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[85]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [77]),
+        .I3(wResult[85]),
+        .O(D[85]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[86]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [78]),
+        .I3(wResult[86]),
+        .O(D[86]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[87]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [79]),
+        .I3(wResult[87]),
+        .O(D[87]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[88]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [80]),
+        .I3(wResult[88]),
+        .O(D[88]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[89]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [81]),
+        .I3(wResult[89]),
+        .O(D[89]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[8]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [0]),
+        .I3(wResult[8]),
+        .O(D[8]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[90]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [82]),
+        .I3(wResult[90]),
+        .O(D[90]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[91]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [83]),
+        .I3(wResult[91]),
+        .O(D[91]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[92]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [84]),
+        .I3(wResult[92]),
+        .O(D[92]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[93]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [85]),
+        .I3(wResult[93]),
+        .O(D[93]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[94]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [86]),
+        .I3(wResult[94]),
+        .O(D[94]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[95]_i_1 
+       (.I0(\rResultBuffer_reg[109] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [87]),
+        .I3(wResult[95]),
+        .O(D[95]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[96]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [88]),
+        .I3(wResult[96]),
+        .O(D[96]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[97]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [89]),
+        .I3(wResult[97]),
+        .O(D[97]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[98]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [90]),
+        .I3(wResult[98]),
+        .O(D[98]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[99]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [91]),
+        .I3(wResult[99]),
+        .O(D[99]));
+  LUT4 #(
+    .INIT(16'h5410)) 
+    \rResultBuffer[9]_i_1 
+       (.I0(\rResultBuffer_reg[0] ),
+        .I1(\rCountToSend_reg[0][0] [0]),
+        .I2(\rResultBuffer_reg[512] [1]),
+        .I3(wResult[9]),
+>>>>>>> temp-branch
         .O(D[9]));
   LUT5 #(
     .INIT(32'hFF34CB00)) 
@@ -20785,7 +24953,11 @@ module design_1_uart_top_0_0_mp_adder
         .I4(regCout_i_2_n_0),
         .I5(regCout_i_3_n_0),
         .O(carry_out));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair35" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+>>>>>>> temp-branch
   LUT2 #(
     .INIT(4'h8)) 
     regCout_i_2
@@ -20802,7 +24974,11 @@ module design_1_uart_top_0_0_mp_adder
         .I4(\regA_Q_reg_n_0_[12] ),
         .I5(regCout_i_4_n_0),
         .O(regCout_i_3_n_0));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair35" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+>>>>>>> temp-branch
   LUT2 #(
     .INIT(4'h6)) 
     regCout_i_4
@@ -20866,7 +25042,11 @@ module design_1_uart_top_0_0_mp_adder
         .I4(\FSM_sequential_rFSM_current_reg[1]_rep__0_n_0 ),
         .I5(\FSM_sequential_rFSM_current_reg[2]_rep__7_n_0 ),
         .O(\regResult[498]_i_2_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair34" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+>>>>>>> temp-branch
   LUT3 #(
     .INIT(8'h96)) 
     \regResult[499]_i_1 
@@ -21031,7 +25211,11 @@ module design_1_uart_top_0_0_mp_adder
         .I4(\regA_Q_reg_n_0_[2] ),
         .I5(\regResult[507]_i_7_n_0 ),
         .O(\regResult[507]_i_6_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair34" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+>>>>>>> temp-branch
   LUT2 #(
     .INIT(4'h6)) 
     \regResult[507]_i_7 
@@ -24216,6 +28400,7 @@ endmodule
 
 (* ORIG_REF_NAME = "uart_rx" *) 
 module design_1_uart_top_0_0_uart_rx
+<<<<<<< HEAD
    (Q,
     E,
     \rCnt_reg[6] ,
@@ -24239,6 +28424,37 @@ module design_1_uart_top_0_0_uart_rx
   input \rBuffer_reg[0]_0 ;
   input [1:0]\FSM_sequential_rFSM[2]_i_2 ;
   input \FSM_sequential_rFSM[2]_i_2_0 ;
+=======
+   (\FSM_sequential_rFSM_reg[0]_rep__2 ,
+    \FSM_sequential_rFSM_reg[1] ,
+    E,
+    \rRxData_Current_reg[7]_0 ,
+    iRx,
+    iClk,
+    \rBuffer_reg[0] ,
+    Q,
+    \FSM_sequential_rFSM_reg[3]_rep__2 ,
+    \FSM_sequential_rFSM_reg[3]_rep__2_0 ,
+    \FSM_sequential_rFSM_reg[3]_rep__2_1 ,
+    \FSM_sequential_rFSM[3]_i_3_0 ,
+    \FSM_sequential_rFSM[3]_i_3_1 ,
+    wAddDone,
+    iRst);
+  output \FSM_sequential_rFSM_reg[0]_rep__2 ;
+  output \FSM_sequential_rFSM_reg[1] ;
+  output [0:0]E;
+  output [7:0]\rRxData_Current_reg[7]_0 ;
+  input iRx;
+  input iClk;
+  input \rBuffer_reg[0] ;
+  input [2:0]Q;
+  input \FSM_sequential_rFSM_reg[3]_rep__2 ;
+  input \FSM_sequential_rFSM_reg[3]_rep__2_0 ;
+  input \FSM_sequential_rFSM_reg[3]_rep__2_1 ;
+  input [0:0]\FSM_sequential_rFSM[3]_i_3_0 ;
+  input \FSM_sequential_rFSM[3]_i_3_1 ;
+  input wAddDone;
+>>>>>>> temp-branch
   input iRst;
 
   wire [0:0]E;
@@ -24254,9 +28470,21 @@ module design_1_uart_top_0_0_uart_rx
   wire \FSM_onehot_rFSM_Current_reg_n_0_[1] ;
   wire \FSM_onehot_rFSM_Current_reg_n_0_[2] ;
   wire \FSM_onehot_rFSM_Current_reg_n_0_[3] ;
+<<<<<<< HEAD
   wire [1:0]\FSM_sequential_rFSM[2]_i_2 ;
   wire \FSM_sequential_rFSM[2]_i_2_0 ;
   wire [0:0]Q;
+=======
+  wire [0:0]\FSM_sequential_rFSM[3]_i_3_0 ;
+  wire \FSM_sequential_rFSM[3]_i_3_1 ;
+  wire \FSM_sequential_rFSM[3]_i_5_n_0 ;
+  wire \FSM_sequential_rFSM_reg[0]_rep__2 ;
+  wire \FSM_sequential_rFSM_reg[1] ;
+  wire \FSM_sequential_rFSM_reg[3]_rep__2 ;
+  wire \FSM_sequential_rFSM_reg[3]_rep__2_0 ;
+  wire \FSM_sequential_rFSM_reg[3]_rep__2_1 ;
+  wire [2:0]Q;
+>>>>>>> temp-branch
   wire iClk;
   wire iRst;
   wire iRx;
@@ -24265,7 +28493,10 @@ module design_1_uart_top_0_0_uart_rx
   wire \rBit_Current[1]_i_1__0_n_0 ;
   wire \rBit_Current[2]_i_1__0_n_0 ;
   wire \rBuffer_reg[0] ;
+<<<<<<< HEAD
   wire \rBuffer_reg[0]_0 ;
+=======
+>>>>>>> temp-branch
   wire [11:0]rCnt_Current;
   wire \rCnt_Current[0]_i_1_n_0 ;
   wire \rCnt_Current[10]_i_1_n_0 ;
@@ -24283,12 +28514,19 @@ module design_1_uart_top_0_0_uart_rx
   wire \rCnt_Current[7]_i_1_n_0 ;
   wire \rCnt_Current[8]_i_1_n_0 ;
   wire \rCnt_Current[9]_i_1_n_0 ;
+<<<<<<< HEAD
   wire \rCnt_reg[6] ;
   wire [0:0]rFSM__0;
+=======
+>>>>>>> temp-branch
   wire rRx1;
   wire rRx2;
   wire \rRxData_Current[7]_i_1_n_0 ;
   wire [7:0]\rRxData_Current_reg[7]_0 ;
+<<<<<<< HEAD
+=======
+  wire wAddDone;
+>>>>>>> temp-branch
   wire wCnt_Next;
   wire wCnt_Next0_carry__0_n_0;
   wire wCnt_Next0_carry__0_n_1;
@@ -24311,6 +28549,7 @@ module design_1_uart_top_0_0_uart_rx
   wire wCnt_Next0_carry_n_5;
   wire wCnt_Next0_carry_n_6;
   wire wCnt_Next0_carry_n_7;
+<<<<<<< HEAD
   wire [3:2]NLW_wCnt_Next0_carry__1_CO_UNCONNECTED;
   wire [3:3]NLW_wCnt_Next0_carry__1_O_UNCONNECTED;
 
@@ -24319,6 +28558,17 @@ module design_1_uart_top_0_0_uart_rx
     .INIT(8'hEA)) 
     \FSM_onehot_rFSM_Current[0]_i_1__0 
        (.I0(Q),
+=======
+  wire wRxDone;
+  wire [3:2]NLW_wCnt_Next0_carry__1_CO_UNCONNECTED;
+  wire [3:3]NLW_wCnt_Next0_carry__1_O_UNCONNECTED;
+
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT3 #(
+    .INIT(8'hEA)) 
+    \FSM_onehot_rFSM_Current[0]_i_1__0 
+       (.I0(wRxDone),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
         .I2(rRx2),
         .O(\FSM_onehot_rFSM_Current[0]_i_1__0_n_0 ));
@@ -24344,6 +28594,7 @@ module design_1_uart_top_0_0_uart_rx
         .I1(rBit_Current[1]),
         .I2(rBit_Current[2]),
         .O(\FSM_onehot_rFSM_Current[4]_i_2__0_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT5 #(
     .INIT(32'hF2FFF2F2)) 
@@ -24379,6 +28630,42 @@ module design_1_uart_top_0_0_uart_rx
     \FSM_onehot_rFSM_Current[4]_i_6 
        (.I0(rCnt_Current[10]),
         .I1(rCnt_Current[11]),
+=======
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT5 #(
+    .INIT(32'hFFFF88F8)) 
+    \FSM_onehot_rFSM_Current[4]_i_3 
+       (.I0(\rCnt_Current[11]_i_3_n_0 ),
+        .I1(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
+        .I2(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+        .I3(rRx2),
+        .I4(wRxDone),
+        .O(\FSM_onehot_rFSM_Current[4]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEECEEEEEEECEEEC)) 
+    \FSM_onehot_rFSM_Current[4]_i_4 
+       (.I0(rCnt_Current[10]),
+        .I1(rCnt_Current[11]),
+        .I2(rCnt_Current[9]),
+        .I3(\FSM_onehot_rFSM_Current[4]_i_5_n_0 ),
+        .I4(\FSM_onehot_rFSM_Current[4]_i_6_n_0 ),
+        .I5(rCnt_Current[5]),
+        .O(\FSM_onehot_rFSM_Current[4]_i_4_n_0 ));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \FSM_onehot_rFSM_Current[4]_i_5 
+       (.I0(rCnt_Current[6]),
+        .I1(rCnt_Current[8]),
+        .I2(rCnt_Current[7]),
+        .O(\FSM_onehot_rFSM_Current[4]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \FSM_onehot_rFSM_Current[4]_i_6 
+       (.I0(rCnt_Current[4]),
+        .I1(rCnt_Current[3]),
+        .I2(rCnt_Current[2]),
+>>>>>>> temp-branch
         .O(\FSM_onehot_rFSM_Current[4]_i_6_n_0 ));
   (* FSM_ENCODED_STATES = "sRX_START:00010,sRX_STOP:01000,sDONE:10000,sIDLE:00001,sRX_DATA:00100" *) 
   FDSE #(
@@ -24423,8 +28710,9 @@ module design_1_uart_top_0_0_uart_rx
        (.C(iClk),
         .CE(\FSM_onehot_rFSM_Current[4]_i_1_n_0 ),
         .D(\FSM_onehot_rFSM_Current_reg_n_0_[3] ),
-        .Q(Q),
+        .Q(wRxDone),
         .R(iRst));
+<<<<<<< HEAD
   LUT5 #(
     .INIT(32'hFFFFF7FF)) 
     \FSM_sequential_rFSM[2]_i_4 
@@ -24457,12 +28745,60 @@ module design_1_uart_top_0_0_uart_rx
   LUT6 #(
     .INIT(64'h0FCFCFCFC8000000)) 
     \rBit_Current[2]_i_1__0 
+=======
+  LUT6 #(
+    .INIT(64'hA000B010B010B010)) 
+    \FSM_sequential_rFSM[3]_i_3 
+       (.I0(\rBuffer_reg[0] ),
+        .I1(Q[2]),
+        .I2(\FSM_sequential_rFSM[3]_i_5_n_0 ),
+        .I3(\FSM_sequential_rFSM_reg[3]_rep__2 ),
+        .I4(\FSM_sequential_rFSM_reg[3]_rep__2_0 ),
+        .I5(\FSM_sequential_rFSM_reg[3]_rep__2_1 ),
+        .O(\FSM_sequential_rFSM_reg[0]_rep__2 ));
+  LUT6 #(
+    .INIT(64'hFF400040FFFFFFFF)) 
+    \FSM_sequential_rFSM[3]_i_5 
+       (.I0(\FSM_sequential_rFSM[3]_i_3_0 ),
+        .I1(\FSM_sequential_rFSM[3]_i_3_1 ),
+        .I2(wRxDone),
+        .I3(Q[0]),
+        .I4(wAddDone),
+        .I5(\rBuffer_reg[0] ),
+        .O(\FSM_sequential_rFSM[3]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h0FC807C807C807C8)) 
+    \rBit_Current[0]_i_1__0 
+>>>>>>> temp-branch
        (.I0(\FSM_onehot_rFSM_Current[4]_i_4_n_0 ),
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I3(rBit_Current[0]),
         .I4(rBit_Current[1]),
         .I5(rBit_Current[2]),
+<<<<<<< HEAD
+=======
+        .O(\rBit_Current[0]_i_1__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0FCFC80007CFC800)) 
+    \rBit_Current[1]_i_1__0 
+       (.I0(\FSM_onehot_rFSM_Current[4]_i_4_n_0 ),
+        .I1(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
+        .I2(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+        .I3(rBit_Current[0]),
+        .I4(rBit_Current[1]),
+        .I5(rBit_Current[2]),
+        .O(\rBit_Current[1]_i_1__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0FCFCFCFC8000000)) 
+    \rBit_Current[2]_i_1__0 
+       (.I0(\FSM_onehot_rFSM_Current[4]_i_4_n_0 ),
+        .I1(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
+        .I2(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+        .I3(rBit_Current[0]),
+        .I4(rBit_Current[1]),
+        .I5(rBit_Current[2]),
+>>>>>>> temp-branch
         .O(\rBit_Current[2]_i_1__0_n_0 ));
   FDRE \rBit_Current_reg[0] 
        (.C(iClk),
@@ -24482,6 +28818,7 @@ module design_1_uart_top_0_0_uart_rx
         .D(\rBit_Current[2]_i_1__0_n_0 ),
         .Q(rBit_Current[2]),
         .R(iRst));
+<<<<<<< HEAD
   LUT4 #(
     .INIT(16'h1000)) 
     \rBuffer[1023]_i_1 
@@ -24495,12 +28832,42 @@ module design_1_uart_top_0_0_uart_rx
     \rCnt_Current[0]_i_1 
        (.I0(rRx2),
         .I1(\rCnt_Current[11]_i_3_n_0 ),
+=======
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT5 #(
+    .INIT(32'h00000040)) 
+    \rBuffer[1023]_i_1 
+       (.I0(Q[1]),
+        .I1(\rBuffer_reg[0] ),
+        .I2(wRxDone),
+        .I3(Q[0]),
+        .I4(Q[2]),
+        .O(E));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT4 #(
+    .INIT(16'hAAFB)) 
+    \rCnt[7]_i_3 
+       (.I0(Q[0]),
+        .I1(\rBuffer_reg[0] ),
+        .I2(wRxDone),
+        .I3(Q[1]),
+        .O(\FSM_sequential_rFSM_reg[1] ));
+  LUT5 #(
+    .INIT(32'h8080D0FF)) 
+    \rCnt_Current[0]_i_1 
+       (.I0(\rCnt_Current[11]_i_3_n_0 ),
+        .I1(rRx2),
+>>>>>>> temp-branch
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
         .I3(\rCnt_Current[11]_i_4_n_0 ),
         .I4(rCnt_Current[0]),
         .O(\rCnt_Current[0]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[10]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24509,7 +28876,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry__1_n_6),
         .O(\rCnt_Current[10]_i_1_n_0 ));
   LUT6 #(
+<<<<<<< HEAD
     .INIT(64'hFFFFFFFFFFFFFFD0)) 
+=======
+    .INIT(64'hFFFFFFFFFFFFFF70)) 
+>>>>>>> temp-branch
     \rCnt_Current[11]_i_1 
        (.I0(rRx2),
         .I1(\rCnt_Current[11]_i_3_n_0 ),
@@ -24519,7 +28890,11 @@ module design_1_uart_top_0_0_uart_rx
         .I5(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .O(wCnt_Next));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[11]_i_2 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24527,6 +28902,7 @@ module design_1_uart_top_0_0_uart_rx
         .I3(\rCnt_Current[11]_i_4_n_0 ),
         .I4(wCnt_Next0_carry__1_n_5),
         .O(\rCnt_Current[11]_i_2_n_0 ));
+<<<<<<< HEAD
   LUT6 #(
     .INIT(64'hBFFFFFFFFFFFFFFF)) 
     \rCnt_Current[11]_i_3 
@@ -24536,6 +28912,17 @@ module design_1_uart_top_0_0_uart_rx
         .I3(rCnt_Current[2]),
         .I4(\rCnt_Current[11]_i_5_n_0 ),
         .I5(\rCnt_Current[11]_i_6_n_0 ),
+=======
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT5 #(
+    .INIT(32'h20000000)) 
+    \rCnt_Current[11]_i_3 
+       (.I0(\rCnt_Current[11]_i_5_n_0 ),
+        .I1(\FSM_onehot_rFSM_Current[4]_i_5_n_0 ),
+        .I2(rCnt_Current[4]),
+        .I3(rCnt_Current[3]),
+        .I4(rCnt_Current[2]),
+>>>>>>> temp-branch
         .O(\rCnt_Current[11]_i_3_n_0 ));
   LUT3 #(
     .INIT(8'hAB)) 
@@ -24544,6 +28931,7 @@ module design_1_uart_top_0_0_uart_rx
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[3] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .O(\rCnt_Current[11]_i_4_n_0 ));
+<<<<<<< HEAD
   LUT4 #(
     .INIT(16'h0008)) 
     \rCnt_Current[11]_i_5 
@@ -24563,6 +28951,20 @@ module design_1_uart_top_0_0_uart_rx
         .O(\rCnt_Current[11]_i_6_n_0 ));
   LUT5 #(
     .INIT(32'hE0FF4040)) 
+=======
+  LUT6 #(
+    .INIT(64'h0001000000000000)) 
+    \rCnt_Current[11]_i_5 
+       (.I0(rCnt_Current[11]),
+        .I1(rCnt_Current[10]),
+        .I2(rCnt_Current[0]),
+        .I3(rCnt_Current[5]),
+        .I4(rCnt_Current[1]),
+        .I5(rCnt_Current[9]),
+        .O(\rCnt_Current[11]_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[1]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24571,7 +28973,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry_n_7),
         .O(\rCnt_Current[1]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[2]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24580,7 +28986,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry_n_6),
         .O(\rCnt_Current[2]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[3]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24589,7 +28999,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry_n_5),
         .O(\rCnt_Current[3]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[4]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24598,7 +29012,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry_n_4),
         .O(\rCnt_Current[4]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[5]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24607,7 +29025,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry__0_n_7),
         .O(\rCnt_Current[5]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[6]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24616,7 +29038,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry__0_n_6),
         .O(\rCnt_Current[6]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[7]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24625,7 +29051,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry__0_n_5),
         .O(\rCnt_Current[7]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[8]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24634,7 +29064,11 @@ module design_1_uart_top_0_0_uart_rx
         .I4(wCnt_Next0_carry__0_n_4),
         .O(\rCnt_Current[8]_i_1_n_0 ));
   LUT5 #(
+<<<<<<< HEAD
     .INIT(32'hE0FF4040)) 
+=======
+    .INIT(32'hD0FF8080)) 
+>>>>>>> temp-branch
     \rCnt_Current[9]_i_1 
        (.I0(\rCnt_Current[11]_i_3_n_0 ),
         .I1(rRx2),
@@ -24817,12 +29251,29 @@ module design_1_uart_top_0_0_uart_top
   input iClk;
   input iRx;
 
+<<<<<<< HEAD
   wire \FSM_sequential_rFSM[1]_i_2_n_0 ;
   wire \FSM_sequential_rFSM[1]_i_3_n_0 ;
+=======
+  wire \FSM_sequential_rFSM[0]_i_2_n_0 ;
+  wire \FSM_sequential_rFSM[0]_rep_i_1__0_n_0 ;
+  wire \FSM_sequential_rFSM[0]_rep_i_1__1_n_0 ;
+  wire \FSM_sequential_rFSM[0]_rep_i_1__2_n_0 ;
+  wire \FSM_sequential_rFSM[0]_rep_i_1_n_0 ;
+  wire \FSM_sequential_rFSM[1]_i_2_n_0 ;
+  wire \FSM_sequential_rFSM[1]_i_3_n_0 ;
+  wire \FSM_sequential_rFSM[3]_i_4_n_0 ;
+  wire \FSM_sequential_rFSM[3]_i_6_n_0 ;
+  wire \FSM_sequential_rFSM[3]_rep_i_1__0_n_0 ;
+  wire \FSM_sequential_rFSM[3]_rep_i_1__1_n_0 ;
+  wire \FSM_sequential_rFSM[3]_rep_i_1__2_n_0 ;
+  wire \FSM_sequential_rFSM[3]_rep_i_1_n_0 ;
+>>>>>>> temp-branch
   wire \FSM_sequential_rFSM_reg[0]_rep__0_n_0 ;
   wire \FSM_sequential_rFSM_reg[0]_rep__1_n_0 ;
   wire \FSM_sequential_rFSM_reg[0]_rep__2_n_0 ;
   wire \FSM_sequential_rFSM_reg[0]_rep_n_0 ;
+<<<<<<< HEAD
   wire \FSM_sequential_rFSM_reg[2]_rep__0_n_0 ;
   wire \FSM_sequential_rFSM_reg[2]_rep__1_n_0 ;
   wire \FSM_sequential_rFSM_reg[2]_rep_n_0 ;
@@ -25340,6 +29791,15 @@ module design_1_uart_top_0_0_uart_top
   wire MP_ADDER_INST_n_98;
   wire MP_ADDER_INST_n_99;
   wire UART_RX_INST_n_2;
+=======
+  wire \FSM_sequential_rFSM_reg[3]_rep__0_n_0 ;
+  wire \FSM_sequential_rFSM_reg[3]_rep__1_n_0 ;
+  wire \FSM_sequential_rFSM_reg[3]_rep__2_n_0 ;
+  wire \FSM_sequential_rFSM_reg[3]_rep_n_0 ;
+  wire MP_ADDER_INST_n_514;
+  wire UART_RX_INST_n_0;
+  wire UART_RX_INST_n_1;
+>>>>>>> temp-branch
   wire UART_TX_INST_n_0;
   wire UART_TX_INST_n_1;
   wire UART_TX_INST_n_12;
@@ -25348,16 +29808,26 @@ module design_1_uart_top_0_0_uart_top
   wire UART_TX_INST_n_3;
   wire UART_TX_INST_n_4;
   wire UART_TX_INST_n_5;
+<<<<<<< HEAD
   wire UART_TX_INST_n_6;
   wire UART_TX_INST_n_7;
   wire UART_TX_INST_n_8;
   wire UART_TX_INST_n_9;
+=======
+>>>>>>> temp-branch
   wire iClk;
   wire iRst;
   wire iRx;
+  wire [31:1]in21;
   wire oTx;
   wire [511:0]opA;
+<<<<<<< HEAD
   wire [7:0]p_0_in;
+=======
+  wire [7:0]p_1_in;
+  wire [7:0]p_3_in;
+  wire [7:0]p_5_in;
+>>>>>>> temp-branch
   wire rAddStart_i_1_n_0;
   wire rAddStart_reg_n_0;
   wire rBuffer;
@@ -25873,7 +30343,6 @@ module design_1_uart_top_0_0_uart_top
   wire \rBuffer_reg_n_0_[98] ;
   wire \rBuffer_reg_n_0_[99] ;
   wire \rBuffer_reg_n_0_[9] ;
-  wire rCnt;
   wire \rCnt[0]_i_1_n_0 ;
   wire \rCnt[1]_i_1_n_0 ;
   wire \rCnt[2]_i_1_n_0 ;
@@ -25881,10 +30350,18 @@ module design_1_uart_top_0_0_uart_top
   wire \rCnt[4]_i_1_n_0 ;
   wire \rCnt[5]_i_1_n_0 ;
   wire \rCnt[5]_i_2_n_0 ;
+<<<<<<< HEAD
   wire \rCnt[5]_i_3_n_0 ;
   wire \rCnt[6]_i_1_n_0 ;
   wire \rCnt[7]_i_2_n_0 ;
   wire \rCnt[7]_i_4_n_0 ;
+=======
+  wire \rCnt[6]_i_1_n_0 ;
+  wire \rCnt[7]_i_2_n_0 ;
+  wire \rCnt[7]_i_5_n_0 ;
+  wire \rCnt[7]_i_6_n_0 ;
+  wire \rCnt[7]_i_7_n_0 ;
+>>>>>>> temp-branch
   wire \rCnt_reg_n_0_[0] ;
   wire \rCnt_reg_n_0_[1] ;
   wire \rCnt_reg_n_0_[2] ;
@@ -25893,8 +30370,59 @@ module design_1_uart_top_0_0_uart_top
   wire \rCnt_reg_n_0_[5] ;
   wire \rCnt_reg_n_0_[6] ;
   wire \rCnt_reg_n_0_[7] ;
+<<<<<<< HEAD
   wire [2:0]rFSM__0;
   wire rResultBuffer;
+=======
+  wire [7:0]\rCountToSend_reg[0]_3 ;
+  wire [7:0]\rCountToSend_reg[1]_2 ;
+  wire [7:0]\rCountToSend_reg[2]_1 ;
+  wire [7:0]\rCountToSend_reg[3]_0 ;
+  wire [3:0]rFSM__0;
+  wire [3:0]rFSM__1;
+  wire [31:0]rLatencyCnt;
+  wire rLatencyCnt0_carry__0_n_0;
+  wire rLatencyCnt0_carry__0_n_1;
+  wire rLatencyCnt0_carry__0_n_2;
+  wire rLatencyCnt0_carry__0_n_3;
+  wire rLatencyCnt0_carry__1_n_0;
+  wire rLatencyCnt0_carry__1_n_1;
+  wire rLatencyCnt0_carry__1_n_2;
+  wire rLatencyCnt0_carry__1_n_3;
+  wire rLatencyCnt0_carry__2_n_0;
+  wire rLatencyCnt0_carry__2_n_1;
+  wire rLatencyCnt0_carry__2_n_2;
+  wire rLatencyCnt0_carry__2_n_3;
+  wire rLatencyCnt0_carry__3_n_0;
+  wire rLatencyCnt0_carry__3_n_1;
+  wire rLatencyCnt0_carry__3_n_2;
+  wire rLatencyCnt0_carry__3_n_3;
+  wire rLatencyCnt0_carry__4_n_0;
+  wire rLatencyCnt0_carry__4_n_1;
+  wire rLatencyCnt0_carry__4_n_2;
+  wire rLatencyCnt0_carry__4_n_3;
+  wire rLatencyCnt0_carry__5_n_0;
+  wire rLatencyCnt0_carry__5_n_1;
+  wire rLatencyCnt0_carry__5_n_2;
+  wire rLatencyCnt0_carry__5_n_3;
+  wire rLatencyCnt0_carry__6_n_2;
+  wire rLatencyCnt0_carry__6_n_3;
+  wire rLatencyCnt0_carry_n_0;
+  wire rLatencyCnt0_carry_n_1;
+  wire rLatencyCnt0_carry_n_2;
+  wire rLatencyCnt0_carry_n_3;
+  wire \rLatencyCnt[31]_i_1_n_0 ;
+  wire \rLatencyCnt_reg_n_0_[0] ;
+  wire \rLatencyCnt_reg_n_0_[1] ;
+  wire \rLatencyCnt_reg_n_0_[2] ;
+  wire \rLatencyCnt_reg_n_0_[3] ;
+  wire \rLatencyCnt_reg_n_0_[4] ;
+  wire \rLatencyCnt_reg_n_0_[5] ;
+  wire \rLatencyCnt_reg_n_0_[6] ;
+  wire \rLatencyCnt_reg_n_0_[7] ;
+  wire [512:0]rResultBuffer;
+  wire \rResultBuffer[512]_i_3_n_0 ;
+>>>>>>> temp-branch
   wire \rResultBuffer_reg_n_0_[0] ;
   wire \rResultBuffer_reg_n_0_[100] ;
   wire \rResultBuffer_reg_n_0_[101] ;
@@ -26345,7 +30873,19 @@ module design_1_uart_top_0_0_uart_top
   wire \rResultBuffer_reg_n_0_[502] ;
   wire \rResultBuffer_reg_n_0_[503] ;
   wire \rResultBuffer_reg_n_0_[504] ;
+<<<<<<< HEAD
   wire \rResultBuffer_reg_n_0_[50] ;
+=======
+  wire \rResultBuffer_reg_n_0_[505] ;
+  wire \rResultBuffer_reg_n_0_[506] ;
+  wire \rResultBuffer_reg_n_0_[507] ;
+  wire \rResultBuffer_reg_n_0_[508] ;
+  wire \rResultBuffer_reg_n_0_[509] ;
+  wire \rResultBuffer_reg_n_0_[50] ;
+  wire \rResultBuffer_reg_n_0_[510] ;
+  wire \rResultBuffer_reg_n_0_[511] ;
+  wire \rResultBuffer_reg_n_0_[512] ;
+>>>>>>> temp-branch
   wire \rResultBuffer_reg_n_0_[51] ;
   wire \rResultBuffer_reg_n_0_[52] ;
   wire \rResultBuffer_reg_n_0_[53] ;
@@ -26400,7 +30940,19 @@ module design_1_uart_top_0_0_uart_top
   wire \rResultBuffer_reg_n_0_[98] ;
   wire \rResultBuffer_reg_n_0_[99] ;
   wire \rResultBuffer_reg_n_0_[9] ;
+<<<<<<< HEAD
   wire rTxByte;
+=======
+  wire [7:0]rTxByte0_in;
+  wire \rTxByte[0]_i_2_n_0 ;
+  wire \rTxByte[1]_i_2_n_0 ;
+  wire \rTxByte[2]_i_2_n_0 ;
+  wire \rTxByte[3]_i_2_n_0 ;
+  wire \rTxByte[4]_i_2_n_0 ;
+  wire \rTxByte[5]_i_2_n_0 ;
+  wire \rTxByte[6]_i_2_n_0 ;
+  wire \rTxByte[7]_i_3_n_0 ;
+>>>>>>> temp-branch
   wire \rTxByte_reg_n_0_[0] ;
   wire \rTxByte_reg_n_0_[1] ;
   wire \rTxByte_reg_n_0_[2] ;
@@ -26409,6 +30961,7 @@ module design_1_uart_top_0_0_uart_top
   wire \rTxByte_reg_n_0_[5] ;
   wire \rTxByte_reg_n_0_[6] ;
   wire \rTxByte_reg_n_0_[7] ;
+<<<<<<< HEAD
   wire rTxStart_i_2_n_0;
   wire rTxStart_reg_n_0;
   wire wAddDone;
@@ -26433,13 +30986,175 @@ module design_1_uart_top_0_0_uart_top
         .I5(\rCnt_reg_n_0_[5] ),
         .O(\FSM_sequential_rFSM[1]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "s_IDLE:000,s_WAIT_RX:001,s_START_ADD:010,s_WAIT_ADD:011,s_TX:100,s_DONE:110,s_WAIT_TX:101" *) 
+=======
+  wire rTxStart_reg_n_0;
+  wire wAddDone;
+  wire [7:0]wRxByte;
+  wire [3:2]NLW_rLatencyCnt0_carry__6_CO_UNCONNECTED;
+  wire [3:3]NLW_rLatencyCnt0_carry__6_O_UNCONNECTED;
+
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT4 #(
+    .INIT(16'h1011)) 
+    \FSM_sequential_rFSM[0]_i_1 
+       (.I0(rFSM__0[0]),
+        .I1(\FSM_sequential_rFSM_reg[3]_rep__0_n_0 ),
+        .I2(\FSM_sequential_rFSM[0]_i_2_n_0 ),
+        .I3(rFSM__0[2]),
+        .O(rFSM__1[0]));
+  LUT6 #(
+    .INIT(64'h000000F0000010FF)) 
+    \FSM_sequential_rFSM[0]_i_2 
+       (.I0(\rCnt_reg_n_0_[0] ),
+        .I1(\rCnt_reg_n_0_[1] ),
+        .I2(\FSM_sequential_rFSM[1]_i_3_n_0 ),
+        .I3(\rCnt_reg_n_0_[6] ),
+        .I4(\rCnt_reg_n_0_[7] ),
+        .I5(rFSM__0[1]),
+        .O(\FSM_sequential_rFSM[0]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h1011)) 
+    \FSM_sequential_rFSM[0]_rep_i_1 
+       (.I0(rFSM__0[0]),
+        .I1(\FSM_sequential_rFSM_reg[3]_rep__1_n_0 ),
+        .I2(\FSM_sequential_rFSM[0]_i_2_n_0 ),
+        .I3(rFSM__0[2]),
+        .O(\FSM_sequential_rFSM[0]_rep_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h1011)) 
+    \FSM_sequential_rFSM[0]_rep_i_1__0 
+       (.I0(rFSM__0[0]),
+        .I1(\FSM_sequential_rFSM_reg[3]_rep_n_0 ),
+        .I2(\FSM_sequential_rFSM[0]_i_2_n_0 ),
+        .I3(rFSM__0[2]),
+        .O(\FSM_sequential_rFSM[0]_rep_i_1__0_n_0 ));
+  LUT4 #(
+    .INIT(16'h1011)) 
+    \FSM_sequential_rFSM[0]_rep_i_1__1 
+       (.I0(rFSM__0[0]),
+        .I1(rFSM__0[3]),
+        .I2(\FSM_sequential_rFSM[0]_i_2_n_0 ),
+        .I3(rFSM__0[2]),
+        .O(\FSM_sequential_rFSM[0]_rep_i_1__1_n_0 ));
+  LUT4 #(
+    .INIT(16'h1011)) 
+    \FSM_sequential_rFSM[0]_rep_i_1__2 
+       (.I0(rFSM__0[0]),
+        .I1(rFSM__0[3]),
+        .I2(\FSM_sequential_rFSM[0]_i_2_n_0 ),
+        .I3(rFSM__0[2]),
+        .O(\FSM_sequential_rFSM[0]_rep_i_1__2_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000F23CC23C)) 
+    \FSM_sequential_rFSM[1]_i_1 
+       (.I0(\FSM_sequential_rFSM[1]_i_2_n_0 ),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(rFSM__0[1]),
+        .I3(rFSM__0[2]),
+        .I4(\FSM_sequential_rFSM[3]_i_4_n_0 ),
+        .I5(rFSM__0[3]),
+        .O(rFSM__1[1]));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT5 #(
+    .INIT(32'hEEECEEEE)) 
+    \FSM_sequential_rFSM[1]_i_2 
+       (.I0(\rCnt_reg_n_0_[6] ),
+        .I1(\rCnt_reg_n_0_[7] ),
+        .I2(\rCnt_reg_n_0_[1] ),
+        .I3(\rCnt_reg_n_0_[0] ),
+        .I4(\FSM_sequential_rFSM[1]_i_3_n_0 ),
+        .O(\FSM_sequential_rFSM[1]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \FSM_sequential_rFSM[1]_i_3 
+       (.I0(\rCnt_reg_n_0_[4] ),
+        .I1(\rCnt_reg_n_0_[5] ),
+        .I2(\rCnt_reg_n_0_[3] ),
+        .I3(\rCnt_reg_n_0_[2] ),
+        .O(\FSM_sequential_rFSM[1]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT5 #(
+    .INIT(32'h0000EFC0)) 
+    \FSM_sequential_rFSM[2]_i_1 
+       (.I0(\FSM_sequential_rFSM[3]_i_4_n_0 ),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(rFSM__0[1]),
+        .I3(rFSM__0[2]),
+        .I4(rFSM__0[3]),
+        .O(rFSM__1[2]));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT5 #(
+    .INIT(32'h00000400)) 
+    \FSM_sequential_rFSM[3]_i_2 
+       (.I0(\FSM_sequential_rFSM[3]_i_4_n_0 ),
+        .I1(rFSM__0[1]),
+        .I2(rFSM__0[3]),
+        .I3(rFSM__0[2]),
+        .I4(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .O(rFSM__1[3]));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    \FSM_sequential_rFSM[3]_i_4 
+       (.I0(\rCnt_reg_n_0_[2] ),
+        .I1(\rCnt_reg_n_0_[3] ),
+        .I2(\rCnt_reg_n_0_[5] ),
+        .I3(\rCnt_reg_n_0_[4] ),
+        .I4(\rCnt_reg_n_0_[6] ),
+        .I5(\rCnt_reg_n_0_[7] ),
+        .O(\FSM_sequential_rFSM[3]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \FSM_sequential_rFSM[3]_i_6 
+       (.I0(rFSM__0[3]),
+        .I1(rFSM__0[2]),
+        .O(\FSM_sequential_rFSM[3]_i_6_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000400)) 
+    \FSM_sequential_rFSM[3]_rep_i_1 
+       (.I0(\FSM_sequential_rFSM[3]_i_4_n_0 ),
+        .I1(rFSM__0[1]),
+        .I2(rFSM__0[3]),
+        .I3(rFSM__0[2]),
+        .I4(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .O(\FSM_sequential_rFSM[3]_rep_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000400)) 
+    \FSM_sequential_rFSM[3]_rep_i_1__0 
+       (.I0(\FSM_sequential_rFSM[3]_i_4_n_0 ),
+        .I1(rFSM__0[1]),
+        .I2(rFSM__0[3]),
+        .I3(rFSM__0[2]),
+        .I4(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .O(\FSM_sequential_rFSM[3]_rep_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000400)) 
+    \FSM_sequential_rFSM[3]_rep_i_1__1 
+       (.I0(\FSM_sequential_rFSM[3]_i_4_n_0 ),
+        .I1(rFSM__0[1]),
+        .I2(rFSM__0[3]),
+        .I3(rFSM__0[2]),
+        .I4(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .O(\FSM_sequential_rFSM[3]_rep_i_1__1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000400)) 
+    \FSM_sequential_rFSM[3]_rep_i_1__2 
+       (.I0(\FSM_sequential_rFSM[3]_i_4_n_0 ),
+        .I1(rFSM__0[1]),
+        .I2(rFSM__0[3]),
+        .I3(rFSM__0[2]),
+        .I4(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .O(\FSM_sequential_rFSM[3]_rep_i_1__2_n_0 ));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+>>>>>>> temp-branch
   (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[0]" *) 
   FDRE \FSM_sequential_rFSM_reg[0] 
        (.C(iClk),
-        .CE(1'b1),
-        .D(UART_TX_INST_n_2),
+        .CE(UART_TX_INST_n_2),
+        .D(rFSM__1[0]),
         .Q(rFSM__0[0]),
         .R(iRst));
+<<<<<<< HEAD
   (* FSM_ENCODED_STATES = "s_IDLE:000,s_WAIT_RX:001,s_START_ADD:010,s_WAIT_ADD:011,s_TX:100,s_DONE:110,s_WAIT_TX:101" *) 
   (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[0]" *) 
   FDRE \FSM_sequential_rFSM_reg[0]_rep 
@@ -26473,20 +31188,60 @@ module design_1_uart_top_0_0_uart_top
         .Q(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
         .R(iRst));
   (* FSM_ENCODED_STATES = "s_IDLE:000,s_WAIT_RX:001,s_START_ADD:010,s_WAIT_ADD:011,s_TX:100,s_DONE:110,s_WAIT_TX:101" *) 
+=======
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[0]" *) 
+  FDRE \FSM_sequential_rFSM_reg[0]_rep 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(\FSM_sequential_rFSM[0]_rep_i_1_n_0 ),
+        .Q(\FSM_sequential_rFSM_reg[0]_rep_n_0 ),
+        .R(iRst));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[0]" *) 
+  FDRE \FSM_sequential_rFSM_reg[0]_rep__0 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(\FSM_sequential_rFSM[0]_rep_i_1__0_n_0 ),
+        .Q(\FSM_sequential_rFSM_reg[0]_rep__0_n_0 ),
+        .R(iRst));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[0]" *) 
+  FDRE \FSM_sequential_rFSM_reg[0]_rep__1 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(\FSM_sequential_rFSM[0]_rep_i_1__1_n_0 ),
+        .Q(\FSM_sequential_rFSM_reg[0]_rep__1_n_0 ),
+        .R(iRst));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[0]" *) 
+  FDRE \FSM_sequential_rFSM_reg[0]_rep__2 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(\FSM_sequential_rFSM[0]_rep_i_1__2_n_0 ),
+        .Q(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .R(iRst));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+>>>>>>> temp-branch
   FDRE \FSM_sequential_rFSM_reg[1] 
        (.C(iClk),
-        .CE(1'b1),
-        .D(UART_TX_INST_n_1),
+        .CE(UART_TX_INST_n_2),
+        .D(rFSM__1[1]),
         .Q(rFSM__0[1]),
         .R(iRst));
+<<<<<<< HEAD
   (* FSM_ENCODED_STATES = "s_IDLE:000,s_WAIT_RX:001,s_START_ADD:010,s_WAIT_ADD:011,s_TX:100,s_DONE:110,s_WAIT_TX:101" *) 
   (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[2]" *) 
+=======
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+>>>>>>> temp-branch
   FDRE \FSM_sequential_rFSM_reg[2] 
        (.C(iClk),
-        .CE(1'b1),
-        .D(UART_TX_INST_n_0),
+        .CE(UART_TX_INST_n_2),
+        .D(rFSM__1[2]),
         .Q(rFSM__0[2]),
         .R(iRst));
+<<<<<<< HEAD
   (* FSM_ENCODED_STATES = "s_IDLE:000,s_WAIT_RX:001,s_START_ADD:010,s_WAIT_ADD:011,s_TX:100,s_DONE:110,s_WAIT_TX:101" *) 
   (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[2]" *) 
   FDRE \FSM_sequential_rFSM_reg[2]_rep 
@@ -26514,10 +31269,56 @@ module design_1_uart_top_0_0_uart_top
   design_1_uart_top_0_0_mp_adder MP_ADDER_INST
        (.D({MP_ADDER_INST_n_2,MP_ADDER_INST_n_3,MP_ADDER_INST_n_4,MP_ADDER_INST_n_5,MP_ADDER_INST_n_6,MP_ADDER_INST_n_7,MP_ADDER_INST_n_8,MP_ADDER_INST_n_9,MP_ADDER_INST_n_10,MP_ADDER_INST_n_11,MP_ADDER_INST_n_12,MP_ADDER_INST_n_13,MP_ADDER_INST_n_14,MP_ADDER_INST_n_15,MP_ADDER_INST_n_16,MP_ADDER_INST_n_17,MP_ADDER_INST_n_18,MP_ADDER_INST_n_19,MP_ADDER_INST_n_20,MP_ADDER_INST_n_21,MP_ADDER_INST_n_22,MP_ADDER_INST_n_23,MP_ADDER_INST_n_24,MP_ADDER_INST_n_25,MP_ADDER_INST_n_26,MP_ADDER_INST_n_27,MP_ADDER_INST_n_28,MP_ADDER_INST_n_29,MP_ADDER_INST_n_30,MP_ADDER_INST_n_31,MP_ADDER_INST_n_32,MP_ADDER_INST_n_33,MP_ADDER_INST_n_34,MP_ADDER_INST_n_35,MP_ADDER_INST_n_36,MP_ADDER_INST_n_37,MP_ADDER_INST_n_38,MP_ADDER_INST_n_39,MP_ADDER_INST_n_40,MP_ADDER_INST_n_41,MP_ADDER_INST_n_42,MP_ADDER_INST_n_43,MP_ADDER_INST_n_44,MP_ADDER_INST_n_45,MP_ADDER_INST_n_46,MP_ADDER_INST_n_47,MP_ADDER_INST_n_48,MP_ADDER_INST_n_49,MP_ADDER_INST_n_50,MP_ADDER_INST_n_51,MP_ADDER_INST_n_52,MP_ADDER_INST_n_53,MP_ADDER_INST_n_54,MP_ADDER_INST_n_55,MP_ADDER_INST_n_56,MP_ADDER_INST_n_57,MP_ADDER_INST_n_58,MP_ADDER_INST_n_59,MP_ADDER_INST_n_60,MP_ADDER_INST_n_61,MP_ADDER_INST_n_62,MP_ADDER_INST_n_63,MP_ADDER_INST_n_64,MP_ADDER_INST_n_65,MP_ADDER_INST_n_66,MP_ADDER_INST_n_67,MP_ADDER_INST_n_68,MP_ADDER_INST_n_69,MP_ADDER_INST_n_70,MP_ADDER_INST_n_71,MP_ADDER_INST_n_72,MP_ADDER_INST_n_73,MP_ADDER_INST_n_74,MP_ADDER_INST_n_75,MP_ADDER_INST_n_76,MP_ADDER_INST_n_77,MP_ADDER_INST_n_78,MP_ADDER_INST_n_79,MP_ADDER_INST_n_80,MP_ADDER_INST_n_81,MP_ADDER_INST_n_82,MP_ADDER_INST_n_83,MP_ADDER_INST_n_84,MP_ADDER_INST_n_85,MP_ADDER_INST_n_86,MP_ADDER_INST_n_87,MP_ADDER_INST_n_88,MP_ADDER_INST_n_89,MP_ADDER_INST_n_90,MP_ADDER_INST_n_91,MP_ADDER_INST_n_92,MP_ADDER_INST_n_93,MP_ADDER_INST_n_94,MP_ADDER_INST_n_95,MP_ADDER_INST_n_96,MP_ADDER_INST_n_97,MP_ADDER_INST_n_98,MP_ADDER_INST_n_99,MP_ADDER_INST_n_100,MP_ADDER_INST_n_101,MP_ADDER_INST_n_102,MP_ADDER_INST_n_103,MP_ADDER_INST_n_104,MP_ADDER_INST_n_105,MP_ADDER_INST_n_106,MP_ADDER_INST_n_107,MP_ADDER_INST_n_108,MP_ADDER_INST_n_109,MP_ADDER_INST_n_110,MP_ADDER_INST_n_111,MP_ADDER_INST_n_112,MP_ADDER_INST_n_113,MP_ADDER_INST_n_114,MP_ADDER_INST_n_115,MP_ADDER_INST_n_116,MP_ADDER_INST_n_117,MP_ADDER_INST_n_118,MP_ADDER_INST_n_119,MP_ADDER_INST_n_120,MP_ADDER_INST_n_121,MP_ADDER_INST_n_122,MP_ADDER_INST_n_123,MP_ADDER_INST_n_124,MP_ADDER_INST_n_125,MP_ADDER_INST_n_126,MP_ADDER_INST_n_127,MP_ADDER_INST_n_128,MP_ADDER_INST_n_129,MP_ADDER_INST_n_130,MP_ADDER_INST_n_131,MP_ADDER_INST_n_132,MP_ADDER_INST_n_133,MP_ADDER_INST_n_134,MP_ADDER_INST_n_135,MP_ADDER_INST_n_136,MP_ADDER_INST_n_137,MP_ADDER_INST_n_138,MP_ADDER_INST_n_139,MP_ADDER_INST_n_140,MP_ADDER_INST_n_141,MP_ADDER_INST_n_142,MP_ADDER_INST_n_143,MP_ADDER_INST_n_144,MP_ADDER_INST_n_145,MP_ADDER_INST_n_146,MP_ADDER_INST_n_147,MP_ADDER_INST_n_148,MP_ADDER_INST_n_149,MP_ADDER_INST_n_150,MP_ADDER_INST_n_151,MP_ADDER_INST_n_152,MP_ADDER_INST_n_153,MP_ADDER_INST_n_154,MP_ADDER_INST_n_155,MP_ADDER_INST_n_156,MP_ADDER_INST_n_157,MP_ADDER_INST_n_158,MP_ADDER_INST_n_159,MP_ADDER_INST_n_160,MP_ADDER_INST_n_161,MP_ADDER_INST_n_162,MP_ADDER_INST_n_163,MP_ADDER_INST_n_164,MP_ADDER_INST_n_165,MP_ADDER_INST_n_166,MP_ADDER_INST_n_167,MP_ADDER_INST_n_168,MP_ADDER_INST_n_169,MP_ADDER_INST_n_170,MP_ADDER_INST_n_171,MP_ADDER_INST_n_172,MP_ADDER_INST_n_173,MP_ADDER_INST_n_174,MP_ADDER_INST_n_175,MP_ADDER_INST_n_176,MP_ADDER_INST_n_177,MP_ADDER_INST_n_178,MP_ADDER_INST_n_179,MP_ADDER_INST_n_180,MP_ADDER_INST_n_181,MP_ADDER_INST_n_182,MP_ADDER_INST_n_183,MP_ADDER_INST_n_184,MP_ADDER_INST_n_185,MP_ADDER_INST_n_186,MP_ADDER_INST_n_187,MP_ADDER_INST_n_188,MP_ADDER_INST_n_189,MP_ADDER_INST_n_190,MP_ADDER_INST_n_191,MP_ADDER_INST_n_192,MP_ADDER_INST_n_193,MP_ADDER_INST_n_194,MP_ADDER_INST_n_195,MP_ADDER_INST_n_196,MP_ADDER_INST_n_197,MP_ADDER_INST_n_198,MP_ADDER_INST_n_199,MP_ADDER_INST_n_200,MP_ADDER_INST_n_201,MP_ADDER_INST_n_202,MP_ADDER_INST_n_203,MP_ADDER_INST_n_204,MP_ADDER_INST_n_205,MP_ADDER_INST_n_206,MP_ADDER_INST_n_207,MP_ADDER_INST_n_208,MP_ADDER_INST_n_209,MP_ADDER_INST_n_210,MP_ADDER_INST_n_211,MP_ADDER_INST_n_212,MP_ADDER_INST_n_213,MP_ADDER_INST_n_214,MP_ADDER_INST_n_215,MP_ADDER_INST_n_216,MP_ADDER_INST_n_217,MP_ADDER_INST_n_218,MP_ADDER_INST_n_219,MP_ADDER_INST_n_220,MP_ADDER_INST_n_221,MP_ADDER_INST_n_222,MP_ADDER_INST_n_223,MP_ADDER_INST_n_224,MP_ADDER_INST_n_225,MP_ADDER_INST_n_226,MP_ADDER_INST_n_227,MP_ADDER_INST_n_228,MP_ADDER_INST_n_229,MP_ADDER_INST_n_230,MP_ADDER_INST_n_231,MP_ADDER_INST_n_232,MP_ADDER_INST_n_233,MP_ADDER_INST_n_234,MP_ADDER_INST_n_235,MP_ADDER_INST_n_236,MP_ADDER_INST_n_237,MP_ADDER_INST_n_238,MP_ADDER_INST_n_239,MP_ADDER_INST_n_240,MP_ADDER_INST_n_241,MP_ADDER_INST_n_242,MP_ADDER_INST_n_243,MP_ADDER_INST_n_244,MP_ADDER_INST_n_245,MP_ADDER_INST_n_246,MP_ADDER_INST_n_247,MP_ADDER_INST_n_248,MP_ADDER_INST_n_249,MP_ADDER_INST_n_250,MP_ADDER_INST_n_251,MP_ADDER_INST_n_252,MP_ADDER_INST_n_253,MP_ADDER_INST_n_254,MP_ADDER_INST_n_255,MP_ADDER_INST_n_256,MP_ADDER_INST_n_257,MP_ADDER_INST_n_258,MP_ADDER_INST_n_259,MP_ADDER_INST_n_260,MP_ADDER_INST_n_261,MP_ADDER_INST_n_262,MP_ADDER_INST_n_263,MP_ADDER_INST_n_264,MP_ADDER_INST_n_265,MP_ADDER_INST_n_266,MP_ADDER_INST_n_267,MP_ADDER_INST_n_268,MP_ADDER_INST_n_269,MP_ADDER_INST_n_270,MP_ADDER_INST_n_271,MP_ADDER_INST_n_272,MP_ADDER_INST_n_273,MP_ADDER_INST_n_274,MP_ADDER_INST_n_275,MP_ADDER_INST_n_276,MP_ADDER_INST_n_277,MP_ADDER_INST_n_278,MP_ADDER_INST_n_279,MP_ADDER_INST_n_280,MP_ADDER_INST_n_281,MP_ADDER_INST_n_282,MP_ADDER_INST_n_283,MP_ADDER_INST_n_284,MP_ADDER_INST_n_285,MP_ADDER_INST_n_286,MP_ADDER_INST_n_287,MP_ADDER_INST_n_288,MP_ADDER_INST_n_289,MP_ADDER_INST_n_290,MP_ADDER_INST_n_291,MP_ADDER_INST_n_292,MP_ADDER_INST_n_293,MP_ADDER_INST_n_294,MP_ADDER_INST_n_295,MP_ADDER_INST_n_296,MP_ADDER_INST_n_297,MP_ADDER_INST_n_298,MP_ADDER_INST_n_299,MP_ADDER_INST_n_300,MP_ADDER_INST_n_301,MP_ADDER_INST_n_302,MP_ADDER_INST_n_303,MP_ADDER_INST_n_304,MP_ADDER_INST_n_305,MP_ADDER_INST_n_306,MP_ADDER_INST_n_307,MP_ADDER_INST_n_308,MP_ADDER_INST_n_309,MP_ADDER_INST_n_310,MP_ADDER_INST_n_311,MP_ADDER_INST_n_312,MP_ADDER_INST_n_313,MP_ADDER_INST_n_314,MP_ADDER_INST_n_315,MP_ADDER_INST_n_316,MP_ADDER_INST_n_317,MP_ADDER_INST_n_318,MP_ADDER_INST_n_319,MP_ADDER_INST_n_320,MP_ADDER_INST_n_321,MP_ADDER_INST_n_322,MP_ADDER_INST_n_323,MP_ADDER_INST_n_324,MP_ADDER_INST_n_325,MP_ADDER_INST_n_326,MP_ADDER_INST_n_327,MP_ADDER_INST_n_328,MP_ADDER_INST_n_329,MP_ADDER_INST_n_330,MP_ADDER_INST_n_331,MP_ADDER_INST_n_332,MP_ADDER_INST_n_333,MP_ADDER_INST_n_334,MP_ADDER_INST_n_335,MP_ADDER_INST_n_336,MP_ADDER_INST_n_337,MP_ADDER_INST_n_338,MP_ADDER_INST_n_339,MP_ADDER_INST_n_340,MP_ADDER_INST_n_341,MP_ADDER_INST_n_342,MP_ADDER_INST_n_343,MP_ADDER_INST_n_344,MP_ADDER_INST_n_345,MP_ADDER_INST_n_346,MP_ADDER_INST_n_347,MP_ADDER_INST_n_348,MP_ADDER_INST_n_349,MP_ADDER_INST_n_350,MP_ADDER_INST_n_351,MP_ADDER_INST_n_352,MP_ADDER_INST_n_353,MP_ADDER_INST_n_354,MP_ADDER_INST_n_355,MP_ADDER_INST_n_356,MP_ADDER_INST_n_357,MP_ADDER_INST_n_358,MP_ADDER_INST_n_359,MP_ADDER_INST_n_360,MP_ADDER_INST_n_361,MP_ADDER_INST_n_362,MP_ADDER_INST_n_363,MP_ADDER_INST_n_364,MP_ADDER_INST_n_365,MP_ADDER_INST_n_366,MP_ADDER_INST_n_367,MP_ADDER_INST_n_368,MP_ADDER_INST_n_369,MP_ADDER_INST_n_370,MP_ADDER_INST_n_371,MP_ADDER_INST_n_372,MP_ADDER_INST_n_373,MP_ADDER_INST_n_374,MP_ADDER_INST_n_375,MP_ADDER_INST_n_376,MP_ADDER_INST_n_377,MP_ADDER_INST_n_378,MP_ADDER_INST_n_379,MP_ADDER_INST_n_380,MP_ADDER_INST_n_381,MP_ADDER_INST_n_382,MP_ADDER_INST_n_383,MP_ADDER_INST_n_384,MP_ADDER_INST_n_385,MP_ADDER_INST_n_386,MP_ADDER_INST_n_387,MP_ADDER_INST_n_388,MP_ADDER_INST_n_389,MP_ADDER_INST_n_390,MP_ADDER_INST_n_391,MP_ADDER_INST_n_392,MP_ADDER_INST_n_393,MP_ADDER_INST_n_394,MP_ADDER_INST_n_395,MP_ADDER_INST_n_396,MP_ADDER_INST_n_397,MP_ADDER_INST_n_398,MP_ADDER_INST_n_399,MP_ADDER_INST_n_400,MP_ADDER_INST_n_401,MP_ADDER_INST_n_402,MP_ADDER_INST_n_403,MP_ADDER_INST_n_404,MP_ADDER_INST_n_405,MP_ADDER_INST_n_406,MP_ADDER_INST_n_407,MP_ADDER_INST_n_408,MP_ADDER_INST_n_409,MP_ADDER_INST_n_410,MP_ADDER_INST_n_411,MP_ADDER_INST_n_412,MP_ADDER_INST_n_413,MP_ADDER_INST_n_414,MP_ADDER_INST_n_415,MP_ADDER_INST_n_416,MP_ADDER_INST_n_417,MP_ADDER_INST_n_418,MP_ADDER_INST_n_419,MP_ADDER_INST_n_420,MP_ADDER_INST_n_421,MP_ADDER_INST_n_422,MP_ADDER_INST_n_423,MP_ADDER_INST_n_424,MP_ADDER_INST_n_425,MP_ADDER_INST_n_426,MP_ADDER_INST_n_427,MP_ADDER_INST_n_428,MP_ADDER_INST_n_429,MP_ADDER_INST_n_430,MP_ADDER_INST_n_431,MP_ADDER_INST_n_432,MP_ADDER_INST_n_433,MP_ADDER_INST_n_434,MP_ADDER_INST_n_435,MP_ADDER_INST_n_436,MP_ADDER_INST_n_437,MP_ADDER_INST_n_438,MP_ADDER_INST_n_439,MP_ADDER_INST_n_440,MP_ADDER_INST_n_441,MP_ADDER_INST_n_442,MP_ADDER_INST_n_443,MP_ADDER_INST_n_444,MP_ADDER_INST_n_445,MP_ADDER_INST_n_446,MP_ADDER_INST_n_447,MP_ADDER_INST_n_448,MP_ADDER_INST_n_449,MP_ADDER_INST_n_450,MP_ADDER_INST_n_451,MP_ADDER_INST_n_452,MP_ADDER_INST_n_453,MP_ADDER_INST_n_454,MP_ADDER_INST_n_455,MP_ADDER_INST_n_456,MP_ADDER_INST_n_457,MP_ADDER_INST_n_458,MP_ADDER_INST_n_459,MP_ADDER_INST_n_460,MP_ADDER_INST_n_461,MP_ADDER_INST_n_462,MP_ADDER_INST_n_463,MP_ADDER_INST_n_464,MP_ADDER_INST_n_465,MP_ADDER_INST_n_466,MP_ADDER_INST_n_467,MP_ADDER_INST_n_468,MP_ADDER_INST_n_469,MP_ADDER_INST_n_470,MP_ADDER_INST_n_471,MP_ADDER_INST_n_472,MP_ADDER_INST_n_473,MP_ADDER_INST_n_474,MP_ADDER_INST_n_475,MP_ADDER_INST_n_476,MP_ADDER_INST_n_477,MP_ADDER_INST_n_478,MP_ADDER_INST_n_479,MP_ADDER_INST_n_480,MP_ADDER_INST_n_481,MP_ADDER_INST_n_482,MP_ADDER_INST_n_483,MP_ADDER_INST_n_484,MP_ADDER_INST_n_485,MP_ADDER_INST_n_486,MP_ADDER_INST_n_487,MP_ADDER_INST_n_488,MP_ADDER_INST_n_489,MP_ADDER_INST_n_490,MP_ADDER_INST_n_491,MP_ADDER_INST_n_492,MP_ADDER_INST_n_493,MP_ADDER_INST_n_494,MP_ADDER_INST_n_495,MP_ADDER_INST_n_496,MP_ADDER_INST_n_497,MP_ADDER_INST_n_498,MP_ADDER_INST_n_499,MP_ADDER_INST_n_500,MP_ADDER_INST_n_501,MP_ADDER_INST_n_502,MP_ADDER_INST_n_503,MP_ADDER_INST_n_504,MP_ADDER_INST_n_505,MP_ADDER_INST_n_506,MP_ADDER_INST_n_507,MP_ADDER_INST_n_508,MP_ADDER_INST_n_509,MP_ADDER_INST_n_510,MP_ADDER_INST_n_511,MP_ADDER_INST_n_512,MP_ADDER_INST_n_513,MP_ADDER_INST_n_514}),
         .E(rCnt),
+=======
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[3]" *) 
+  FDRE \FSM_sequential_rFSM_reg[3] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(rFSM__1[3]),
+        .Q(rFSM__0[3]),
+        .R(iRst));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[3]" *) 
+  FDRE \FSM_sequential_rFSM_reg[3]_rep 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(\FSM_sequential_rFSM[3]_rep_i_1_n_0 ),
+        .Q(\FSM_sequential_rFSM_reg[3]_rep_n_0 ),
+        .R(iRst));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[3]" *) 
+  FDRE \FSM_sequential_rFSM_reg[3]_rep__0 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(\FSM_sequential_rFSM[3]_rep_i_1__0_n_0 ),
+        .Q(\FSM_sequential_rFSM_reg[3]_rep__0_n_0 ),
+        .R(iRst));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[3]" *) 
+  FDRE \FSM_sequential_rFSM_reg[3]_rep__1 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(\FSM_sequential_rFSM[3]_rep_i_1__1_n_0 ),
+        .Q(\FSM_sequential_rFSM_reg[3]_rep__1_n_0 ),
+        .R(iRst));
+  (* FSM_ENCODED_STATES = "s_WAIT_ADD:0011,s_TX:0100,s_START_ADD:0010,s_WAIT_RX:0001,s_IDLE:0000,iSTATE:0110,iSTATE0:0111,s_DONE:1000,s_WAIT_TX:0101" *) 
+  (* ORIG_CELL_NAME = "FSM_sequential_rFSM_reg[3]" *) 
+  FDRE \FSM_sequential_rFSM_reg[3]_rep__2 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_2),
+        .D(\FSM_sequential_rFSM[3]_rep_i_1__2_n_0 ),
+        .Q(\FSM_sequential_rFSM_reg[3]_rep__2_n_0 ),
+        .R(iRst));
+  design_1_uart_top_0_0_mp_adder MP_ADDER_INST
+       (.D(rResultBuffer),
+        .E(MP_ADDER_INST_n_514),
+>>>>>>> temp-branch
         .\FSM_sequential_rFSM_current_reg[0]_0 (rAddStart_reg_n_0),
         .Q({opA,\rBuffer_reg_n_0_[511] ,\rBuffer_reg_n_0_[510] ,\rBuffer_reg_n_0_[509] ,\rBuffer_reg_n_0_[508] ,\rBuffer_reg_n_0_[507] ,\rBuffer_reg_n_0_[506] ,\rBuffer_reg_n_0_[505] ,\rBuffer_reg_n_0_[504] ,\rBuffer_reg_n_0_[503] ,\rBuffer_reg_n_0_[502] ,\rBuffer_reg_n_0_[501] ,\rBuffer_reg_n_0_[500] ,\rBuffer_reg_n_0_[499] ,\rBuffer_reg_n_0_[498] ,\rBuffer_reg_n_0_[497] ,\rBuffer_reg_n_0_[496] ,\rBuffer_reg_n_0_[495] ,\rBuffer_reg_n_0_[494] ,\rBuffer_reg_n_0_[493] ,\rBuffer_reg_n_0_[492] ,\rBuffer_reg_n_0_[491] ,\rBuffer_reg_n_0_[490] ,\rBuffer_reg_n_0_[489] ,\rBuffer_reg_n_0_[488] ,\rBuffer_reg_n_0_[487] ,\rBuffer_reg_n_0_[486] ,\rBuffer_reg_n_0_[485] ,\rBuffer_reg_n_0_[484] ,\rBuffer_reg_n_0_[483] ,\rBuffer_reg_n_0_[482] ,\rBuffer_reg_n_0_[481] ,\rBuffer_reg_n_0_[480] ,\rBuffer_reg_n_0_[479] ,\rBuffer_reg_n_0_[478] ,\rBuffer_reg_n_0_[477] ,\rBuffer_reg_n_0_[476] ,\rBuffer_reg_n_0_[475] ,\rBuffer_reg_n_0_[474] ,\rBuffer_reg_n_0_[473] ,\rBuffer_reg_n_0_[472] ,\rBuffer_reg_n_0_[471] ,\rBuffer_reg_n_0_[470] ,\rBuffer_reg_n_0_[469] ,\rBuffer_reg_n_0_[468] ,\rBuffer_reg_n_0_[467] ,\rBuffer_reg_n_0_[466] ,\rBuffer_reg_n_0_[465] ,\rBuffer_reg_n_0_[464] ,\rBuffer_reg_n_0_[463] ,\rBuffer_reg_n_0_[462] ,\rBuffer_reg_n_0_[461] ,\rBuffer_reg_n_0_[460] ,\rBuffer_reg_n_0_[459] ,\rBuffer_reg_n_0_[458] ,\rBuffer_reg_n_0_[457] ,\rBuffer_reg_n_0_[456] ,\rBuffer_reg_n_0_[455] ,\rBuffer_reg_n_0_[454] ,\rBuffer_reg_n_0_[453] ,\rBuffer_reg_n_0_[452] ,\rBuffer_reg_n_0_[451] ,\rBuffer_reg_n_0_[450] ,\rBuffer_reg_n_0_[449] ,\rBuffer_reg_n_0_[448] ,\rBuffer_reg_n_0_[447] ,\rBuffer_reg_n_0_[446] ,\rBuffer_reg_n_0_[445] ,\rBuffer_reg_n_0_[444] ,\rBuffer_reg_n_0_[443] ,\rBuffer_reg_n_0_[442] ,\rBuffer_reg_n_0_[441] ,\rBuffer_reg_n_0_[440] ,\rBuffer_reg_n_0_[439] ,\rBuffer_reg_n_0_[438] ,\rBuffer_reg_n_0_[437] ,\rBuffer_reg_n_0_[436] ,\rBuffer_reg_n_0_[435] ,\rBuffer_reg_n_0_[434] ,\rBuffer_reg_n_0_[433] ,\rBuffer_reg_n_0_[432] ,\rBuffer_reg_n_0_[431] ,\rBuffer_reg_n_0_[430] ,\rBuffer_reg_n_0_[429] ,\rBuffer_reg_n_0_[428] ,\rBuffer_reg_n_0_[427] ,\rBuffer_reg_n_0_[426] ,\rBuffer_reg_n_0_[425] ,\rBuffer_reg_n_0_[424] ,\rBuffer_reg_n_0_[423] ,\rBuffer_reg_n_0_[422] ,\rBuffer_reg_n_0_[421] ,\rBuffer_reg_n_0_[420] ,\rBuffer_reg_n_0_[419] ,\rBuffer_reg_n_0_[418] ,\rBuffer_reg_n_0_[417] ,\rBuffer_reg_n_0_[416] ,\rBuffer_reg_n_0_[415] ,\rBuffer_reg_n_0_[414] ,\rBuffer_reg_n_0_[413] ,\rBuffer_reg_n_0_[412] ,\rBuffer_reg_n_0_[411] ,\rBuffer_reg_n_0_[410] ,\rBuffer_reg_n_0_[409] ,\rBuffer_reg_n_0_[408] ,\rBuffer_reg_n_0_[407] ,\rBuffer_reg_n_0_[406] ,\rBuffer_reg_n_0_[405] ,\rBuffer_reg_n_0_[404] ,\rBuffer_reg_n_0_[403] ,\rBuffer_reg_n_0_[402] ,\rBuffer_reg_n_0_[401] ,\rBuffer_reg_n_0_[400] ,\rBuffer_reg_n_0_[399] ,\rBuffer_reg_n_0_[398] ,\rBuffer_reg_n_0_[397] ,\rBuffer_reg_n_0_[396] ,\rBuffer_reg_n_0_[395] ,\rBuffer_reg_n_0_[394] ,\rBuffer_reg_n_0_[393] ,\rBuffer_reg_n_0_[392] ,\rBuffer_reg_n_0_[391] ,\rBuffer_reg_n_0_[390] ,\rBuffer_reg_n_0_[389] ,\rBuffer_reg_n_0_[388] ,\rBuffer_reg_n_0_[387] ,\rBuffer_reg_n_0_[386] ,\rBuffer_reg_n_0_[385] ,\rBuffer_reg_n_0_[384] ,\rBuffer_reg_n_0_[383] ,\rBuffer_reg_n_0_[382] ,\rBuffer_reg_n_0_[381] ,\rBuffer_reg_n_0_[380] ,\rBuffer_reg_n_0_[379] ,\rBuffer_reg_n_0_[378] ,\rBuffer_reg_n_0_[377] ,\rBuffer_reg_n_0_[376] ,\rBuffer_reg_n_0_[375] ,\rBuffer_reg_n_0_[374] ,\rBuffer_reg_n_0_[373] ,\rBuffer_reg_n_0_[372] ,\rBuffer_reg_n_0_[371] ,\rBuffer_reg_n_0_[370] ,\rBuffer_reg_n_0_[369] ,\rBuffer_reg_n_0_[368] ,\rBuffer_reg_n_0_[367] ,\rBuffer_reg_n_0_[366] ,\rBuffer_reg_n_0_[365] ,\rBuffer_reg_n_0_[364] ,\rBuffer_reg_n_0_[363] ,\rBuffer_reg_n_0_[362] ,\rBuffer_reg_n_0_[361] ,\rBuffer_reg_n_0_[360] ,\rBuffer_reg_n_0_[359] ,\rBuffer_reg_n_0_[358] ,\rBuffer_reg_n_0_[357] ,\rBuffer_reg_n_0_[356] ,\rBuffer_reg_n_0_[355] ,\rBuffer_reg_n_0_[354] ,\rBuffer_reg_n_0_[353] ,\rBuffer_reg_n_0_[352] ,\rBuffer_reg_n_0_[351] ,\rBuffer_reg_n_0_[350] ,\rBuffer_reg_n_0_[349] ,\rBuffer_reg_n_0_[348] ,\rBuffer_reg_n_0_[347] ,\rBuffer_reg_n_0_[346] ,\rBuffer_reg_n_0_[345] ,\rBuffer_reg_n_0_[344] ,\rBuffer_reg_n_0_[343] ,\rBuffer_reg_n_0_[342] ,\rBuffer_reg_n_0_[341] ,\rBuffer_reg_n_0_[340] ,\rBuffer_reg_n_0_[339] ,\rBuffer_reg_n_0_[338] ,\rBuffer_reg_n_0_[337] ,\rBuffer_reg_n_0_[336] ,\rBuffer_reg_n_0_[335] ,\rBuffer_reg_n_0_[334] ,\rBuffer_reg_n_0_[333] ,\rBuffer_reg_n_0_[332] ,\rBuffer_reg_n_0_[331] ,\rBuffer_reg_n_0_[330] ,\rBuffer_reg_n_0_[329] ,\rBuffer_reg_n_0_[328] ,\rBuffer_reg_n_0_[327] ,\rBuffer_reg_n_0_[326] ,\rBuffer_reg_n_0_[325] ,\rBuffer_reg_n_0_[324] ,\rBuffer_reg_n_0_[323] ,\rBuffer_reg_n_0_[322] ,\rBuffer_reg_n_0_[321] ,\rBuffer_reg_n_0_[320] ,\rBuffer_reg_n_0_[319] ,\rBuffer_reg_n_0_[318] ,\rBuffer_reg_n_0_[317] ,\rBuffer_reg_n_0_[316] ,\rBuffer_reg_n_0_[315] ,\rBuffer_reg_n_0_[314] ,\rBuffer_reg_n_0_[313] ,\rBuffer_reg_n_0_[312] ,\rBuffer_reg_n_0_[311] ,\rBuffer_reg_n_0_[310] ,\rBuffer_reg_n_0_[309] ,\rBuffer_reg_n_0_[308] ,\rBuffer_reg_n_0_[307] ,\rBuffer_reg_n_0_[306] ,\rBuffer_reg_n_0_[305] ,\rBuffer_reg_n_0_[304] ,\rBuffer_reg_n_0_[303] ,\rBuffer_reg_n_0_[302] ,\rBuffer_reg_n_0_[301] ,\rBuffer_reg_n_0_[300] ,\rBuffer_reg_n_0_[299] ,\rBuffer_reg_n_0_[298] ,\rBuffer_reg_n_0_[297] ,\rBuffer_reg_n_0_[296] ,\rBuffer_reg_n_0_[295] ,\rBuffer_reg_n_0_[294] ,\rBuffer_reg_n_0_[293] ,\rBuffer_reg_n_0_[292] ,\rBuffer_reg_n_0_[291] ,\rBuffer_reg_n_0_[290] ,\rBuffer_reg_n_0_[289] ,\rBuffer_reg_n_0_[288] ,\rBuffer_reg_n_0_[287] ,\rBuffer_reg_n_0_[286] ,\rBuffer_reg_n_0_[285] ,\rBuffer_reg_n_0_[284] ,\rBuffer_reg_n_0_[283] ,\rBuffer_reg_n_0_[282] ,\rBuffer_reg_n_0_[281] ,\rBuffer_reg_n_0_[280] ,\rBuffer_reg_n_0_[279] ,\rBuffer_reg_n_0_[278] ,\rBuffer_reg_n_0_[277] ,\rBuffer_reg_n_0_[276] ,\rBuffer_reg_n_0_[275] ,\rBuffer_reg_n_0_[274] ,\rBuffer_reg_n_0_[273] ,\rBuffer_reg_n_0_[272] ,\rBuffer_reg_n_0_[271] ,\rBuffer_reg_n_0_[270] ,\rBuffer_reg_n_0_[269] ,\rBuffer_reg_n_0_[268] ,\rBuffer_reg_n_0_[267] ,\rBuffer_reg_n_0_[266] ,\rBuffer_reg_n_0_[265] ,\rBuffer_reg_n_0_[264] ,\rBuffer_reg_n_0_[263] ,\rBuffer_reg_n_0_[262] ,\rBuffer_reg_n_0_[261] ,\rBuffer_reg_n_0_[260] ,\rBuffer_reg_n_0_[259] ,\rBuffer_reg_n_0_[258] ,\rBuffer_reg_n_0_[257] ,\rBuffer_reg_n_0_[256] ,\rBuffer_reg_n_0_[255] ,\rBuffer_reg_n_0_[254] ,\rBuffer_reg_n_0_[253] ,\rBuffer_reg_n_0_[252] ,\rBuffer_reg_n_0_[251] ,\rBuffer_reg_n_0_[250] ,\rBuffer_reg_n_0_[249] ,\rBuffer_reg_n_0_[248] ,\rBuffer_reg_n_0_[247] ,\rBuffer_reg_n_0_[246] ,\rBuffer_reg_n_0_[245] ,\rBuffer_reg_n_0_[244] ,\rBuffer_reg_n_0_[243] ,\rBuffer_reg_n_0_[242] ,\rBuffer_reg_n_0_[241] ,\rBuffer_reg_n_0_[240] ,\rBuffer_reg_n_0_[239] ,\rBuffer_reg_n_0_[238] ,\rBuffer_reg_n_0_[237] ,\rBuffer_reg_n_0_[236] ,\rBuffer_reg_n_0_[235] ,\rBuffer_reg_n_0_[234] ,\rBuffer_reg_n_0_[233] ,\rBuffer_reg_n_0_[232] ,\rBuffer_reg_n_0_[231] ,\rBuffer_reg_n_0_[230] ,\rBuffer_reg_n_0_[229] ,\rBuffer_reg_n_0_[228] ,\rBuffer_reg_n_0_[227] ,\rBuffer_reg_n_0_[226] ,\rBuffer_reg_n_0_[225] ,\rBuffer_reg_n_0_[224] ,\rBuffer_reg_n_0_[223] ,\rBuffer_reg_n_0_[222] ,\rBuffer_reg_n_0_[221] ,\rBuffer_reg_n_0_[220] ,\rBuffer_reg_n_0_[219] ,\rBuffer_reg_n_0_[218] ,\rBuffer_reg_n_0_[217] ,\rBuffer_reg_n_0_[216] ,\rBuffer_reg_n_0_[215] ,\rBuffer_reg_n_0_[214] ,\rBuffer_reg_n_0_[213] ,\rBuffer_reg_n_0_[212] ,\rBuffer_reg_n_0_[211] ,\rBuffer_reg_n_0_[210] ,\rBuffer_reg_n_0_[209] ,\rBuffer_reg_n_0_[208] ,\rBuffer_reg_n_0_[207] ,\rBuffer_reg_n_0_[206] ,\rBuffer_reg_n_0_[205] ,\rBuffer_reg_n_0_[204] ,\rBuffer_reg_n_0_[203] ,\rBuffer_reg_n_0_[202] ,\rBuffer_reg_n_0_[201] ,\rBuffer_reg_n_0_[200] ,\rBuffer_reg_n_0_[199] ,\rBuffer_reg_n_0_[198] ,\rBuffer_reg_n_0_[197] ,\rBuffer_reg_n_0_[196] ,\rBuffer_reg_n_0_[195] ,\rBuffer_reg_n_0_[194] ,\rBuffer_reg_n_0_[193] ,\rBuffer_reg_n_0_[192] ,\rBuffer_reg_n_0_[191] ,\rBuffer_reg_n_0_[190] ,\rBuffer_reg_n_0_[189] ,\rBuffer_reg_n_0_[188] ,\rBuffer_reg_n_0_[187] ,\rBuffer_reg_n_0_[186] ,\rBuffer_reg_n_0_[185] ,\rBuffer_reg_n_0_[184] ,\rBuffer_reg_n_0_[183] ,\rBuffer_reg_n_0_[182] ,\rBuffer_reg_n_0_[181] ,\rBuffer_reg_n_0_[180] ,\rBuffer_reg_n_0_[179] ,\rBuffer_reg_n_0_[178] ,\rBuffer_reg_n_0_[177] ,\rBuffer_reg_n_0_[176] ,\rBuffer_reg_n_0_[175] ,\rBuffer_reg_n_0_[174] ,\rBuffer_reg_n_0_[173] ,\rBuffer_reg_n_0_[172] ,\rBuffer_reg_n_0_[171] ,\rBuffer_reg_n_0_[170] ,\rBuffer_reg_n_0_[169] ,\rBuffer_reg_n_0_[168] ,\rBuffer_reg_n_0_[167] ,\rBuffer_reg_n_0_[166] ,\rBuffer_reg_n_0_[165] ,\rBuffer_reg_n_0_[164] ,\rBuffer_reg_n_0_[163] ,\rBuffer_reg_n_0_[162] ,\rBuffer_reg_n_0_[161] ,\rBuffer_reg_n_0_[160] ,\rBuffer_reg_n_0_[159] ,\rBuffer_reg_n_0_[158] ,\rBuffer_reg_n_0_[157] ,\rBuffer_reg_n_0_[156] ,\rBuffer_reg_n_0_[155] ,\rBuffer_reg_n_0_[154] ,\rBuffer_reg_n_0_[153] ,\rBuffer_reg_n_0_[152] ,\rBuffer_reg_n_0_[151] ,\rBuffer_reg_n_0_[150] ,\rBuffer_reg_n_0_[149] ,\rBuffer_reg_n_0_[148] ,\rBuffer_reg_n_0_[147] ,\rBuffer_reg_n_0_[146] ,\rBuffer_reg_n_0_[145] ,\rBuffer_reg_n_0_[144] ,\rBuffer_reg_n_0_[143] ,\rBuffer_reg_n_0_[142] ,\rBuffer_reg_n_0_[141] ,\rBuffer_reg_n_0_[140] ,\rBuffer_reg_n_0_[139] ,\rBuffer_reg_n_0_[138] ,\rBuffer_reg_n_0_[137] ,\rBuffer_reg_n_0_[136] ,\rBuffer_reg_n_0_[135] ,\rBuffer_reg_n_0_[134] ,\rBuffer_reg_n_0_[133] ,\rBuffer_reg_n_0_[132] ,\rBuffer_reg_n_0_[131] ,\rBuffer_reg_n_0_[130] ,\rBuffer_reg_n_0_[129] ,\rBuffer_reg_n_0_[128] ,\rBuffer_reg_n_0_[127] ,\rBuffer_reg_n_0_[126] ,\rBuffer_reg_n_0_[125] ,\rBuffer_reg_n_0_[124] ,\rBuffer_reg_n_0_[123] ,\rBuffer_reg_n_0_[122] ,\rBuffer_reg_n_0_[121] ,\rBuffer_reg_n_0_[120] ,\rBuffer_reg_n_0_[119] ,\rBuffer_reg_n_0_[118] ,\rBuffer_reg_n_0_[117] ,\rBuffer_reg_n_0_[116] ,\rBuffer_reg_n_0_[115] ,\rBuffer_reg_n_0_[114] ,\rBuffer_reg_n_0_[113] ,\rBuffer_reg_n_0_[112] ,\rBuffer_reg_n_0_[111] ,\rBuffer_reg_n_0_[110] ,\rBuffer_reg_n_0_[109] ,\rBuffer_reg_n_0_[108] ,\rBuffer_reg_n_0_[107] ,\rBuffer_reg_n_0_[106] ,\rBuffer_reg_n_0_[105] ,\rBuffer_reg_n_0_[104] ,\rBuffer_reg_n_0_[103] ,\rBuffer_reg_n_0_[102] ,\rBuffer_reg_n_0_[101] ,\rBuffer_reg_n_0_[100] ,\rBuffer_reg_n_0_[99] ,\rBuffer_reg_n_0_[98] ,\rBuffer_reg_n_0_[97] ,\rBuffer_reg_n_0_[96] ,\rBuffer_reg_n_0_[95] ,\rBuffer_reg_n_0_[94] ,\rBuffer_reg_n_0_[93] ,\rBuffer_reg_n_0_[92] ,\rBuffer_reg_n_0_[91] ,\rBuffer_reg_n_0_[90] ,\rBuffer_reg_n_0_[89] ,\rBuffer_reg_n_0_[88] ,\rBuffer_reg_n_0_[87] ,\rBuffer_reg_n_0_[86] ,\rBuffer_reg_n_0_[85] ,\rBuffer_reg_n_0_[84] ,\rBuffer_reg_n_0_[83] ,\rBuffer_reg_n_0_[82] ,\rBuffer_reg_n_0_[81] ,\rBuffer_reg_n_0_[80] ,\rBuffer_reg_n_0_[79] ,\rBuffer_reg_n_0_[78] ,\rBuffer_reg_n_0_[77] ,\rBuffer_reg_n_0_[76] ,\rBuffer_reg_n_0_[75] ,\rBuffer_reg_n_0_[74] ,\rBuffer_reg_n_0_[73] ,\rBuffer_reg_n_0_[72] ,\rBuffer_reg_n_0_[71] ,\rBuffer_reg_n_0_[70] ,\rBuffer_reg_n_0_[69] ,\rBuffer_reg_n_0_[68] ,\rBuffer_reg_n_0_[67] ,\rBuffer_reg_n_0_[66] ,\rBuffer_reg_n_0_[65] ,\rBuffer_reg_n_0_[64] ,\rBuffer_reg_n_0_[63] ,\rBuffer_reg_n_0_[62] ,\rBuffer_reg_n_0_[61] ,\rBuffer_reg_n_0_[60] ,\rBuffer_reg_n_0_[59] ,\rBuffer_reg_n_0_[58] ,\rBuffer_reg_n_0_[57] ,\rBuffer_reg_n_0_[56] ,\rBuffer_reg_n_0_[55] ,\rBuffer_reg_n_0_[54] ,\rBuffer_reg_n_0_[53] ,\rBuffer_reg_n_0_[52] ,\rBuffer_reg_n_0_[51] ,\rBuffer_reg_n_0_[50] ,\rBuffer_reg_n_0_[49] ,\rBuffer_reg_n_0_[48] ,\rBuffer_reg_n_0_[47] ,\rBuffer_reg_n_0_[46] ,\rBuffer_reg_n_0_[45] ,\rBuffer_reg_n_0_[44] ,\rBuffer_reg_n_0_[43] ,\rBuffer_reg_n_0_[42] ,\rBuffer_reg_n_0_[41] ,\rBuffer_reg_n_0_[40] ,\rBuffer_reg_n_0_[39] ,\rBuffer_reg_n_0_[38] ,\rBuffer_reg_n_0_[37] ,\rBuffer_reg_n_0_[36] ,\rBuffer_reg_n_0_[35] ,\rBuffer_reg_n_0_[34] ,\rBuffer_reg_n_0_[33] ,\rBuffer_reg_n_0_[32] ,\rBuffer_reg_n_0_[31] ,\rBuffer_reg_n_0_[30] ,\rBuffer_reg_n_0_[29] ,\rBuffer_reg_n_0_[28] ,\rBuffer_reg_n_0_[27] ,\rBuffer_reg_n_0_[26] ,\rBuffer_reg_n_0_[25] ,\rBuffer_reg_n_0_[24] ,\rBuffer_reg_n_0_[23] ,\rBuffer_reg_n_0_[22] ,\rBuffer_reg_n_0_[21] ,\rBuffer_reg_n_0_[20] ,\rBuffer_reg_n_0_[19] ,\rBuffer_reg_n_0_[18] ,\rBuffer_reg_n_0_[17] ,\rBuffer_reg_n_0_[16] ,\rBuffer_reg_n_0_[15] ,\rBuffer_reg_n_0_[14] ,\rBuffer_reg_n_0_[13] ,\rBuffer_reg_n_0_[12] ,\rBuffer_reg_n_0_[11] ,\rBuffer_reg_n_0_[10] ,\rBuffer_reg_n_0_[9] ,\rBuffer_reg_n_0_[8] ,\rBuffer_reg_n_0_[7] ,\rBuffer_reg_n_0_[6] ,\rBuffer_reg_n_0_[5] ,\rBuffer_reg_n_0_[4] ,\rBuffer_reg_n_0_[3] ,\rBuffer_reg_n_0_[2] ,\rBuffer_reg_n_0_[1] ,\rBuffer_reg_n_0_[0] }),
         .iClk(iClk),
         .iRst(iRst),
+<<<<<<< HEAD
         .\rCnt_reg[0] (UART_TX_INST_n_12),
         .\rCnt_reg[0]_0 (wRxDone),
         .rFSM__0(rFSM__0),
@@ -26526,12 +31327,22 @@ module design_1_uart_top_0_0_uart_top
         .\rResultBuffer_reg[256] (\FSM_sequential_rFSM_reg[2]_rep__0_n_0 ),
         .\rResultBuffer_reg[264] (\FSM_sequential_rFSM_reg[0]_rep__0_n_0 ),
         .\rResultBuffer_reg[391] (\FSM_sequential_rFSM_reg[2]_rep__1_n_0 ),
+=======
+        .\rCountToSend_reg[0][0] (rFSM__0),
+        .\rResultBuffer_reg[0] (\FSM_sequential_rFSM_reg[3]_rep__0_n_0 ),
+        .\rResultBuffer_reg[109] (\FSM_sequential_rFSM_reg[3]_rep__1_n_0 ),
+        .\rResultBuffer_reg[136] (\FSM_sequential_rFSM_reg[0]_rep_n_0 ),
+        .\rResultBuffer_reg[205] (\FSM_sequential_rFSM_reg[3]_rep__2_n_0 ),
+        .\rResultBuffer_reg[264] (\FSM_sequential_rFSM_reg[0]_rep__0_n_0 ),
+        .\rResultBuffer_reg[391] (\FSM_sequential_rFSM_reg[3]_rep_n_0 ),
+>>>>>>> temp-branch
         .\rResultBuffer_reg[392] (\FSM_sequential_rFSM_reg[0]_rep__1_n_0 ),
         .\rResultBuffer_reg[399] (\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
         .\rResultBuffer_reg[512] ({\rResultBuffer_reg_n_0_[504] ,\rResultBuffer_reg_n_0_[503] ,\rResultBuffer_reg_n_0_[502] ,\rResultBuffer_reg_n_0_[501] ,\rResultBuffer_reg_n_0_[500] ,\rResultBuffer_reg_n_0_[499] ,\rResultBuffer_reg_n_0_[498] ,\rResultBuffer_reg_n_0_[497] ,\rResultBuffer_reg_n_0_[496] ,\rResultBuffer_reg_n_0_[495] ,\rResultBuffer_reg_n_0_[494] ,\rResultBuffer_reg_n_0_[493] ,\rResultBuffer_reg_n_0_[492] ,\rResultBuffer_reg_n_0_[491] ,\rResultBuffer_reg_n_0_[490] ,\rResultBuffer_reg_n_0_[489] ,\rResultBuffer_reg_n_0_[488] ,\rResultBuffer_reg_n_0_[487] ,\rResultBuffer_reg_n_0_[486] ,\rResultBuffer_reg_n_0_[485] ,\rResultBuffer_reg_n_0_[484] ,\rResultBuffer_reg_n_0_[483] ,\rResultBuffer_reg_n_0_[482] ,\rResultBuffer_reg_n_0_[481] ,\rResultBuffer_reg_n_0_[480] ,\rResultBuffer_reg_n_0_[479] ,\rResultBuffer_reg_n_0_[478] ,\rResultBuffer_reg_n_0_[477] ,\rResultBuffer_reg_n_0_[476] ,\rResultBuffer_reg_n_0_[475] ,\rResultBuffer_reg_n_0_[474] ,\rResultBuffer_reg_n_0_[473] ,\rResultBuffer_reg_n_0_[472] ,\rResultBuffer_reg_n_0_[471] ,\rResultBuffer_reg_n_0_[470] ,\rResultBuffer_reg_n_0_[469] ,\rResultBuffer_reg_n_0_[468] ,\rResultBuffer_reg_n_0_[467] ,\rResultBuffer_reg_n_0_[466] ,\rResultBuffer_reg_n_0_[465] ,\rResultBuffer_reg_n_0_[464] ,\rResultBuffer_reg_n_0_[463] ,\rResultBuffer_reg_n_0_[462] ,\rResultBuffer_reg_n_0_[461] ,\rResultBuffer_reg_n_0_[460] ,\rResultBuffer_reg_n_0_[459] ,\rResultBuffer_reg_n_0_[458] ,\rResultBuffer_reg_n_0_[457] ,\rResultBuffer_reg_n_0_[456] ,\rResultBuffer_reg_n_0_[455] ,\rResultBuffer_reg_n_0_[454] ,\rResultBuffer_reg_n_0_[453] ,\rResultBuffer_reg_n_0_[452] ,\rResultBuffer_reg_n_0_[451] ,\rResultBuffer_reg_n_0_[450] ,\rResultBuffer_reg_n_0_[449] ,\rResultBuffer_reg_n_0_[448] ,\rResultBuffer_reg_n_0_[447] ,\rResultBuffer_reg_n_0_[446] ,\rResultBuffer_reg_n_0_[445] ,\rResultBuffer_reg_n_0_[444] ,\rResultBuffer_reg_n_0_[443] ,\rResultBuffer_reg_n_0_[442] ,\rResultBuffer_reg_n_0_[441] ,\rResultBuffer_reg_n_0_[440] ,\rResultBuffer_reg_n_0_[439] ,\rResultBuffer_reg_n_0_[438] ,\rResultBuffer_reg_n_0_[437] ,\rResultBuffer_reg_n_0_[436] ,\rResultBuffer_reg_n_0_[435] ,\rResultBuffer_reg_n_0_[434] ,\rResultBuffer_reg_n_0_[433] ,\rResultBuffer_reg_n_0_[432] ,\rResultBuffer_reg_n_0_[431] ,\rResultBuffer_reg_n_0_[430] ,\rResultBuffer_reg_n_0_[429] ,\rResultBuffer_reg_n_0_[428] ,\rResultBuffer_reg_n_0_[427] ,\rResultBuffer_reg_n_0_[426] ,\rResultBuffer_reg_n_0_[425] ,\rResultBuffer_reg_n_0_[424] ,\rResultBuffer_reg_n_0_[423] ,\rResultBuffer_reg_n_0_[422] ,\rResultBuffer_reg_n_0_[421] ,\rResultBuffer_reg_n_0_[420] ,\rResultBuffer_reg_n_0_[419] ,\rResultBuffer_reg_n_0_[418] ,\rResultBuffer_reg_n_0_[417] ,\rResultBuffer_reg_n_0_[416] ,\rResultBuffer_reg_n_0_[415] ,\rResultBuffer_reg_n_0_[414] ,\rResultBuffer_reg_n_0_[413] ,\rResultBuffer_reg_n_0_[412] ,\rResultBuffer_reg_n_0_[411] ,\rResultBuffer_reg_n_0_[410] ,\rResultBuffer_reg_n_0_[409] ,\rResultBuffer_reg_n_0_[408] ,\rResultBuffer_reg_n_0_[407] ,\rResultBuffer_reg_n_0_[406] ,\rResultBuffer_reg_n_0_[405] ,\rResultBuffer_reg_n_0_[404] ,\rResultBuffer_reg_n_0_[403] ,\rResultBuffer_reg_n_0_[402] ,\rResultBuffer_reg_n_0_[401] ,\rResultBuffer_reg_n_0_[400] ,\rResultBuffer_reg_n_0_[399] ,\rResultBuffer_reg_n_0_[398] ,\rResultBuffer_reg_n_0_[397] ,\rResultBuffer_reg_n_0_[396] ,\rResultBuffer_reg_n_0_[395] ,\rResultBuffer_reg_n_0_[394] ,\rResultBuffer_reg_n_0_[393] ,\rResultBuffer_reg_n_0_[392] ,\rResultBuffer_reg_n_0_[391] ,\rResultBuffer_reg_n_0_[390] ,\rResultBuffer_reg_n_0_[389] ,\rResultBuffer_reg_n_0_[388] ,\rResultBuffer_reg_n_0_[387] ,\rResultBuffer_reg_n_0_[386] ,\rResultBuffer_reg_n_0_[385] ,\rResultBuffer_reg_n_0_[384] ,\rResultBuffer_reg_n_0_[383] ,\rResultBuffer_reg_n_0_[382] ,\rResultBuffer_reg_n_0_[381] ,\rResultBuffer_reg_n_0_[380] ,\rResultBuffer_reg_n_0_[379] ,\rResultBuffer_reg_n_0_[378] ,\rResultBuffer_reg_n_0_[377] ,\rResultBuffer_reg_n_0_[376] ,\rResultBuffer_reg_n_0_[375] ,\rResultBuffer_reg_n_0_[374] ,\rResultBuffer_reg_n_0_[373] ,\rResultBuffer_reg_n_0_[372] ,\rResultBuffer_reg_n_0_[371] ,\rResultBuffer_reg_n_0_[370] ,\rResultBuffer_reg_n_0_[369] ,\rResultBuffer_reg_n_0_[368] ,\rResultBuffer_reg_n_0_[367] ,\rResultBuffer_reg_n_0_[366] ,\rResultBuffer_reg_n_0_[365] ,\rResultBuffer_reg_n_0_[364] ,\rResultBuffer_reg_n_0_[363] ,\rResultBuffer_reg_n_0_[362] ,\rResultBuffer_reg_n_0_[361] ,\rResultBuffer_reg_n_0_[360] ,\rResultBuffer_reg_n_0_[359] ,\rResultBuffer_reg_n_0_[358] ,\rResultBuffer_reg_n_0_[357] ,\rResultBuffer_reg_n_0_[356] ,\rResultBuffer_reg_n_0_[355] ,\rResultBuffer_reg_n_0_[354] ,\rResultBuffer_reg_n_0_[353] ,\rResultBuffer_reg_n_0_[352] ,\rResultBuffer_reg_n_0_[351] ,\rResultBuffer_reg_n_0_[350] ,\rResultBuffer_reg_n_0_[349] ,\rResultBuffer_reg_n_0_[348] ,\rResultBuffer_reg_n_0_[347] ,\rResultBuffer_reg_n_0_[346] ,\rResultBuffer_reg_n_0_[345] ,\rResultBuffer_reg_n_0_[344] ,\rResultBuffer_reg_n_0_[343] ,\rResultBuffer_reg_n_0_[342] ,\rResultBuffer_reg_n_0_[341] ,\rResultBuffer_reg_n_0_[340] ,\rResultBuffer_reg_n_0_[339] ,\rResultBuffer_reg_n_0_[338] ,\rResultBuffer_reg_n_0_[337] ,\rResultBuffer_reg_n_0_[336] ,\rResultBuffer_reg_n_0_[335] ,\rResultBuffer_reg_n_0_[334] ,\rResultBuffer_reg_n_0_[333] ,\rResultBuffer_reg_n_0_[332] ,\rResultBuffer_reg_n_0_[331] ,\rResultBuffer_reg_n_0_[330] ,\rResultBuffer_reg_n_0_[329] ,\rResultBuffer_reg_n_0_[328] ,\rResultBuffer_reg_n_0_[327] ,\rResultBuffer_reg_n_0_[326] ,\rResultBuffer_reg_n_0_[325] ,\rResultBuffer_reg_n_0_[324] ,\rResultBuffer_reg_n_0_[323] ,\rResultBuffer_reg_n_0_[322] ,\rResultBuffer_reg_n_0_[321] ,\rResultBuffer_reg_n_0_[320] ,\rResultBuffer_reg_n_0_[319] ,\rResultBuffer_reg_n_0_[318] ,\rResultBuffer_reg_n_0_[317] ,\rResultBuffer_reg_n_0_[316] ,\rResultBuffer_reg_n_0_[315] ,\rResultBuffer_reg_n_0_[314] ,\rResultBuffer_reg_n_0_[313] ,\rResultBuffer_reg_n_0_[312] ,\rResultBuffer_reg_n_0_[311] ,\rResultBuffer_reg_n_0_[310] ,\rResultBuffer_reg_n_0_[309] ,\rResultBuffer_reg_n_0_[308] ,\rResultBuffer_reg_n_0_[307] ,\rResultBuffer_reg_n_0_[306] ,\rResultBuffer_reg_n_0_[305] ,\rResultBuffer_reg_n_0_[304] ,\rResultBuffer_reg_n_0_[303] ,\rResultBuffer_reg_n_0_[302] ,\rResultBuffer_reg_n_0_[301] ,\rResultBuffer_reg_n_0_[300] ,\rResultBuffer_reg_n_0_[299] ,\rResultBuffer_reg_n_0_[298] ,\rResultBuffer_reg_n_0_[297] ,\rResultBuffer_reg_n_0_[296] ,\rResultBuffer_reg_n_0_[295] ,\rResultBuffer_reg_n_0_[294] ,\rResultBuffer_reg_n_0_[293] ,\rResultBuffer_reg_n_0_[292] ,\rResultBuffer_reg_n_0_[291] ,\rResultBuffer_reg_n_0_[290] ,\rResultBuffer_reg_n_0_[289] ,\rResultBuffer_reg_n_0_[288] ,\rResultBuffer_reg_n_0_[287] ,\rResultBuffer_reg_n_0_[286] ,\rResultBuffer_reg_n_0_[285] ,\rResultBuffer_reg_n_0_[284] ,\rResultBuffer_reg_n_0_[283] ,\rResultBuffer_reg_n_0_[282] ,\rResultBuffer_reg_n_0_[281] ,\rResultBuffer_reg_n_0_[280] ,\rResultBuffer_reg_n_0_[279] ,\rResultBuffer_reg_n_0_[278] ,\rResultBuffer_reg_n_0_[277] ,\rResultBuffer_reg_n_0_[276] ,\rResultBuffer_reg_n_0_[275] ,\rResultBuffer_reg_n_0_[274] ,\rResultBuffer_reg_n_0_[273] ,\rResultBuffer_reg_n_0_[272] ,\rResultBuffer_reg_n_0_[271] ,\rResultBuffer_reg_n_0_[270] ,\rResultBuffer_reg_n_0_[269] ,\rResultBuffer_reg_n_0_[268] ,\rResultBuffer_reg_n_0_[267] ,\rResultBuffer_reg_n_0_[266] ,\rResultBuffer_reg_n_0_[265] ,\rResultBuffer_reg_n_0_[264] ,\rResultBuffer_reg_n_0_[263] ,\rResultBuffer_reg_n_0_[262] ,\rResultBuffer_reg_n_0_[261] ,\rResultBuffer_reg_n_0_[260] ,\rResultBuffer_reg_n_0_[259] ,\rResultBuffer_reg_n_0_[258] ,\rResultBuffer_reg_n_0_[257] ,\rResultBuffer_reg_n_0_[256] ,\rResultBuffer_reg_n_0_[255] ,\rResultBuffer_reg_n_0_[254] ,\rResultBuffer_reg_n_0_[253] ,\rResultBuffer_reg_n_0_[252] ,\rResultBuffer_reg_n_0_[251] ,\rResultBuffer_reg_n_0_[250] ,\rResultBuffer_reg_n_0_[249] ,\rResultBuffer_reg_n_0_[248] ,\rResultBuffer_reg_n_0_[247] ,\rResultBuffer_reg_n_0_[246] ,\rResultBuffer_reg_n_0_[245] ,\rResultBuffer_reg_n_0_[244] ,\rResultBuffer_reg_n_0_[243] ,\rResultBuffer_reg_n_0_[242] ,\rResultBuffer_reg_n_0_[241] ,\rResultBuffer_reg_n_0_[240] ,\rResultBuffer_reg_n_0_[239] ,\rResultBuffer_reg_n_0_[238] ,\rResultBuffer_reg_n_0_[237] ,\rResultBuffer_reg_n_0_[236] ,\rResultBuffer_reg_n_0_[235] ,\rResultBuffer_reg_n_0_[234] ,\rResultBuffer_reg_n_0_[233] ,\rResultBuffer_reg_n_0_[232] ,\rResultBuffer_reg_n_0_[231] ,\rResultBuffer_reg_n_0_[230] ,\rResultBuffer_reg_n_0_[229] ,\rResultBuffer_reg_n_0_[228] ,\rResultBuffer_reg_n_0_[227] ,\rResultBuffer_reg_n_0_[226] ,\rResultBuffer_reg_n_0_[225] ,\rResultBuffer_reg_n_0_[224] ,\rResultBuffer_reg_n_0_[223] ,\rResultBuffer_reg_n_0_[222] ,\rResultBuffer_reg_n_0_[221] ,\rResultBuffer_reg_n_0_[220] ,\rResultBuffer_reg_n_0_[219] ,\rResultBuffer_reg_n_0_[218] ,\rResultBuffer_reg_n_0_[217] ,\rResultBuffer_reg_n_0_[216] ,\rResultBuffer_reg_n_0_[215] ,\rResultBuffer_reg_n_0_[214] ,\rResultBuffer_reg_n_0_[213] ,\rResultBuffer_reg_n_0_[212] ,\rResultBuffer_reg_n_0_[211] ,\rResultBuffer_reg_n_0_[210] ,\rResultBuffer_reg_n_0_[209] ,\rResultBuffer_reg_n_0_[208] ,\rResultBuffer_reg_n_0_[207] ,\rResultBuffer_reg_n_0_[206] ,\rResultBuffer_reg_n_0_[205] ,\rResultBuffer_reg_n_0_[204] ,\rResultBuffer_reg_n_0_[203] ,\rResultBuffer_reg_n_0_[202] ,\rResultBuffer_reg_n_0_[201] ,\rResultBuffer_reg_n_0_[200] ,\rResultBuffer_reg_n_0_[199] ,\rResultBuffer_reg_n_0_[198] ,\rResultBuffer_reg_n_0_[197] ,\rResultBuffer_reg_n_0_[196] ,\rResultBuffer_reg_n_0_[195] ,\rResultBuffer_reg_n_0_[194] ,\rResultBuffer_reg_n_0_[193] ,\rResultBuffer_reg_n_0_[192] ,\rResultBuffer_reg_n_0_[191] ,\rResultBuffer_reg_n_0_[190] ,\rResultBuffer_reg_n_0_[189] ,\rResultBuffer_reg_n_0_[188] ,\rResultBuffer_reg_n_0_[187] ,\rResultBuffer_reg_n_0_[186] ,\rResultBuffer_reg_n_0_[185] ,\rResultBuffer_reg_n_0_[184] ,\rResultBuffer_reg_n_0_[183] ,\rResultBuffer_reg_n_0_[182] ,\rResultBuffer_reg_n_0_[181] ,\rResultBuffer_reg_n_0_[180] ,\rResultBuffer_reg_n_0_[179] ,\rResultBuffer_reg_n_0_[178] ,\rResultBuffer_reg_n_0_[177] ,\rResultBuffer_reg_n_0_[176] ,\rResultBuffer_reg_n_0_[175] ,\rResultBuffer_reg_n_0_[174] ,\rResultBuffer_reg_n_0_[173] ,\rResultBuffer_reg_n_0_[172] ,\rResultBuffer_reg_n_0_[171] ,\rResultBuffer_reg_n_0_[170] ,\rResultBuffer_reg_n_0_[169] ,\rResultBuffer_reg_n_0_[168] ,\rResultBuffer_reg_n_0_[167] ,\rResultBuffer_reg_n_0_[166] ,\rResultBuffer_reg_n_0_[165] ,\rResultBuffer_reg_n_0_[164] ,\rResultBuffer_reg_n_0_[163] ,\rResultBuffer_reg_n_0_[162] ,\rResultBuffer_reg_n_0_[161] ,\rResultBuffer_reg_n_0_[160] ,\rResultBuffer_reg_n_0_[159] ,\rResultBuffer_reg_n_0_[158] ,\rResultBuffer_reg_n_0_[157] ,\rResultBuffer_reg_n_0_[156] ,\rResultBuffer_reg_n_0_[155] ,\rResultBuffer_reg_n_0_[154] ,\rResultBuffer_reg_n_0_[153] ,\rResultBuffer_reg_n_0_[152] ,\rResultBuffer_reg_n_0_[151] ,\rResultBuffer_reg_n_0_[150] ,\rResultBuffer_reg_n_0_[149] ,\rResultBuffer_reg_n_0_[148] ,\rResultBuffer_reg_n_0_[147] ,\rResultBuffer_reg_n_0_[146] ,\rResultBuffer_reg_n_0_[145] ,\rResultBuffer_reg_n_0_[144] ,\rResultBuffer_reg_n_0_[143] ,\rResultBuffer_reg_n_0_[142] ,\rResultBuffer_reg_n_0_[141] ,\rResultBuffer_reg_n_0_[140] ,\rResultBuffer_reg_n_0_[139] ,\rResultBuffer_reg_n_0_[138] ,\rResultBuffer_reg_n_0_[137] ,\rResultBuffer_reg_n_0_[136] ,\rResultBuffer_reg_n_0_[135] ,\rResultBuffer_reg_n_0_[134] ,\rResultBuffer_reg_n_0_[133] ,\rResultBuffer_reg_n_0_[132] ,\rResultBuffer_reg_n_0_[131] ,\rResultBuffer_reg_n_0_[130] ,\rResultBuffer_reg_n_0_[129] ,\rResultBuffer_reg_n_0_[128] ,\rResultBuffer_reg_n_0_[127] ,\rResultBuffer_reg_n_0_[126] ,\rResultBuffer_reg_n_0_[125] ,\rResultBuffer_reg_n_0_[124] ,\rResultBuffer_reg_n_0_[123] ,\rResultBuffer_reg_n_0_[122] ,\rResultBuffer_reg_n_0_[121] ,\rResultBuffer_reg_n_0_[120] ,\rResultBuffer_reg_n_0_[119] ,\rResultBuffer_reg_n_0_[118] ,\rResultBuffer_reg_n_0_[117] ,\rResultBuffer_reg_n_0_[116] ,\rResultBuffer_reg_n_0_[115] ,\rResultBuffer_reg_n_0_[114] ,\rResultBuffer_reg_n_0_[113] ,\rResultBuffer_reg_n_0_[112] ,\rResultBuffer_reg_n_0_[111] ,\rResultBuffer_reg_n_0_[110] ,\rResultBuffer_reg_n_0_[109] ,\rResultBuffer_reg_n_0_[108] ,\rResultBuffer_reg_n_0_[107] ,\rResultBuffer_reg_n_0_[106] ,\rResultBuffer_reg_n_0_[105] ,\rResultBuffer_reg_n_0_[104] ,\rResultBuffer_reg_n_0_[103] ,\rResultBuffer_reg_n_0_[102] ,\rResultBuffer_reg_n_0_[101] ,\rResultBuffer_reg_n_0_[100] ,\rResultBuffer_reg_n_0_[99] ,\rResultBuffer_reg_n_0_[98] ,\rResultBuffer_reg_n_0_[97] ,\rResultBuffer_reg_n_0_[96] ,\rResultBuffer_reg_n_0_[95] ,\rResultBuffer_reg_n_0_[94] ,\rResultBuffer_reg_n_0_[93] ,\rResultBuffer_reg_n_0_[92] ,\rResultBuffer_reg_n_0_[91] ,\rResultBuffer_reg_n_0_[90] ,\rResultBuffer_reg_n_0_[89] ,\rResultBuffer_reg_n_0_[88] ,\rResultBuffer_reg_n_0_[87] ,\rResultBuffer_reg_n_0_[86] ,\rResultBuffer_reg_n_0_[85] ,\rResultBuffer_reg_n_0_[84] ,\rResultBuffer_reg_n_0_[83] ,\rResultBuffer_reg_n_0_[82] ,\rResultBuffer_reg_n_0_[81] ,\rResultBuffer_reg_n_0_[80] ,\rResultBuffer_reg_n_0_[79] ,\rResultBuffer_reg_n_0_[78] ,\rResultBuffer_reg_n_0_[77] ,\rResultBuffer_reg_n_0_[76] ,\rResultBuffer_reg_n_0_[75] ,\rResultBuffer_reg_n_0_[74] ,\rResultBuffer_reg_n_0_[73] ,\rResultBuffer_reg_n_0_[72] ,\rResultBuffer_reg_n_0_[71] ,\rResultBuffer_reg_n_0_[70] ,\rResultBuffer_reg_n_0_[69] ,\rResultBuffer_reg_n_0_[68] ,\rResultBuffer_reg_n_0_[67] ,\rResultBuffer_reg_n_0_[66] ,\rResultBuffer_reg_n_0_[65] ,\rResultBuffer_reg_n_0_[64] ,\rResultBuffer_reg_n_0_[63] ,\rResultBuffer_reg_n_0_[62] ,\rResultBuffer_reg_n_0_[61] ,\rResultBuffer_reg_n_0_[60] ,\rResultBuffer_reg_n_0_[59] ,\rResultBuffer_reg_n_0_[58] ,\rResultBuffer_reg_n_0_[57] ,\rResultBuffer_reg_n_0_[56] ,\rResultBuffer_reg_n_0_[55] ,\rResultBuffer_reg_n_0_[54] ,\rResultBuffer_reg_n_0_[53] ,\rResultBuffer_reg_n_0_[52] ,\rResultBuffer_reg_n_0_[51] ,\rResultBuffer_reg_n_0_[50] ,\rResultBuffer_reg_n_0_[49] ,\rResultBuffer_reg_n_0_[48] ,\rResultBuffer_reg_n_0_[47] ,\rResultBuffer_reg_n_0_[46] ,\rResultBuffer_reg_n_0_[45] ,\rResultBuffer_reg_n_0_[44] ,\rResultBuffer_reg_n_0_[43] ,\rResultBuffer_reg_n_0_[42] ,\rResultBuffer_reg_n_0_[41] ,\rResultBuffer_reg_n_0_[40] ,\rResultBuffer_reg_n_0_[39] ,\rResultBuffer_reg_n_0_[38] ,\rResultBuffer_reg_n_0_[37] ,\rResultBuffer_reg_n_0_[36] ,\rResultBuffer_reg_n_0_[35] ,\rResultBuffer_reg_n_0_[34] ,\rResultBuffer_reg_n_0_[33] ,\rResultBuffer_reg_n_0_[32] ,\rResultBuffer_reg_n_0_[31] ,\rResultBuffer_reg_n_0_[30] ,\rResultBuffer_reg_n_0_[29] ,\rResultBuffer_reg_n_0_[28] ,\rResultBuffer_reg_n_0_[27] ,\rResultBuffer_reg_n_0_[26] ,\rResultBuffer_reg_n_0_[25] ,\rResultBuffer_reg_n_0_[24] ,\rResultBuffer_reg_n_0_[23] ,\rResultBuffer_reg_n_0_[22] ,\rResultBuffer_reg_n_0_[21] ,\rResultBuffer_reg_n_0_[20] ,\rResultBuffer_reg_n_0_[19] ,\rResultBuffer_reg_n_0_[18] ,\rResultBuffer_reg_n_0_[17] ,\rResultBuffer_reg_n_0_[16] ,\rResultBuffer_reg_n_0_[15] ,\rResultBuffer_reg_n_0_[14] ,\rResultBuffer_reg_n_0_[13] ,\rResultBuffer_reg_n_0_[12] ,\rResultBuffer_reg_n_0_[11] ,\rResultBuffer_reg_n_0_[10] ,\rResultBuffer_reg_n_0_[9] ,\rResultBuffer_reg_n_0_[8] ,\rResultBuffer_reg_n_0_[7] ,\rResultBuffer_reg_n_0_[6] ,\rResultBuffer_reg_n_0_[5] ,\rResultBuffer_reg_n_0_[4] ,\rResultBuffer_reg_n_0_[3] ,\rResultBuffer_reg_n_0_[2] ,\rResultBuffer_reg_n_0_[1] ,\rResultBuffer_reg_n_0_[0] }),
         .wAddDone(wAddDone));
   design_1_uart_top_0_0_uart_rx UART_RX_INST
        (.E(rBuffer),
+<<<<<<< HEAD
         .\FSM_sequential_rFSM[2]_i_2 ({\rCnt_reg_n_0_[7] ,\rCnt_reg_n_0_[6] }),
         .\FSM_sequential_rFSM[2]_i_2_0 (\rCnt[7]_i_4_n_0 ),
         .Q(wRxDone),
@@ -26582,6 +31393,52 @@ module design_1_uart_top_0_0_uart_top
   FDRE rAddStart_reg
        (.C(iClk),
         .CE(1'b1),
+=======
+        .\FSM_sequential_rFSM[3]_i_3_0 (\rCnt_reg_n_0_[7] ),
+        .\FSM_sequential_rFSM[3]_i_3_1 (\rCnt[7]_i_7_n_0 ),
+        .\FSM_sequential_rFSM_reg[0]_rep__2 (UART_RX_INST_n_0),
+        .\FSM_sequential_rFSM_reg[1] (UART_RX_INST_n_1),
+        .\FSM_sequential_rFSM_reg[3]_rep__2 (\FSM_sequential_rFSM[3]_i_6_n_0 ),
+        .\FSM_sequential_rFSM_reg[3]_rep__2_0 (UART_TX_INST_n_1),
+        .\FSM_sequential_rFSM_reg[3]_rep__2_1 (\FSM_sequential_rFSM[0]_i_2_n_0 ),
+        .Q(rFSM__0[3:1]),
+        .iClk(iClk),
+        .iRst(iRst),
+        .iRx(iRx),
+        .\rBuffer_reg[0] (\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .\rRxData_Current_reg[7]_0 (wRxByte),
+        .wAddDone(wAddDone));
+  design_1_uart_top_0_0_uart_tx UART_TX_INST
+       (.E(UART_TX_INST_n_3),
+        .\FSM_onehot_rFSM_Current_reg[4]_0 (UART_TX_INST_n_1),
+        .\FSM_onehot_rFSM_Current_reg[4]_1 (UART_TX_INST_n_2),
+        .\FSM_onehot_rFSM_Current_reg[4]_2 (UART_TX_INST_n_5),
+        .\FSM_sequential_rFSM_reg[0]_rep__2 (UART_TX_INST_n_4),
+        .\FSM_sequential_rFSM_reg[3] (UART_TX_INST_n_0),
+        .\FSM_sequential_rFSM_reg[3]_rep__2 (UART_RX_INST_n_0),
+        .Q(rFSM__0[3:1]),
+        .iClk(iClk),
+        .iRst(iRst),
+        .oTx(oTx),
+        .\rCnt_reg[0] (UART_RX_INST_n_1),
+        .\rCnt_reg[0]_0 (\FSM_sequential_rFSM[3]_i_4_n_0 ),
+        .\rResultBuffer_reg[0] (\FSM_sequential_rFSM[1]_i_2_n_0 ),
+        .\rResultBuffer_reg[0]_0 (\rResultBuffer[512]_i_3_n_0 ),
+        .\rTxByte_reg[0] (\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .\rTxByte_reg[0]_0 (\FSM_sequential_rFSM[0]_i_2_n_0 ),
+        .\rTxData_Current_reg[0]_0 (rTxStart_reg_n_0),
+        .\rTxData_Current_reg[7]_0 ({\rTxByte_reg_n_0_[7] ,\rTxByte_reg_n_0_[6] ,\rTxByte_reg_n_0_[5] ,\rTxByte_reg_n_0_[4] ,\rTxByte_reg_n_0_[3] ,\rTxByte_reg_n_0_[2] ,\rTxByte_reg_n_0_[1] ,\rTxByte_reg_n_0_[0] }),
+        .wAddDone(wAddDone));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    rAddStart_i_1
+       (.I0(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .O(rAddStart_i_1_n_0));
+  FDRE rAddStart_reg
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+>>>>>>> temp-branch
         .D(rAddStart_i_1_n_0),
         .Q(rAddStart_reg_n_0),
         .R(iRst));
@@ -32729,6 +37586,7 @@ module design_1_uart_top_0_0_uart_top
         .D(\rBuffer_reg_n_0_[1] ),
         .Q(\rBuffer_reg_n_0_[9] ),
         .R(iRst));
+<<<<<<< HEAD
   LUT4 #(
     .INIT(16'h000E)) 
     \rCnt[0]_i_1 
@@ -32742,6 +37600,29 @@ module design_1_uart_top_0_0_uart_top
     .INIT(8'h06)) 
     \rCnt[1]_i_1 
        (.I0(\rCnt_reg_n_0_[1] ),
+=======
+  LUT5 #(
+    .INIT(32'h41404544)) 
+    \rCnt[0]_i_1 
+       (.I0(\rCnt_reg_n_0_[0] ),
+        .I1(rFSM__0[2]),
+        .I2(rFSM__0[1]),
+        .I3(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I4(\FSM_sequential_rFSM[1]_i_2_n_0 ),
+        .O(\rCnt[0]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h28)) 
+    \rCnt[1]_i_1 
+       (.I0(\rCnt[7]_i_6_n_0 ),
+        .I1(\rCnt_reg_n_0_[1] ),
+        .I2(\rCnt_reg_n_0_[0] ),
+        .O(\rCnt[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  LUT4 #(
+    .INIT(16'h2A80)) 
+    \rCnt[2]_i_1 
+       (.I0(\rCnt[7]_i_6_n_0 ),
+>>>>>>> temp-branch
         .I1(\rCnt_reg_n_0_[0] ),
         .I2(\rCnt[5]_i_3_n_0 ),
         .O(\rCnt[1]_i_1_n_0 ));
@@ -32754,17 +37635,26 @@ module design_1_uart_top_0_0_uart_top
         .I2(\rCnt_reg_n_0_[2] ),
         .I3(\rCnt[5]_i_3_n_0 ),
         .O(\rCnt[2]_i_1_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair48" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+>>>>>>> temp-branch
   LUT5 #(
     .INIT(32'h00007F80)) 
     \rCnt[3]_i_1 
+<<<<<<< HEAD
        (.I0(\rCnt_reg_n_0_[2] ),
+=======
+       (.I0(\rCnt[7]_i_6_n_0 ),
+>>>>>>> temp-branch
         .I1(\rCnt_reg_n_0_[1] ),
         .I2(\rCnt_reg_n_0_[0] ),
         .I3(\rCnt_reg_n_0_[3] ),
         .I4(\rCnt[5]_i_3_n_0 ),
         .O(\rCnt[3]_i_1_n_0 ));
   LUT6 #(
+<<<<<<< HEAD
     .INIT(64'h000000007FFF8000)) 
     \rCnt[4]_i_1 
        (.I0(\rCnt_reg_n_0_[3] ),
@@ -32831,50 +37721,139 @@ module design_1_uart_top_0_0_uart_top
         .I4(\rCnt_reg_n_0_[2] ),
         .I5(\rCnt_reg_n_0_[4] ),
         .O(\rCnt[7]_i_4_n_0 ));
+=======
+    .INIT(64'h2AAAAAAA80000000)) 
+    \rCnt[4]_i_1 
+       (.I0(\rCnt[7]_i_6_n_0 ),
+        .I1(\rCnt_reg_n_0_[2] ),
+        .I2(\rCnt_reg_n_0_[0] ),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[3] ),
+        .I5(\rCnt_reg_n_0_[4] ),
+        .O(\rCnt[4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h2AAAAAAA80000000)) 
+    \rCnt[5]_i_1 
+       (.I0(\rCnt[7]_i_6_n_0 ),
+        .I1(\rCnt_reg_n_0_[3] ),
+        .I2(\rCnt[5]_i_2_n_0 ),
+        .I3(\rCnt_reg_n_0_[2] ),
+        .I4(\rCnt_reg_n_0_[4] ),
+        .I5(\rCnt_reg_n_0_[5] ),
+        .O(\rCnt[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \rCnt[5]_i_2 
+       (.I0(\rCnt_reg_n_0_[0] ),
+        .I1(\rCnt_reg_n_0_[1] ),
+        .O(\rCnt[5]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h6006600060666060)) 
+    \rCnt[6]_i_1 
+       (.I0(\rCnt[7]_i_5_n_0 ),
+        .I1(\rCnt_reg_n_0_[6] ),
+        .I2(rFSM__0[2]),
+        .I3(rFSM__0[1]),
+        .I4(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I5(\FSM_sequential_rFSM[1]_i_2_n_0 ),
+        .O(\rCnt[6]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h7800)) 
+    \rCnt[7]_i_2 
+       (.I0(\rCnt_reg_n_0_[6] ),
+        .I1(\rCnt[7]_i_5_n_0 ),
+        .I2(\rCnt_reg_n_0_[7] ),
+        .I3(\rCnt[7]_i_6_n_0 ),
+        .O(\rCnt[7]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
+    \rCnt[7]_i_5 
+       (.I0(\rCnt_reg_n_0_[4] ),
+        .I1(\rCnt_reg_n_0_[2] ),
+        .I2(\rCnt_reg_n_0_[0] ),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[3] ),
+        .I5(\rCnt_reg_n_0_[5] ),
+        .O(\rCnt[7]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hF00BF000F0FBF0F0)) 
+    \rCnt[7]_i_6 
+       (.I0(\rCnt_reg_n_0_[7] ),
+        .I1(\rCnt[7]_i_7_n_0 ),
+        .I2(rFSM__0[2]),
+        .I3(rFSM__0[1]),
+        .I4(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I5(\FSM_sequential_rFSM[1]_i_2_n_0 ),
+        .O(\rCnt[7]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
+    \rCnt[7]_i_7 
+       (.I0(\rCnt_reg_n_0_[6] ),
+        .I1(\rCnt_reg_n_0_[5] ),
+        .I2(\rCnt_reg_n_0_[3] ),
+        .I3(\rCnt[5]_i_2_n_0 ),
+        .I4(\rCnt_reg_n_0_[2] ),
+        .I5(\rCnt_reg_n_0_[4] ),
+        .O(\rCnt[7]_i_7_n_0 ));
+>>>>>>> temp-branch
   FDRE \rCnt_reg[0] 
        (.C(iClk),
-        .CE(rCnt),
+        .CE(UART_TX_INST_n_4),
         .D(\rCnt[0]_i_1_n_0 ),
         .Q(\rCnt_reg_n_0_[0] ),
         .R(iRst));
   FDRE \rCnt_reg[1] 
        (.C(iClk),
-        .CE(rCnt),
+        .CE(UART_TX_INST_n_4),
         .D(\rCnt[1]_i_1_n_0 ),
         .Q(\rCnt_reg_n_0_[1] ),
         .R(iRst));
   FDRE \rCnt_reg[2] 
        (.C(iClk),
-        .CE(rCnt),
+        .CE(UART_TX_INST_n_4),
         .D(\rCnt[2]_i_1_n_0 ),
         .Q(\rCnt_reg_n_0_[2] ),
         .R(iRst));
   FDRE \rCnt_reg[3] 
        (.C(iClk),
-        .CE(rCnt),
+        .CE(UART_TX_INST_n_4),
         .D(\rCnt[3]_i_1_n_0 ),
         .Q(\rCnt_reg_n_0_[3] ),
         .R(iRst));
   FDRE \rCnt_reg[4] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rCnt),
+=======
+        .CE(UART_TX_INST_n_4),
+>>>>>>> temp-branch
         .D(\rCnt[4]_i_1_n_0 ),
         .Q(\rCnt_reg_n_0_[4] ),
         .R(iRst));
   FDRE \rCnt_reg[5] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rCnt),
+=======
+        .CE(UART_TX_INST_n_4),
+>>>>>>> temp-branch
         .D(\rCnt[5]_i_1_n_0 ),
         .Q(\rCnt_reg_n_0_[5] ),
         .R(iRst));
   FDRE \rCnt_reg[6] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rCnt),
+=======
+        .CE(UART_TX_INST_n_4),
+>>>>>>> temp-branch
         .D(\rCnt[6]_i_1_n_0 ),
         .Q(\rCnt_reg_n_0_[6] ),
         .R(iRst));
   FDRE \rCnt_reg[7] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rCnt),
         .D(\rCnt[7]_i_2_n_0 ),
         .Q(\rCnt_reg_n_0_[7] ),
@@ -32883,2704 +37862,5680 @@ module design_1_uart_top_0_0_uart_top
        (.C(iClk),
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_514),
+=======
+        .CE(UART_TX_INST_n_4),
+        .D(\rCnt[7]_i_2_n_0 ),
+        .Q(\rCnt_reg_n_0_[7] ),
+        .R(iRst));
+  FDRE \rCountToSend_reg[0][0] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_5_in[0]),
+        .Q(\rCountToSend_reg[0]_3 [0]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[0][1] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_5_in[1]),
+        .Q(\rCountToSend_reg[0]_3 [1]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[0][2] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_5_in[2]),
+        .Q(\rCountToSend_reg[0]_3 [2]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[0][3] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_5_in[3]),
+        .Q(\rCountToSend_reg[0]_3 [3]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[0][4] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_5_in[4]),
+        .Q(\rCountToSend_reg[0]_3 [4]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[0][5] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_5_in[5]),
+        .Q(\rCountToSend_reg[0]_3 [5]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[0][6] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_5_in[6]),
+        .Q(\rCountToSend_reg[0]_3 [6]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[0][7] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_5_in[7]),
+        .Q(\rCountToSend_reg[0]_3 [7]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[1][0] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_3_in[0]),
+        .Q(\rCountToSend_reg[1]_2 [0]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[1][1] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_3_in[1]),
+        .Q(\rCountToSend_reg[1]_2 [1]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[1][2] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_3_in[2]),
+        .Q(\rCountToSend_reg[1]_2 [2]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[1][3] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_3_in[3]),
+        .Q(\rCountToSend_reg[1]_2 [3]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[1][4] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_3_in[4]),
+        .Q(\rCountToSend_reg[1]_2 [4]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[1][5] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_3_in[5]),
+        .Q(\rCountToSend_reg[1]_2 [5]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[1][6] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_3_in[6]),
+        .Q(\rCountToSend_reg[1]_2 [6]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[1][7] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_3_in[7]),
+        .Q(\rCountToSend_reg[1]_2 [7]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[2][0] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_1_in[0]),
+        .Q(\rCountToSend_reg[2]_1 [0]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[2][1] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_1_in[1]),
+        .Q(\rCountToSend_reg[2]_1 [1]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[2][2] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_1_in[2]),
+        .Q(\rCountToSend_reg[2]_1 [2]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[2][3] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_1_in[3]),
+        .Q(\rCountToSend_reg[2]_1 [3]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[2][4] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_1_in[4]),
+        .Q(\rCountToSend_reg[2]_1 [4]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[2][5] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_1_in[5]),
+        .Q(\rCountToSend_reg[2]_1 [5]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[2][6] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_1_in[6]),
+        .Q(\rCountToSend_reg[2]_1 [6]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[2][7] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(p_1_in[7]),
+        .Q(\rCountToSend_reg[2]_1 [7]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[3][0] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(\rLatencyCnt_reg_n_0_[0] ),
+        .Q(\rCountToSend_reg[3]_0 [0]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[3][1] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(\rLatencyCnt_reg_n_0_[1] ),
+        .Q(\rCountToSend_reg[3]_0 [1]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[3][2] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(\rLatencyCnt_reg_n_0_[2] ),
+        .Q(\rCountToSend_reg[3]_0 [2]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[3][3] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(\rLatencyCnt_reg_n_0_[3] ),
+        .Q(\rCountToSend_reg[3]_0 [3]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[3][4] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(\rLatencyCnt_reg_n_0_[4] ),
+        .Q(\rCountToSend_reg[3]_0 [4]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[3][5] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(\rLatencyCnt_reg_n_0_[5] ),
+        .Q(\rCountToSend_reg[3]_0 [5]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[3][6] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(\rLatencyCnt_reg_n_0_[6] ),
+        .Q(\rCountToSend_reg[3]_0 [6]),
+        .R(1'b0));
+  FDRE \rCountToSend_reg[3][7] 
+       (.C(iClk),
+        .CE(MP_ADDER_INST_n_514),
+        .D(\rLatencyCnt_reg_n_0_[7] ),
+        .Q(\rCountToSend_reg[3]_0 [7]),
+        .R(1'b0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 rLatencyCnt0_carry
+       (.CI(1'b0),
+        .CO({rLatencyCnt0_carry_n_0,rLatencyCnt0_carry_n_1,rLatencyCnt0_carry_n_2,rLatencyCnt0_carry_n_3}),
+        .CYINIT(\rLatencyCnt_reg_n_0_[0] ),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in21[4:1]),
+        .S({\rLatencyCnt_reg_n_0_[4] ,\rLatencyCnt_reg_n_0_[3] ,\rLatencyCnt_reg_n_0_[2] ,\rLatencyCnt_reg_n_0_[1] }));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 rLatencyCnt0_carry__0
+       (.CI(rLatencyCnt0_carry_n_0),
+        .CO({rLatencyCnt0_carry__0_n_0,rLatencyCnt0_carry__0_n_1,rLatencyCnt0_carry__0_n_2,rLatencyCnt0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in21[8:5]),
+        .S({p_1_in[0],\rLatencyCnt_reg_n_0_[7] ,\rLatencyCnt_reg_n_0_[6] ,\rLatencyCnt_reg_n_0_[5] }));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 rLatencyCnt0_carry__1
+       (.CI(rLatencyCnt0_carry__0_n_0),
+        .CO({rLatencyCnt0_carry__1_n_0,rLatencyCnt0_carry__1_n_1,rLatencyCnt0_carry__1_n_2,rLatencyCnt0_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in21[12:9]),
+        .S(p_1_in[4:1]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 rLatencyCnt0_carry__2
+       (.CI(rLatencyCnt0_carry__1_n_0),
+        .CO({rLatencyCnt0_carry__2_n_0,rLatencyCnt0_carry__2_n_1,rLatencyCnt0_carry__2_n_2,rLatencyCnt0_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in21[16:13]),
+        .S({p_3_in[0],p_1_in[7:5]}));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 rLatencyCnt0_carry__3
+       (.CI(rLatencyCnt0_carry__2_n_0),
+        .CO({rLatencyCnt0_carry__3_n_0,rLatencyCnt0_carry__3_n_1,rLatencyCnt0_carry__3_n_2,rLatencyCnt0_carry__3_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in21[20:17]),
+        .S(p_3_in[4:1]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 rLatencyCnt0_carry__4
+       (.CI(rLatencyCnt0_carry__3_n_0),
+        .CO({rLatencyCnt0_carry__4_n_0,rLatencyCnt0_carry__4_n_1,rLatencyCnt0_carry__4_n_2,rLatencyCnt0_carry__4_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in21[24:21]),
+        .S({p_5_in[0],p_3_in[7:5]}));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 rLatencyCnt0_carry__5
+       (.CI(rLatencyCnt0_carry__4_n_0),
+        .CO({rLatencyCnt0_carry__5_n_0,rLatencyCnt0_carry__5_n_1,rLatencyCnt0_carry__5_n_2,rLatencyCnt0_carry__5_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in21[28:25]),
+        .S(p_5_in[4:1]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 rLatencyCnt0_carry__6
+       (.CI(rLatencyCnt0_carry__5_n_0),
+        .CO({NLW_rLatencyCnt0_carry__6_CO_UNCONNECTED[3:2],rLatencyCnt0_carry__6_n_2,rLatencyCnt0_carry__6_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_rLatencyCnt0_carry__6_O_UNCONNECTED[3],in21[31:29]}),
+        .S({1'b0,p_5_in[7:5]}));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \rLatencyCnt[0]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(\rLatencyCnt_reg_n_0_[0] ),
+        .O(rLatencyCnt[0]));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[10]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[10]),
+        .O(rLatencyCnt[10]));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[11]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[11]),
+        .O(rLatencyCnt[11]));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[12]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[12]),
+        .O(rLatencyCnt[12]));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[13]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[13]),
+        .O(rLatencyCnt[13]));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[14]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[14]),
+        .O(rLatencyCnt[14]));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[15]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[15]),
+        .O(rLatencyCnt[15]));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[16]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[16]),
+        .O(rLatencyCnt[16]));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[17]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[17]),
+        .O(rLatencyCnt[17]));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[18]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[18]),
+        .O(rLatencyCnt[18]));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[19]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[19]),
+        .O(rLatencyCnt[19]));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[1]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[1]),
+        .O(rLatencyCnt[1]));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[20]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[20]),
+        .O(rLatencyCnt[20]));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[21]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[21]),
+        .O(rLatencyCnt[21]));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[22]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[22]),
+        .O(rLatencyCnt[22]));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[23]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[23]),
+        .O(rLatencyCnt[23]));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[24]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[24]),
+        .O(rLatencyCnt[24]));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[25]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[25]),
+        .O(rLatencyCnt[25]));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[26]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[26]),
+        .O(rLatencyCnt[26]));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[27]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[27]),
+        .O(rLatencyCnt[27]));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[28]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[28]),
+        .O(rLatencyCnt[28]));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[29]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[29]),
+        .O(rLatencyCnt[29]));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[2]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[2]),
+        .O(rLatencyCnt[2]));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[30]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[30]),
+        .O(rLatencyCnt[30]));
+  LUT3 #(
+    .INIT(8'h04)) 
+    \rLatencyCnt[31]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(rFSM__0[1]),
+        .I2(rFSM__0[2]),
+        .O(\rLatencyCnt[31]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[31]_i_2 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[31]),
+        .O(rLatencyCnt[31]));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[3]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[3]),
+        .O(rLatencyCnt[3]));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[4]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[4]),
+        .O(rLatencyCnt[4]));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[5]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[5]),
+        .O(rLatencyCnt[5]));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[6]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[6]),
+        .O(rLatencyCnt[6]));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[7]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[7]),
+        .O(rLatencyCnt[7]));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[8]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[8]),
+        .O(rLatencyCnt[8]));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \rLatencyCnt[9]_i_1 
+       (.I0(rFSM__0[3]),
+        .I1(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I2(in21[9]),
+        .O(rLatencyCnt[9]));
+  FDRE \rLatencyCnt_reg[0] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[0]),
+        .Q(\rLatencyCnt_reg_n_0_[0] ),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[10] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[10]),
+        .Q(p_1_in[2]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[11] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[11]),
+        .Q(p_1_in[3]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[12] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[12]),
+        .Q(p_1_in[4]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[13] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[13]),
+        .Q(p_1_in[5]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[14] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[14]),
+        .Q(p_1_in[6]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[15] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[15]),
+        .Q(p_1_in[7]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[16] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[16]),
+        .Q(p_3_in[0]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[17] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[17]),
+        .Q(p_3_in[1]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[18] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[18]),
+        .Q(p_3_in[2]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[19] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[19]),
+        .Q(p_3_in[3]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[1] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[1]),
+        .Q(\rLatencyCnt_reg_n_0_[1] ),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[20] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[20]),
+        .Q(p_3_in[4]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[21] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[21]),
+        .Q(p_3_in[5]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[22] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[22]),
+        .Q(p_3_in[6]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[23] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[23]),
+        .Q(p_3_in[7]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[24] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[24]),
+        .Q(p_5_in[0]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[25] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[25]),
+        .Q(p_5_in[1]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[26] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[26]),
+        .Q(p_5_in[2]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[27] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[27]),
+        .Q(p_5_in[3]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[28] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[28]),
+        .Q(p_5_in[4]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[29] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[29]),
+        .Q(p_5_in[5]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[2] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[2]),
+        .Q(\rLatencyCnt_reg_n_0_[2] ),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[30] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[30]),
+        .Q(p_5_in[6]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[31] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[31]),
+        .Q(p_5_in[7]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[3] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[3]),
+        .Q(\rLatencyCnt_reg_n_0_[3] ),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[4] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[4]),
+        .Q(\rLatencyCnt_reg_n_0_[4] ),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[5] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[5]),
+        .Q(\rLatencyCnt_reg_n_0_[5] ),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[6] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[6]),
+        .Q(\rLatencyCnt_reg_n_0_[6] ),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[7] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[7]),
+        .Q(\rLatencyCnt_reg_n_0_[7] ),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[8] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[8]),
+        .Q(p_1_in[0]),
+        .R(iRst));
+  FDRE \rLatencyCnt_reg[9] 
+       (.C(iClk),
+        .CE(\rLatencyCnt[31]_i_1_n_0 ),
+        .D(rLatencyCnt[9]),
+        .Q(p_1_in[1]),
+        .R(iRst));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT4 #(
+    .INIT(16'hFEDF)) 
+    \rResultBuffer[512]_i_3 
+       (.I0(rFSM__0[1]),
+        .I1(rFSM__0[3]),
+        .I2(\FSM_sequential_rFSM_reg[0]_rep__2_n_0 ),
+        .I3(rFSM__0[2]),
+        .O(\rResultBuffer[512]_i_3_n_0 ));
+  FDRE \rResultBuffer_reg[0] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[0]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[0] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[100] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_414),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[100]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[100] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[101] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_413),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[101]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[101] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[102] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_412),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[102]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[102] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[103] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_411),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[103]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[103] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[104] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_410),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[104]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[104] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[105] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_409),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[105]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[105] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[106] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_408),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[106]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[106] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[107] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_407),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[107]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[107] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[108] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_406),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[108]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[108] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[109] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_405),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[109]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[109] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[10] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_504),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[10]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[10] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[110] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_404),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[110]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[110] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[111] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_403),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[111]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[111] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[112] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_402),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[112]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[112] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[113] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_401),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[113]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[113] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[114] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_400),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[114]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[114] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[115] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_399),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[115]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[115] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[116] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_398),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[116]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[116] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[117] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_397),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[117]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[117] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[118] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_396),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[118]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[118] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[119] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_395),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[119]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[119] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[11] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_503),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[11]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[11] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[120] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_394),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[120]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[120] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[121] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_393),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[121]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[121] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[122] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_392),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[122]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[122] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[123] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_391),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[123]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[123] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[124] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_390),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[124]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[124] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[125] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_389),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[125]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[125] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[126] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_388),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[126]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[126] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[127] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_387),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[127]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[127] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[128] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_386),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[128]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[128] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[129] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_385),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[129]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[129] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[12] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_502),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[12]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[12] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[130] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_384),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[130]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[130] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[131] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_383),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[131]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[131] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[132] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_382),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[132]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[132] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[133] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_381),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[133]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[133] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[134] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_380),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[134]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[134] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[135] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_379),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[135]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[135] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[136] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_378),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[136]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[136] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[137] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_377),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[137]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[137] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[138] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_376),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[138]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[138] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[139] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_375),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[139]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[139] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[13] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_501),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[13]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[13] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[140] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_374),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[140]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[140] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[141] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_373),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[141]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[141] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[142] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_372),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[142]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[142] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[143] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_371),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[143]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[143] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[144] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_370),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[144]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[144] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[145] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_369),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[145]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[145] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[146] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_368),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[146]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[146] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[147] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_367),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[147]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[147] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[148] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_366),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[148]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[148] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[149] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_365),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[149]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[149] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[14] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_500),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[14]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[14] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[150] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_364),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[150]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[150] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[151] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_363),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[151]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[151] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[152] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_362),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[152]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[152] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[153] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_361),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[153]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[153] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[154] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_360),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[154]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[154] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[155] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_359),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[155]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[155] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[156] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_358),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[156]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[156] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[157] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_357),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[157]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[157] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[158] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_356),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[158]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[158] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[159] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_355),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[159]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[159] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[15] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_499),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[15]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[15] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[160] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_354),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[160]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[160] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[161] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_353),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[161]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[161] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[162] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_352),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[162]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[162] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[163] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_351),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[163]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[163] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[164] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_350),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[164]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[164] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[165] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_349),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[165]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[165] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[166] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_348),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[166]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[166] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[167] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_347),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[167]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[167] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[168] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_346),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[168]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[168] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[169] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_345),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[169]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[169] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[16] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_498),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[16]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[16] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[170] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_344),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[170]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[170] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[171] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_343),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[171]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[171] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[172] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_342),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[172]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[172] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[173] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_341),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[173]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[173] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[174] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_340),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[174]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[174] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[175] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_339),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[175]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[175] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[176] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_338),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[176]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[176] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[177] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_337),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[177]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[177] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[178] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_336),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[178]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[178] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[179] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_335),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[179]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[179] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[17] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_497),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[17]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[17] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[180] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_334),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[180]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[180] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[181] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_333),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[181]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[181] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[182] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_332),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[182]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[182] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[183] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_331),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[183]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[183] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[184] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_330),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[184]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[184] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[185] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_329),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[185]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[185] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[186] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_328),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[186]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[186] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[187] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_327),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[187]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[187] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[188] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_326),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[188]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[188] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[189] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_325),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[189]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[189] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[18] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_496),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[18]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[18] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[190] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_324),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[190]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[190] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[191] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_323),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[191]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[191] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[192] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_322),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[192]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[192] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[193] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_321),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[193]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[193] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[194] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_320),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[194]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[194] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[195] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_319),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[195]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[195] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[196] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_318),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[196]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[196] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[197] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_317),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[197]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[197] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[198] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_316),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[198]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[198] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[199] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_315),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[199]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[199] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[19] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_495),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[19]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[19] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[1] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_513),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[1]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[1] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[200] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_314),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[200]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[200] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[201] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_313),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[201]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[201] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[202] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_312),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[202]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[202] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[203] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_311),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[203]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[203] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[204] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_310),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[204]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[204] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[205] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_309),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[205]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[205] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[206] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_308),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[206]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[206] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[207] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_307),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[207]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[207] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[208] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_306),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[208]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[208] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[209] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_305),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[209]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[209] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[20] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_494),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[20]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[20] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[210] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_304),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[210]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[210] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[211] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_303),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[211]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[211] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[212] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_302),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[212]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[212] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[213] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_301),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[213]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[213] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[214] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_300),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[214]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[214] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[215] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_299),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[215]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[215] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[216] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_298),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[216]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[216] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[217] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_297),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[217]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[217] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[218] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_296),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[218]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[218] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[219] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_295),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[219]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[219] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[21] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_493),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[21]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[21] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[220] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_294),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[220]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[220] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[221] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_293),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[221]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[221] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[222] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_292),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[222]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[222] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[223] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_291),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[223]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[223] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[224] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_290),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[224]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[224] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[225] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_289),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[225]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[225] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[226] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_288),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[226]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[226] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[227] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_287),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[227]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[227] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[228] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_286),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[228]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[228] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[229] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_285),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[229]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[229] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[22] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_492),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[22]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[22] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[230] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_284),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[230]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[230] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[231] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_283),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[231]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[231] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[232] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_282),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[232]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[232] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[233] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_281),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[233]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[233] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[234] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_280),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[234]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[234] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[235] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_279),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[235]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[235] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[236] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_278),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[236]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[236] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[237] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_277),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[237]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[237] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[238] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_276),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[238]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[238] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[239] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_275),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[239]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[239] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[23] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_491),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[23]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[23] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[240] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_274),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[240]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[240] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[241] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_273),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[241]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[241] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[242] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_272),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[242]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[242] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[243] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_271),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[243]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[243] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[244] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_270),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[244]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[244] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[245] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_269),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[245]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[245] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[246] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_268),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[246]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[246] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[247] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_267),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[247]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[247] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[248] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_266),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[248]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[248] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[249] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_265),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[249]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[249] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[24] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_490),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[24]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[24] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[250] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_264),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[250]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[250] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[251] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_263),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[251]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[251] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[252] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_262),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[252]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[252] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[253] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_261),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[253]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[253] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[254] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_260),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[254]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[254] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[255] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_259),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[255]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[255] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[256] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_258),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[256]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[256] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[257] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_257),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[257]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[257] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[258] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_256),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[258]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[258] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[259] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_255),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[259]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[259] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[25] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_489),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[25]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[25] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[260] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_254),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[260]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[260] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[261] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_253),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[261]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[261] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[262] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_252),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[262]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[262] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[263] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_251),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[263]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[263] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[264] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_250),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[264]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[264] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[265] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_249),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[265]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[265] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[266] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_248),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[266]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[266] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[267] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_247),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[267]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[267] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[268] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_246),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[268]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[268] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[269] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_245),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[269]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[269] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[26] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_488),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[26]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[26] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[270] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_244),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[270]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[270] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[271] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_243),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[271]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[271] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[272] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_242),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[272]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[272] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[273] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_241),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[273]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[273] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[274] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_240),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[274]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[274] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[275] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_239),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[275]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[275] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[276] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_238),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[276]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[276] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[277] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_237),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[277]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[277] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[278] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_236),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[278]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[278] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[279] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_235),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[279]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[279] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[27] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_487),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[27]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[27] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[280] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_234),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[280]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[280] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[281] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_233),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[281]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[281] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[282] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_232),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[282]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[282] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[283] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_231),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[283]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[283] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[284] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_230),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[284]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[284] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[285] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_229),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[285]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[285] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[286] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_228),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[286]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[286] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[287] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_227),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[287]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[287] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[288] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_226),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[288]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[288] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[289] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_225),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[289]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[289] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[28] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_486),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[28]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[28] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[290] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_224),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[290]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[290] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[291] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_223),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[291]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[291] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[292] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_222),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[292]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[292] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[293] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_221),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[293]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[293] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[294] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_220),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[294]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[294] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[295] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_219),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[295]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[295] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[296] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_218),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[296]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[296] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[297] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_217),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[297]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[297] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[298] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_216),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[298]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[298] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[299] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_215),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[299]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[299] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[29] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_485),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[29]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[29] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[2] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_512),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[2]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[2] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[300] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_214),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[300]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[300] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[301] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_213),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[301]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[301] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[302] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_212),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[302]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[302] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[303] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_211),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[303]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[303] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[304] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_210),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[304]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[304] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[305] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_209),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[305]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[305] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[306] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_208),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[306]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[306] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[307] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_207),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[307]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[307] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[308] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_206),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[308]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[308] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[309] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_205),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[309]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[309] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[30] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_484),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[30]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[30] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[310] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_204),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[310]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[310] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[311] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_203),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[311]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[311] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[312] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_202),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[312]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[312] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[313] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_201),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[313]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[313] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[314] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_200),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[314]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[314] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[315] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_199),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[315]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[315] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[316] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_198),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[316]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[316] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[317] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_197),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[317]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[317] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[318] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_196),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[318]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[318] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[319] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_195),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[319]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[319] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[31] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_483),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[31]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[31] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[320] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_194),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[320]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[320] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[321] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_193),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[321]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[321] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[322] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_192),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[322]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[322] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[323] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_191),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[323]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[323] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[324] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_190),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[324]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[324] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[325] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_189),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[325]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[325] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[326] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_188),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[326]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[326] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[327] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_187),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[327]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[327] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[328] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_186),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[328]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[328] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[329] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_185),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[329]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[329] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[32] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_482),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[32]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[32] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[330] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_184),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[330]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[330] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[331] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_183),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[331]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[331] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[332] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_182),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[332]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[332] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[333] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_181),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[333]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[333] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[334] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_180),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[334]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[334] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[335] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_179),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[335]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[335] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[336] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_178),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[336]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[336] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[337] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_177),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[337]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[337] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[338] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_176),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[338]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[338] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[339] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_175),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[339]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[339] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[33] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_481),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[33]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[33] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[340] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_174),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[340]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[340] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[341] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_173),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[341]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[341] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[342] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_172),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[342]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[342] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[343] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_171),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[343]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[343] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[344] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_170),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[344]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[344] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[345] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_169),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[345]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[345] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[346] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_168),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[346]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[346] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[347] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_167),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[347]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[347] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[348] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_166),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[348]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[348] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[349] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_165),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[349]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[349] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[34] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_480),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[34]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[34] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[350] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_164),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[350]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[350] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[351] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_163),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[351]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[351] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[352] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_162),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[352]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[352] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[353] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_161),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[353]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[353] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[354] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_160),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[354]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[354] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[355] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_159),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[355]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[355] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[356] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_158),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[356]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[356] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[357] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_157),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[357]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[357] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[358] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_156),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[358]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[358] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[359] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_155),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[359]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[359] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[35] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_479),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[35]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[35] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[360] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_154),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[360]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[360] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[361] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_153),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[361]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[361] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[362] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_152),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[362]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[362] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[363] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_151),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[363]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[363] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[364] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_150),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[364]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[364] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[365] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_149),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[365]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[365] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[366] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_148),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[366]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[366] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[367] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_147),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[367]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[367] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[368] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_146),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[368]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[368] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[369] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_145),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[369]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[369] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[36] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_478),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[36]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[36] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[370] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_144),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[370]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[370] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[371] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_143),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[371]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[371] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[372] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_142),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[372]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[372] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[373] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_141),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[373]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[373] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[374] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_140),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[374]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[374] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[375] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_139),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[375]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[375] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[376] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_138),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[376]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[376] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[377] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_137),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[377]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[377] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[378] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_136),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[378]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[378] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[379] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_135),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[379]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[379] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[37] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_477),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[37]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[37] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[380] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_134),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[380]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[380] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[381] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_133),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[381]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[381] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[382] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_132),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[382]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[382] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[383] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_131),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[383]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[383] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[384] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_130),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[384]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[384] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[385] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_129),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[385]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[385] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[386] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_128),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[386]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[386] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[387] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_127),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[387]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[387] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[388] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_126),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[388]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[388] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[389] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_125),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[389]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[389] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[38] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_476),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[38]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[38] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[390] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_124),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[390]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[390] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[391] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_123),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[391]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[391] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[392] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_122),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[392]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[392] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[393] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_121),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[393]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[393] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[394] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_120),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[394]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[394] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[395] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_119),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[395]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[395] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[396] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_118),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[396]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[396] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[397] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_117),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[397]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[397] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[398] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_116),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[398]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[398] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[399] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_115),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[399]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[399] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[39] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_475),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[39]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[39] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[3] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_511),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[3]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[3] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[400] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_114),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[400]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[400] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[401] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_113),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[401]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[401] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[402] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_112),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[402]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[402] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[403] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_111),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[403]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[403] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[404] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_110),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[404]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[404] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[405] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_109),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[405]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[405] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[406] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_108),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[406]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[406] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[407] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_107),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[407]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[407] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[408] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_106),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[408]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[408] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[409] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_105),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[409]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[409] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[40] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_474),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[40]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[40] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[410] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_104),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[410]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[410] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[411] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_103),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[411]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[411] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[412] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_102),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[412]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[412] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[413] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_101),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[413]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[413] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[414] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_100),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[414]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[414] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[415] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_99),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[415]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[415] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[416] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_98),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[416]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[416] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[417] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_97),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[417]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[417] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[418] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_96),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[418]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[418] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[419] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_95),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[419]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[419] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[41] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_473),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[41]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[41] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[420] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_94),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[420]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[420] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[421] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_93),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[421]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[421] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[422] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_92),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[422]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[422] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[423] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_91),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[423]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[423] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[424] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_90),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[424]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[424] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[425] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_89),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[425]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[425] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[426] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_88),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[426]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[426] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[427] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_87),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[427]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[427] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[428] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_86),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[428]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[428] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[429] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_85),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[429]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[429] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[42] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_472),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[42]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[42] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[430] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_84),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[430]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[430] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[431] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_83),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[431]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[431] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[432] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_82),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[432]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[432] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[433] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_81),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[433]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[433] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[434] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_80),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[434]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[434] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[435] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_79),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[435]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[435] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[436] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_78),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[436]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[436] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[437] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_77),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[437]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[437] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[438] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_76),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[438]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[438] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[439] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_75),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[439]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[439] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[43] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_471),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[43]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[43] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[440] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_74),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[440]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[440] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[441] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_73),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[441]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[441] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[442] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_72),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[442]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[442] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[443] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_71),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[443]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[443] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[444] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_70),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[444]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[444] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[445] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_69),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[445]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[445] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[446] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_68),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[446]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[446] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[447] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_67),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[447]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[447] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[448] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_66),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[448]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[448] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[449] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_65),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[449]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[449] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[44] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_470),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[44]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[44] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[450] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_64),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[450]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[450] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[451] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_63),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[451]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[451] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[452] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_62),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[452]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[452] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[453] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_61),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[453]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[453] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[454] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_60),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[454]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[454] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[455] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_59),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[455]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[455] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[456] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_58),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[456]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[456] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[457] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_57),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[457]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[457] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[458] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_56),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[458]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[458] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[459] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_55),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[459]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[459] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[45] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_469),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[45]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[45] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[460] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_54),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[460]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[460] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[461] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_53),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[461]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[461] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[462] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_52),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[462]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[462] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[463] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_51),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[463]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[463] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[464] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_50),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[464]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[464] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[465] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_49),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[465]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[465] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[466] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_48),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[466]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[466] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[467] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_47),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[467]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[467] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[468] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_46),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[468]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[468] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[469] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_45),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[469]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[469] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[46] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_468),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[46]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[46] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[470] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_44),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[470]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[470] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[471] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_43),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[471]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[471] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[472] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_42),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[472]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[472] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[473] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_41),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[473]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[473] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[474] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_40),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[474]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[474] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[475] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_39),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[475]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[475] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[476] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_38),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[476]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[476] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[477] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_37),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[477]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[477] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[478] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_36),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[478]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[478] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[479] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_35),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[479]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[479] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[47] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_467),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[47]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[47] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[480] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_34),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[480]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[480] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[481] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_33),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[481]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[481] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[482] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_32),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[482]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[482] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[483] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_31),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[483]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[483] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[484] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_30),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[484]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[484] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[485] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_29),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[485]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[485] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[486] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_28),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[486]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[486] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[487] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_27),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[487]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[487] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[488] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_26),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[488]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[488] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[489] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_25),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[489]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[489] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[48] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_466),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[48]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[48] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[490] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_24),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[490]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[490] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[491] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_23),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[491]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[491] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[492] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_22),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[492]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[492] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[493] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_21),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[493]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[493] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[494] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_20),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[494]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[494] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[495] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_19),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[495]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[495] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[496] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_18),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[496]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[496] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[497] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_17),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[497]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[497] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[498] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_16),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[498]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[498] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[499] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_15),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[499]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[499] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[49] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_465),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[49]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[49] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[4] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_510),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[4]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[4] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[500] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_14),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[500]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[500] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[501] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_13),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[501]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[501] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[502] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_12),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[502]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[502] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[503] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_11),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[503]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[503] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[504] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_10),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[504]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[504] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[505] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_9),
         .Q(p_0_in[0]),
@@ -35613,10 +43568,45 @@ module design_1_uart_top_0_0_uart_top
        (.C(iClk),
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_464),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[505]),
+        .Q(\rResultBuffer_reg_n_0_[505] ),
+        .R(iRst));
+  FDRE \rResultBuffer_reg[506] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[506]),
+        .Q(\rResultBuffer_reg_n_0_[506] ),
+        .R(iRst));
+  FDRE \rResultBuffer_reg[507] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[507]),
+        .Q(\rResultBuffer_reg_n_0_[507] ),
+        .R(iRst));
+  FDRE \rResultBuffer_reg[508] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[508]),
+        .Q(\rResultBuffer_reg_n_0_[508] ),
+        .R(iRst));
+  FDRE \rResultBuffer_reg[509] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[509]),
+        .Q(\rResultBuffer_reg_n_0_[509] ),
+        .R(iRst));
+  FDRE \rResultBuffer_reg[50] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[50]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[50] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[510] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_4),
         .Q(p_0_in[5]),
@@ -35637,322 +43627,605 @@ module design_1_uart_top_0_0_uart_top
        (.C(iClk),
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_463),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[510]),
+        .Q(\rResultBuffer_reg_n_0_[510] ),
+        .R(iRst));
+  FDRE \rResultBuffer_reg[511] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[511]),
+        .Q(\rResultBuffer_reg_n_0_[511] ),
+        .R(iRst));
+  FDRE \rResultBuffer_reg[512] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[512]),
+        .Q(\rResultBuffer_reg_n_0_[512] ),
+        .R(iRst));
+  FDRE \rResultBuffer_reg[51] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[51]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[51] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[52] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_462),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[52]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[52] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[53] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_461),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[53]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[53] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[54] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_460),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[54]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[54] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[55] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_459),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[55]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[55] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[56] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_458),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[56]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[56] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[57] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_457),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[57]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[57] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[58] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_456),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[58]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[58] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[59] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_455),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[59]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[59] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[5] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_509),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[5]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[5] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[60] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_454),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[60]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[60] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[61] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_453),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[61]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[61] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[62] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_452),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[62]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[62] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[63] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_451),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[63]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[63] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[64] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_450),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[64]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[64] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[65] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_449),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[65]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[65] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[66] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_448),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[66]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[66] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[67] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_447),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[67]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[67] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[68] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_446),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[68]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[68] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[69] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_445),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[69]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[69] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[6] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_508),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[6]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[6] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[70] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_444),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[70]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[70] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[71] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_443),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[71]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[71] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[72] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_442),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[72]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[72] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[73] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_441),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[73]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[73] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[74] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_440),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[74]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[74] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[75] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_439),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[75]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[75] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[76] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_438),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[76]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[76] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[77] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_437),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[77]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[77] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[78] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_436),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[78]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[78] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[79] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_435),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[79]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[79] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[7] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_507),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[7]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[7] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[80] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_434),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[80]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[80] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[81] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_433),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[81]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[81] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[82] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_432),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[82]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[82] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[83] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_431),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[83]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[83] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[84] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_430),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[84]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[84] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[85] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_429),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[85]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[85] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[86] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_428),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[86]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[86] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[87] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_427),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[87]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[87] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[88] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_426),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[88]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[88] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[89] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_425),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[89]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[89] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[8] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_506),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[8]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[8] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[90] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_424),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[90]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[90] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[91] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_423),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[91]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[91] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[92] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_422),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[92]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[92] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[93] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_421),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[93]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[93] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[94] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_420),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[94]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[94] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[95] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_419),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[95]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[95] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[96] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_418),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[96]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[96] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[97] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_417),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[97]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[97] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[98] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_416),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[98]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[98] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[99] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_415),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[99]),
+>>>>>>> temp-branch
         .Q(\rResultBuffer_reg_n_0_[99] ),
         .R(iRst));
   FDRE \rResultBuffer_reg[9] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rResultBuffer),
         .D(MP_ADDER_INST_n_505),
         .Q(\rResultBuffer_reg_n_0_[9] ),
@@ -35961,48 +44234,237 @@ module design_1_uart_top_0_0_uart_top
        (.C(iClk),
         .CE(rTxByte),
         .D(p_0_in[0]),
+=======
+        .CE(UART_TX_INST_n_3),
+        .D(rResultBuffer[9]),
+        .Q(\rResultBuffer_reg_n_0_[9] ),
+        .R(iRst));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  LUT3 #(
+    .INIT(8'h3A)) 
+    \rTxByte[0]_i_1 
+       (.I0(\rResultBuffer_reg_n_0_[505] ),
+        .I1(\rTxByte[0]_i_2_n_0 ),
+        .I2(rFSM__0[1]),
+        .O(rTxByte0_in[0]));
+  LUT6 #(
+    .INIT(64'h0F3355000F3355FF)) 
+    \rTxByte[0]_i_2 
+       (.I0(\rCountToSend_reg[2]_1 [0]),
+        .I1(\rCountToSend_reg[1]_2 [0]),
+        .I2(\rCountToSend_reg[3]_0 [0]),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[0] ),
+        .I5(\rCountToSend_reg[0]_3 [0]),
+        .O(\rTxByte[0]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  LUT3 #(
+    .INIT(8'h3A)) 
+    \rTxByte[1]_i_1 
+       (.I0(\rResultBuffer_reg_n_0_[506] ),
+        .I1(\rTxByte[1]_i_2_n_0 ),
+        .I2(rFSM__0[1]),
+        .O(rTxByte0_in[1]));
+  LUT6 #(
+    .INIT(64'h0F0055330FFF5533)) 
+    \rTxByte[1]_i_2 
+       (.I0(\rCountToSend_reg[2]_1 [1]),
+        .I1(\rCountToSend_reg[0]_3 [1]),
+        .I2(\rCountToSend_reg[3]_0 [1]),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[0] ),
+        .I5(\rCountToSend_reg[1]_2 [1]),
+        .O(\rTxByte[1]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT3 #(
+    .INIT(8'h3A)) 
+    \rTxByte[2]_i_1 
+       (.I0(\rResultBuffer_reg_n_0_[507] ),
+        .I1(\rTxByte[2]_i_2_n_0 ),
+        .I2(rFSM__0[1]),
+        .O(rTxByte0_in[2]));
+  LUT6 #(
+    .INIT(64'h0F3355000F3355FF)) 
+    \rTxByte[2]_i_2 
+       (.I0(\rCountToSend_reg[2]_1 [2]),
+        .I1(\rCountToSend_reg[1]_2 [2]),
+        .I2(\rCountToSend_reg[3]_0 [2]),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[0] ),
+        .I5(\rCountToSend_reg[0]_3 [2]),
+        .O(\rTxByte[2]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT3 #(
+    .INIT(8'h3A)) 
+    \rTxByte[3]_i_1 
+       (.I0(\rResultBuffer_reg_n_0_[508] ),
+        .I1(\rTxByte[3]_i_2_n_0 ),
+        .I2(rFSM__0[1]),
+        .O(rTxByte0_in[3]));
+  LUT6 #(
+    .INIT(64'h55000F3355FF0F33)) 
+    \rTxByte[3]_i_2 
+       (.I0(\rCountToSend_reg[3]_0 [3]),
+        .I1(\rCountToSend_reg[0]_3 [3]),
+        .I2(\rCountToSend_reg[2]_1 [3]),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[0] ),
+        .I5(\rCountToSend_reg[1]_2 [3]),
+        .O(\rTxByte[3]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT3 #(
+    .INIT(8'h3A)) 
+    \rTxByte[4]_i_1 
+       (.I0(\rResultBuffer_reg_n_0_[509] ),
+        .I1(\rTxByte[4]_i_2_n_0 ),
+        .I2(rFSM__0[1]),
+        .O(rTxByte0_in[4]));
+  LUT6 #(
+    .INIT(64'h55000F3355FF0F33)) 
+    \rTxByte[4]_i_2 
+       (.I0(\rCountToSend_reg[3]_0 [4]),
+        .I1(\rCountToSend_reg[0]_3 [4]),
+        .I2(\rCountToSend_reg[2]_1 [4]),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[0] ),
+        .I5(\rCountToSend_reg[1]_2 [4]),
+        .O(\rTxByte[4]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT3 #(
+    .INIT(8'h3A)) 
+    \rTxByte[5]_i_1 
+       (.I0(\rResultBuffer_reg_n_0_[510] ),
+        .I1(\rTxByte[5]_i_2_n_0 ),
+        .I2(rFSM__0[1]),
+        .O(rTxByte0_in[5]));
+  LUT6 #(
+    .INIT(64'h55000F3355FF0F33)) 
+    \rTxByte[5]_i_2 
+       (.I0(\rCountToSend_reg[3]_0 [5]),
+        .I1(\rCountToSend_reg[0]_3 [5]),
+        .I2(\rCountToSend_reg[2]_1 [5]),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[0] ),
+        .I5(\rCountToSend_reg[1]_2 [5]),
+        .O(\rTxByte[5]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT3 #(
+    .INIT(8'h3A)) 
+    \rTxByte[6]_i_1 
+       (.I0(\rResultBuffer_reg_n_0_[511] ),
+        .I1(\rTxByte[6]_i_2_n_0 ),
+        .I2(rFSM__0[1]),
+        .O(rTxByte0_in[6]));
+  LUT6 #(
+    .INIT(64'h55000F3355FF0F33)) 
+    \rTxByte[6]_i_2 
+       (.I0(\rCountToSend_reg[3]_0 [6]),
+        .I1(\rCountToSend_reg[0]_3 [6]),
+        .I2(\rCountToSend_reg[2]_1 [6]),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[0] ),
+        .I5(\rCountToSend_reg[1]_2 [6]),
+        .O(\rTxByte[6]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT3 #(
+    .INIT(8'h3A)) 
+    \rTxByte[7]_i_2 
+       (.I0(\rResultBuffer_reg_n_0_[512] ),
+        .I1(\rTxByte[7]_i_3_n_0 ),
+        .I2(rFSM__0[1]),
+        .O(rTxByte0_in[7]));
+  LUT6 #(
+    .INIT(64'h55000F3355FF0F33)) 
+    \rTxByte[7]_i_3 
+       (.I0(\rCountToSend_reg[3]_0 [7]),
+        .I1(\rCountToSend_reg[0]_3 [7]),
+        .I2(\rCountToSend_reg[2]_1 [7]),
+        .I3(\rCnt_reg_n_0_[1] ),
+        .I4(\rCnt_reg_n_0_[0] ),
+        .I5(\rCountToSend_reg[1]_2 [7]),
+        .O(\rTxByte[7]_i_3_n_0 ));
+  FDRE \rTxByte_reg[0] 
+       (.C(iClk),
+        .CE(UART_TX_INST_n_5),
+        .D(rTxByte0_in[0]),
+>>>>>>> temp-branch
         .Q(\rTxByte_reg_n_0_[0] ),
         .R(iRst));
   FDRE \rTxByte_reg[1] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rTxByte),
         .D(p_0_in[1]),
+=======
+        .CE(UART_TX_INST_n_5),
+        .D(rTxByte0_in[1]),
+>>>>>>> temp-branch
         .Q(\rTxByte_reg_n_0_[1] ),
         .R(iRst));
   FDRE \rTxByte_reg[2] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rTxByte),
         .D(p_0_in[2]),
+=======
+        .CE(UART_TX_INST_n_5),
+        .D(rTxByte0_in[2]),
+>>>>>>> temp-branch
         .Q(\rTxByte_reg_n_0_[2] ),
         .R(iRst));
   FDRE \rTxByte_reg[3] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rTxByte),
         .D(p_0_in[3]),
+=======
+        .CE(UART_TX_INST_n_5),
+        .D(rTxByte0_in[3]),
+>>>>>>> temp-branch
         .Q(\rTxByte_reg_n_0_[3] ),
         .R(iRst));
   FDRE \rTxByte_reg[4] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rTxByte),
         .D(p_0_in[4]),
+=======
+        .CE(UART_TX_INST_n_5),
+        .D(rTxByte0_in[4]),
+>>>>>>> temp-branch
         .Q(\rTxByte_reg_n_0_[4] ),
         .R(iRst));
   FDRE \rTxByte_reg[5] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rTxByte),
         .D(p_0_in[5]),
+=======
+        .CE(UART_TX_INST_n_5),
+        .D(rTxByte0_in[5]),
+>>>>>>> temp-branch
         .Q(\rTxByte_reg_n_0_[5] ),
         .R(iRst));
   FDRE \rTxByte_reg[6] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rTxByte),
         .D(p_0_in[6]),
+=======
+        .CE(UART_TX_INST_n_5),
+        .D(rTxByte0_in[6]),
+>>>>>>> temp-branch
         .Q(\rTxByte_reg_n_0_[6] ),
         .R(iRst));
   FDRE \rTxByte_reg[7] 
        (.C(iClk),
+<<<<<<< HEAD
         .CE(rTxByte),
         .D(p_0_in[7]),
+=======
+        .CE(UART_TX_INST_n_5),
+        .D(rTxByte0_in[7]),
+>>>>>>> temp-branch
         .Q(\rTxByte_reg_n_0_[7] ),
         .R(iRst));
   (* SOFT_HLUTNM = "soft_lutpair49" *) 
@@ -36015,13 +44477,18 @@ module design_1_uart_top_0_0_uart_top
   FDRE rTxStart_reg
        (.C(iClk),
         .CE(1'b1),
+<<<<<<< HEAD
         .D(UART_TX_INST_n_14),
+=======
+        .D(UART_TX_INST_n_0),
+>>>>>>> temp-branch
         .Q(rTxStart_reg_n_0),
         .R(iRst));
 endmodule
 
 (* ORIG_REF_NAME = "uart_tx" *) 
 module design_1_uart_top_0_0_uart_tx
+<<<<<<< HEAD
    (\FSM_sequential_rFSM_reg[0]_rep__2 ,
     \FSM_sequential_rFSM_reg[0]_rep__2_0 ,
     \FSM_sequential_rFSM_reg[2]_rep__1 ,
@@ -36074,6 +44541,46 @@ module design_1_uart_top_0_0_uart_tx
   input [7:0]Q;
   input \FSM_sequential_rFSM_reg[2]_rep__1_4 ;
   input rTxStart_reg_1;
+=======
+   (\FSM_sequential_rFSM_reg[3] ,
+    \FSM_onehot_rFSM_Current_reg[4]_0 ,
+    \FSM_onehot_rFSM_Current_reg[4]_1 ,
+    E,
+    \FSM_sequential_rFSM_reg[0]_rep__2 ,
+    \FSM_onehot_rFSM_Current_reg[4]_2 ,
+    oTx,
+    Q,
+    \rTxByte_reg[0] ,
+    \rTxByte_reg[0]_0 ,
+    \rTxData_Current_reg[0]_0 ,
+    \FSM_sequential_rFSM_reg[3]_rep__2 ,
+    wAddDone,
+    \rResultBuffer_reg[0] ,
+    \rResultBuffer_reg[0]_0 ,
+    \rCnt_reg[0] ,
+    \rCnt_reg[0]_0 ,
+    \rTxData_Current_reg[7]_0 ,
+    iRst,
+    iClk);
+  output \FSM_sequential_rFSM_reg[3] ;
+  output \FSM_onehot_rFSM_Current_reg[4]_0 ;
+  output \FSM_onehot_rFSM_Current_reg[4]_1 ;
+  output [0:0]E;
+  output [0:0]\FSM_sequential_rFSM_reg[0]_rep__2 ;
+  output [0:0]\FSM_onehot_rFSM_Current_reg[4]_2 ;
+  output oTx;
+  input [2:0]Q;
+  input \rTxByte_reg[0] ;
+  input \rTxByte_reg[0]_0 ;
+  input \rTxData_Current_reg[0]_0 ;
+  input \FSM_sequential_rFSM_reg[3]_rep__2 ;
+  input wAddDone;
+  input \rResultBuffer_reg[0] ;
+  input \rResultBuffer_reg[0]_0 ;
+  input \rCnt_reg[0] ;
+  input \rCnt_reg[0]_0 ;
+  input [7:0]\rTxData_Current_reg[7]_0 ;
+>>>>>>> temp-branch
   input iRst;
   input iClk;
 
@@ -36085,12 +44592,19 @@ module design_1_uart_top_0_0_uart_tx
   wire \FSM_onehot_rFSM_Current[4]_i_1__0_n_0 ;
   wire \FSM_onehot_rFSM_Current[4]_i_2_n_0 ;
   wire \FSM_onehot_rFSM_Current[4]_i_3__0_n_0 ;
+<<<<<<< HEAD
   wire \FSM_onehot_rFSM_Current_reg[0]_0 ;
   wire \FSM_onehot_rFSM_Current_reg[4]_0 ;
+=======
+  wire \FSM_onehot_rFSM_Current_reg[4]_0 ;
+  wire \FSM_onehot_rFSM_Current_reg[4]_1 ;
+  wire [0:0]\FSM_onehot_rFSM_Current_reg[4]_2 ;
+>>>>>>> temp-branch
   wire \FSM_onehot_rFSM_Current_reg_n_0_[0] ;
   wire \FSM_onehot_rFSM_Current_reg_n_0_[1] ;
   wire \FSM_onehot_rFSM_Current_reg_n_0_[2] ;
   wire \FSM_onehot_rFSM_Current_reg_n_0_[3] ;
+<<<<<<< HEAD
   wire \FSM_sequential_rFSM[2]_i_2_n_0 ;
   wire \FSM_sequential_rFSM[2]_i_3_n_0 ;
   wire \FSM_sequential_rFSM_reg[0]_rep ;
@@ -36109,6 +44623,12 @@ module design_1_uart_top_0_0_uart_tx
   wire \FSM_sequential_rFSM_reg[2]_rep__1_3 ;
   wire \FSM_sequential_rFSM_reg[2]_rep__1_4 ;
   wire [7:0]Q;
+=======
+  wire [0:0]\FSM_sequential_rFSM_reg[0]_rep__2 ;
+  wire \FSM_sequential_rFSM_reg[3] ;
+  wire \FSM_sequential_rFSM_reg[3]_rep__2 ;
+  wire [2:0]Q;
+>>>>>>> temp-branch
   wire iClk;
   wire iRst;
   wire [6:0]in7;
@@ -36117,6 +44637,10 @@ module design_1_uart_top_0_0_uart_tx
   wire \rBit_Current[0]_i_1_n_0 ;
   wire \rBit_Current[1]_i_1_n_0 ;
   wire \rBit_Current[2]_i_1_n_0 ;
+<<<<<<< HEAD
+=======
+  wire \rCnt[7]_i_4_n_0 ;
+>>>>>>> temp-branch
   wire \rCnt_Current[0]_i_1__0_n_0 ;
   wire \rCnt_Current[10]_i_1__0_n_0 ;
   wire \rCnt_Current[10]_i_2_n_0 ;
@@ -36143,7 +44667,16 @@ module design_1_uart_top_0_0_uart_tx
   wire \rCnt_Current_reg_n_0_[7] ;
   wire \rCnt_Current_reg_n_0_[8] ;
   wire \rCnt_Current_reg_n_0_[9] ;
+<<<<<<< HEAD
   wire [1:0]rFSM__0;
+=======
+  wire \rCnt_reg[0] ;
+  wire \rCnt_reg[0]_0 ;
+  wire \rResultBuffer_reg[0] ;
+  wire \rResultBuffer_reg[0]_0 ;
+  wire \rTxByte_reg[0] ;
+  wire \rTxByte_reg[0]_0 ;
+>>>>>>> temp-branch
   wire \rTxData_Current[0]_i_1_n_0 ;
   wire \rTxData_Current[1]_i_1_n_0 ;
   wire \rTxData_Current[2]_i_1_n_0 ;
@@ -36153,20 +44686,30 @@ module design_1_uart_top_0_0_uart_tx
   wire \rTxData_Current[6]_i_1_n_0 ;
   wire \rTxData_Current[7]_i_2_n_0 ;
   wire \rTxData_Current[7]_i_3_n_0 ;
+<<<<<<< HEAD
   wire \rTxData_Current_reg_n_0_[0] ;
   wire rTxStart_reg;
   wire rTxStart_reg_0;
   wire rTxStart_reg_1;
+=======
+  wire \rTxData_Current_reg[0]_0 ;
+  wire [7:0]\rTxData_Current_reg[7]_0 ;
+  wire \rTxData_Current_reg_n_0_[0] ;
+>>>>>>> temp-branch
   wire wAddDone;
   wire wBit_Next;
   wire wTxData_Next;
   wire wTxDone;
 
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair45" *) 
+=======
+>>>>>>> temp-branch
   LUT3 #(
     .INIT(8'hBA)) 
     \FSM_onehot_rFSM_Current[0]_i_1 
        (.I0(wTxDone),
+<<<<<<< HEAD
         .I1(rTxStart_reg_0),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .O(\FSM_onehot_rFSM_Current[0]_i_1_n_0 ));
@@ -36175,19 +44718,38 @@ module design_1_uart_top_0_0_uart_tx
     .INIT(16'h8F88)) 
     \FSM_onehot_rFSM_Current[1]_i_1 
        (.I0(rTxStart_reg_0),
+=======
+        .I1(\rTxData_Current_reg[0]_0 ),
+        .I2(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+        .O(\FSM_onehot_rFSM_Current[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT4 #(
+    .INIT(16'h8F88)) 
+    \FSM_onehot_rFSM_Current[1]_i_1 
+       (.I0(\rTxData_Current_reg[0]_0 ),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(\FSM_onehot_rFSM_Current[4]_i_2_n_0 ),
         .I3(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
         .O(\FSM_onehot_rFSM_Current[1]_i_1_n_0 ));
   LUT6 #(
+<<<<<<< HEAD
     .INIT(64'hFFFFFF007F00FF00)) 
+=======
+    .INIT(64'hFFFF7F00FF00FF00)) 
+>>>>>>> temp-branch
     \FSM_onehot_rFSM_Current[2]_i_1 
        (.I0(rBit_Current[2]),
         .I1(rBit_Current[0]),
         .I2(rBit_Current[1]),
         .I3(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
+<<<<<<< HEAD
         .I4(\FSM_onehot_rFSM_Current[4]_i_2_n_0 ),
         .I5(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
+=======
+        .I4(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
+        .I5(\FSM_onehot_rFSM_Current[4]_i_2_n_0 ),
+>>>>>>> temp-branch
         .O(\FSM_onehot_rFSM_Current[2]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hC0000000AAAAAAAA)) 
@@ -36199,7 +44761,11 @@ module design_1_uart_top_0_0_uart_tx
         .I4(rBit_Current[1]),
         .I5(\FSM_onehot_rFSM_Current[4]_i_2_n_0 ),
         .O(\FSM_onehot_rFSM_Current[3]_i_1_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair43" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+>>>>>>> temp-branch
   LUT2 #(
     .INIT(4'h8)) 
     \FSM_onehot_rFSM_Current[4]_i_1__0 
@@ -36210,10 +44776,17 @@ module design_1_uart_top_0_0_uart_tx
     .INIT(64'hAAAAAAA8AAAAAAAA)) 
     \FSM_onehot_rFSM_Current[4]_i_2 
        (.I0(\rCnt_Current_reg_n_0_[10] ),
+<<<<<<< HEAD
         .I1(\rCnt_Current_reg_n_0_[7] ),
         .I2(\rCnt_Current_reg_n_0_[8] ),
         .I3(\rCnt_Current_reg_n_0_[6] ),
         .I4(\rCnt_Current_reg_n_0_[9] ),
+=======
+        .I1(\rCnt_Current_reg_n_0_[6] ),
+        .I2(\rCnt_Current_reg_n_0_[9] ),
+        .I3(\rCnt_Current_reg_n_0_[7] ),
+        .I4(\rCnt_Current_reg_n_0_[8] ),
+>>>>>>> temp-branch
         .I5(\FSM_onehot_rFSM_Current[4]_i_3__0_n_0 ),
         .O(\FSM_onehot_rFSM_Current[4]_i_2_n_0 ));
   LUT4 #(
@@ -36269,6 +44842,7 @@ module design_1_uart_top_0_0_uart_tx
         .D(\FSM_onehot_rFSM_Current[4]_i_1__0_n_0 ),
         .Q(wTxDone),
         .R(iRst));
+<<<<<<< HEAD
   LUT5 #(
     .INIT(32'h00FF5700)) 
     \FSM_sequential_rFSM[0]_i_1 
@@ -36376,6 +44950,19 @@ module design_1_uart_top_0_0_uart_tx
         .I3(rFSM__0[1]),
         .O(\FSM_sequential_rFSM_reg[0]_rep__2_3 ));
   (* SOFT_HLUTNM = "soft_lutpair47" *) 
+=======
+  LUT6 #(
+    .INIT(64'hFFFFFFFF00A0030F)) 
+    \FSM_sequential_rFSM[3]_i_1 
+       (.I0(wTxDone),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .I3(Q[2]),
+        .I4(\rTxByte_reg[0] ),
+        .I5(\FSM_sequential_rFSM_reg[3]_rep__2 ),
+        .O(\FSM_onehot_rFSM_Current_reg[4]_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+>>>>>>> temp-branch
   LUT3 #(
     .INIT(8'hA3)) 
     oTx_INST_0
@@ -36383,15 +44970,34 @@ module design_1_uart_top_0_0_uart_tx
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .O(oTx));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h38)) 
+=======
+  LUT6 #(
+    .INIT(64'h00000070AAAAAA8A)) 
+>>>>>>> temp-branch
     \rBit_Current[0]_i_1 
        (.I0(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
-        .I1(wBit_Next),
-        .I2(rBit_Current[0]),
+        .I1(\FSM_onehot_rFSM_Current[4]_i_2_n_0 ),
+        .I2(\FSM_onehot_rFSM_Current_reg[4]_0 ),
+        .I3(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
+        .I4(\FSM_onehot_rFSM_Current_reg_n_0_[3] ),
+        .I5(rBit_Current[0]),
         .O(\rBit_Current[0]_i_1_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \rBit_Current[0]_i_2 
+       (.I0(wTxDone),
+        .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+        .O(\FSM_onehot_rFSM_Current_reg[4]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+>>>>>>> temp-branch
   LUT4 #(
     .INIT(16'h4F80)) 
     \rBit_Current[1]_i_1 
@@ -36400,7 +45006,11 @@ module design_1_uart_top_0_0_uart_tx
         .I2(wBit_Next),
         .I3(rBit_Current[1]),
         .O(\rBit_Current[1]_i_1_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+>>>>>>> temp-branch
   LUT5 #(
     .INIT(32'h2AFF8000)) 
     \rBit_Current[2]_i_1 
@@ -36415,10 +45025,17 @@ module design_1_uart_top_0_0_uart_tx
     \rBit_Current[2]_i_2 
        (.I0(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I1(\FSM_onehot_rFSM_Current[4]_i_2_n_0 ),
+<<<<<<< HEAD
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
         .I3(\FSM_onehot_rFSM_Current_reg_n_0_[3] ),
         .I4(wTxDone),
         .I5(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+=======
+        .I2(wTxDone),
+        .I3(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+        .I4(\FSM_onehot_rFSM_Current_reg_n_0_[1] ),
+        .I5(\FSM_onehot_rFSM_Current_reg_n_0_[3] ),
+>>>>>>> temp-branch
         .O(wBit_Next));
   FDRE \rBit_Current_reg[0] 
        (.C(iClk),
@@ -36438,6 +45055,7 @@ module design_1_uart_top_0_0_uart_tx
         .D(\rBit_Current[2]_i_1_n_0 ),
         .Q(rBit_Current[2]),
         .R(iRst));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'h0054)) 
@@ -36448,13 +45066,40 @@ module design_1_uart_top_0_0_uart_tx
         .I3(rTxStart_reg),
         .O(\FSM_onehot_rFSM_Current_reg[4]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair46" *) 
+=======
+  LUT6 #(
+    .INIT(64'h000000000000BABB)) 
+    \rCnt[7]_i_1 
+       (.I0(\rCnt_reg[0] ),
+        .I1(\rTxByte_reg[0] ),
+        .I2(\rResultBuffer_reg[0] ),
+        .I3(\FSM_onehot_rFSM_Current_reg[4]_0 ),
+        .I4(\rCnt[7]_i_4_n_0 ),
+        .I5(Q[2]),
+        .O(\FSM_sequential_rFSM_reg[0]_rep__2 ));
+  LUT6 #(
+    .INIT(64'hF000F0F0B0F0B0F0)) 
+    \rCnt[7]_i_4 
+       (.I0(\FSM_onehot_rFSM_Current_reg[4]_0 ),
+        .I1(\rCnt_reg[0]_0 ),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(wAddDone),
+        .I5(\rTxByte_reg[0] ),
+        .O(\rCnt[7]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+>>>>>>> temp-branch
   LUT2 #(
     .INIT(4'h2)) 
     \rCnt_Current[0]_i_1__0 
        (.I0(\rCnt_Current[10]_i_2_n_0 ),
         .I1(\rCnt_Current_reg_n_0_[0] ),
         .O(\rCnt_Current[0]_i_1__0_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair42" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+>>>>>>> temp-branch
   LUT4 #(
     .INIT(16'hAA80)) 
     \rCnt_Current[10]_i_1__0 
@@ -36463,7 +45108,11 @@ module design_1_uart_top_0_0_uart_tx
         .I2(\rCnt_Current_reg_n_0_[9] ),
         .I3(\rCnt_Current_reg_n_0_[10] ),
         .O(\rCnt_Current[10]_i_1__0_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair43" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+>>>>>>> temp-branch
   LUT4 #(
     .INIT(16'h5554)) 
     \rCnt_Current[10]_i_2 
@@ -36472,7 +45121,11 @@ module design_1_uart_top_0_0_uart_tx
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[3] ),
         .I3(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .O(\rCnt_Current[10]_i_2_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+>>>>>>> temp-branch
   LUT4 #(
     .INIT(16'h0800)) 
     \rCnt_Current[10]_i_3 
@@ -36481,7 +45134,11 @@ module design_1_uart_top_0_0_uart_tx
         .I2(\rCnt_Current[8]_i_2_n_0 ),
         .I3(\rCnt_Current_reg_n_0_[8] ),
         .O(\rCnt_Current[10]_i_3_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair46" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+>>>>>>> temp-branch
   LUT3 #(
     .INIT(8'h28)) 
     \rCnt_Current[1]_i_1__0 
@@ -36489,7 +45146,11 @@ module design_1_uart_top_0_0_uart_tx
         .I1(\rCnt_Current_reg_n_0_[1] ),
         .I2(\rCnt_Current_reg_n_0_[0] ),
         .O(\rCnt_Current[1]_i_1__0_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair38" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+>>>>>>> temp-branch
   LUT4 #(
     .INIT(16'h2A80)) 
     \rCnt_Current[2]_i_1__0 
@@ -36498,7 +45159,11 @@ module design_1_uart_top_0_0_uart_tx
         .I2(\rCnt_Current_reg_n_0_[1] ),
         .I3(\rCnt_Current_reg_n_0_[2] ),
         .O(\rCnt_Current[2]_i_1__0_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair38" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+>>>>>>> temp-branch
   LUT5 #(
     .INIT(32'h2AAA8000)) 
     \rCnt_Current[3]_i_1__0 
@@ -36534,7 +45199,11 @@ module design_1_uart_top_0_0_uart_tx
        (.I0(\rCnt_Current_reg_n_0_[0] ),
         .I1(\rCnt_Current_reg_n_0_[1] ),
         .O(\rCnt_Current[5]_i_2_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair41" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+>>>>>>> temp-branch
   LUT3 #(
     .INIT(8'h82)) 
     \rCnt_Current[6]_i_1__0 
@@ -36542,7 +45211,11 @@ module design_1_uart_top_0_0_uart_tx
         .I1(\rCnt_Current[8]_i_2_n_0 ),
         .I2(\rCnt_Current_reg_n_0_[6] ),
         .O(\rCnt_Current[6]_i_1__0_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair41" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+>>>>>>> temp-branch
   LUT4 #(
     .INIT(16'hA208)) 
     \rCnt_Current[7]_i_1__0 
@@ -36551,7 +45224,11 @@ module design_1_uart_top_0_0_uart_tx
         .I2(\rCnt_Current[8]_i_2_n_0 ),
         .I3(\rCnt_Current_reg_n_0_[7] ),
         .O(\rCnt_Current[7]_i_1__0_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+>>>>>>> temp-branch
   LUT5 #(
     .INIT(32'h82888888)) 
     \rCnt_Current[8]_i_1__0 
@@ -36571,7 +45248,11 @@ module design_1_uart_top_0_0_uart_tx
         .I4(\rCnt_Current_reg_n_0_[1] ),
         .I5(\rCnt_Current_reg_n_0_[0] ),
         .O(\rCnt_Current[8]_i_2_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair42" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+>>>>>>> temp-branch
   LUT3 #(
     .INIT(8'h28)) 
     \rCnt_Current[9]_i_1__0 
@@ -36655,6 +45336,7 @@ module design_1_uart_top_0_0_uart_tx
         .I4(wAddDone),
         .O(E));
   LUT6 #(
+<<<<<<< HEAD
     .INIT(64'h0000000004040400)) 
     \rTxByte[7]_i_1 
        (.I0(rFSM__0[0]),
@@ -36668,6 +45350,31 @@ module design_1_uart_top_0_0_uart_tx
     .INIT(32'hFFFFF888)) 
     \rTxData_Current[0]_i_1 
        (.I0(Q[0]),
+=======
+    .INIT(64'h000000002E2E2E22)) 
+    \rResultBuffer[512]_i_1 
+       (.I0(wAddDone),
+        .I1(Q[1]),
+        .I2(\rResultBuffer_reg[0] ),
+        .I3(wTxDone),
+        .I4(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+        .I5(\rResultBuffer_reg[0]_0 ),
+        .O(E));
+  LUT6 #(
+    .INIT(64'h0000000000E00000)) 
+    \rTxByte[7]_i_1 
+       (.I0(wTxDone),
+        .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
+        .I2(\rTxByte_reg[0]_0 ),
+        .I3(Q[2]),
+        .I4(Q[1]),
+        .I5(\rTxByte_reg[0] ),
+        .O(\FSM_onehot_rFSM_Current_reg[4]_2 ));
+  LUT5 #(
+    .INIT(32'hFFFFF888)) 
+    \rTxData_Current[0]_i_1 
+       (.I0(\rTxData_Current_reg[7]_0 [0]),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I3(in7[0]),
@@ -36676,7 +45383,11 @@ module design_1_uart_top_0_0_uart_tx
   LUT5 #(
     .INIT(32'hFFFFF888)) 
     \rTxData_Current[1]_i_1 
+<<<<<<< HEAD
        (.I0(Q[1]),
+=======
+       (.I0(\rTxData_Current_reg[7]_0 [1]),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I3(in7[1]),
@@ -36685,7 +45396,11 @@ module design_1_uart_top_0_0_uart_tx
   LUT5 #(
     .INIT(32'hFFFFF888)) 
     \rTxData_Current[2]_i_1 
+<<<<<<< HEAD
        (.I0(Q[2]),
+=======
+       (.I0(\rTxData_Current_reg[7]_0 [2]),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I3(in7[2]),
@@ -36694,7 +45409,11 @@ module design_1_uart_top_0_0_uart_tx
   LUT5 #(
     .INIT(32'hFFFFF888)) 
     \rTxData_Current[3]_i_1 
+<<<<<<< HEAD
        (.I0(Q[3]),
+=======
+       (.I0(\rTxData_Current_reg[7]_0 [3]),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I3(in7[3]),
@@ -36703,7 +45422,11 @@ module design_1_uart_top_0_0_uart_tx
   LUT5 #(
     .INIT(32'hFFFFF888)) 
     \rTxData_Current[4]_i_1 
+<<<<<<< HEAD
        (.I0(Q[4]),
+=======
+       (.I0(\rTxData_Current_reg[7]_0 [4]),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I3(in7[4]),
@@ -36712,7 +45435,11 @@ module design_1_uart_top_0_0_uart_tx
   LUT5 #(
     .INIT(32'hFFFFF888)) 
     \rTxData_Current[5]_i_1 
+<<<<<<< HEAD
        (.I0(Q[5]),
+=======
+       (.I0(\rTxData_Current_reg[7]_0 [5]),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I3(in7[5]),
@@ -36721,7 +45448,11 @@ module design_1_uart_top_0_0_uart_tx
   LUT5 #(
     .INIT(32'hFFFFF888)) 
     \rTxData_Current[6]_i_1 
+<<<<<<< HEAD
        (.I0(Q[6]),
+=======
+       (.I0(\rTxData_Current_reg[7]_0 [6]),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(\FSM_onehot_rFSM_Current_reg_n_0_[2] ),
         .I3(in7[6]),
@@ -36730,7 +45461,11 @@ module design_1_uart_top_0_0_uart_tx
   LUT6 #(
     .INIT(64'h8FFFFFFF88888888)) 
     \rTxData_Current[7]_i_1 
+<<<<<<< HEAD
        (.I0(rTxStart_reg_0),
+=======
+       (.I0(\rTxData_Current_reg[0]_0 ),
+>>>>>>> temp-branch
         .I1(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I2(rBit_Current[1]),
         .I3(rBit_Current[0]),
@@ -36743,7 +45478,11 @@ module design_1_uart_top_0_0_uart_tx
        (.I0(\FSM_onehot_rFSM_Current_reg_n_0_[0] ),
         .I1(Q[7]),
         .O(\rTxData_Current[7]_i_2_n_0 ));
+<<<<<<< HEAD
   (* SOFT_HLUTNM = "soft_lutpair44" *) 
+=======
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+>>>>>>> temp-branch
   LUT2 #(
     .INIT(4'h8)) 
     \rTxData_Current[7]_i_3 
@@ -36799,6 +45538,7 @@ module design_1_uart_top_0_0_uart_tx
         .Q(in7[6]),
         .R(iRst));
   LUT6 #(
+<<<<<<< HEAD
     .INIT(64'h5555FFFF000000A8)) 
     rTxStart_i_1
        (.I0(rTxStart_reg_1),
@@ -36808,6 +45548,17 @@ module design_1_uart_top_0_0_uart_tx
         .I4(rTxStart_reg),
         .I5(rTxStart_reg_0),
         .O(\FSM_onehot_rFSM_Current_reg[0]_0 ));
+=======
+    .INIT(64'hBFBFBFBF00000400)) 
+    rTxStart_i_1
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(\rTxByte_reg[0] ),
+        .I3(\rTxByte_reg[0]_0 ),
+        .I4(\FSM_onehot_rFSM_Current_reg[4]_0 ),
+        .I5(\rTxData_Current_reg[0]_0 ),
+        .O(\FSM_sequential_rFSM_reg[3] ));
+>>>>>>> temp-branch
 endmodule
 `ifndef GLBL
 `define GLBL

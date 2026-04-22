@@ -12,4 +12,8 @@ Half_Adder h02(s, iCarry, oSum, a);
 
 assign oCarry = (s & iCarry) || (iA & iB);
      
+<<<<<<< HEAD
 endmodule
+=======
+endmodule
+>>>>>>> temp-branch

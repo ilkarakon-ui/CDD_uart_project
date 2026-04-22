@@ -1,7 +1,11 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+<<<<<<< HEAD
 | Date             : Thu Apr  2 13:12:43 2026
+=======
+| Date             : Wed Apr 22 19:30:38 2026
+>>>>>>> temp-branch
 | Host             : ILIAS-PC2 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +34,17 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
+<<<<<<< HEAD
 | Total On-Chip Power (W)  | 0.143        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.037        |
+=======
+| Total On-Chip Power (W)  | 0.142        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.036        |
+>>>>>>> temp-branch
 | Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.4         |
@@ -52,6 +63,7 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
+<<<<<<< HEAD
 | Clocks         |     0.012 |        3 |       --- |             --- |
 | Slice Logic    |     0.013 |     4954 |       --- |             --- |
 |   LUT as Logic |     0.011 |     1660 |     53200 |            3.12 |
@@ -62,6 +74,18 @@ Table of Contents
 | I/O            |    <0.001 |        4 |       125 |            3.20 |
 | Static Power   |     0.106 |          |           |                 |
 | Total          |     0.143 |          |           |                 |
+=======
+| Clocks         |     0.013 |        3 |       --- |             --- |
+| Slice Logic    |     0.012 |     5086 |       --- |             --- |
+|   LUT as Logic |     0.010 |     1700 |     53200 |            3.20 |
+|   Register     |     0.001 |     3280 |    106400 |            3.08 |
+|   CARRY4       |    <0.001 |       16 |     13300 |            0.12 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |     0.011 |     3452 |       --- |             --- |
+| I/O            |    <0.001 |        4 |       125 |            3.20 |
+| Static Power   |     0.106 |          |           |                 |
+| Total          |     0.142 |          |           |                 |
+>>>>>>> temp-branch
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +95,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+<<<<<<< HEAD
 | Vccint    |       1.000 |     0.044 |       0.037 |      0.008 |       NA    | Unspecified | NA         |
+=======
+| Vccint    |       1.000 |     0.043 |       0.036 |      0.008 |       NA    | Unspecified | NA         |
+>>>>>>> temp-branch
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,10 +175,17 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
+<<<<<<< HEAD
 | design_1_wrapper |     0.037 |
 |   design_1_i     |     0.036 |
 |     uart_top_0   |     0.036 |
 |       inst       |     0.036 |
+=======
+| design_1_wrapper |     0.036 |
+|   design_1_i     |     0.036 |
+|     uart_top_0   |     0.035 |
+|       inst       |     0.035 |
+>>>>>>> temp-branch
 +------------------+-----------+
 
 

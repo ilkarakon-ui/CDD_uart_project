@@ -18,4 +18,8 @@ Full_Adder f01(iA[i],iB[i], c[i], oSum[i], c[i+1]);
 end
 endgenerate
 assign oCarry = c[N];
+<<<<<<< HEAD
 endmodule
+=======
+endmodule
+>>>>>>> temp-branch
