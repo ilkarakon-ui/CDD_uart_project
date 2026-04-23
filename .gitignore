@@ -1,0 +1,27 @@
+# Vivado/FPGA specific files
+*.log
+*.jou
+*.pb
+*.backup.*
+*.str
+*.lck
+*.wcfg
+*.xpr.lock
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.runs/
+*.gen/
+*.ip_defs/
+*.srcs/sources_1/bd/design_1/ip/
+*.srcs/sources_1/bd/design_1/synth/
+*.srcs/sources_1/bd/design_1/sim/
+*.srcs/sources_1/bd/design_1/hdl/
+*.srcs/sources_1/bd/design_1/hw_handoff/
+
+# Hidden/System files
+.vs/
+.vscode/
+.DS_Store
+Thumbs.db
