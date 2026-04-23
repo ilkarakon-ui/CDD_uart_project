@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-<<<<<<< HEAD
-    <Process Command=".planAhead." Owner="ilkar" Host="ILIAS-PC2" Pid="22212">
-=======
-    <Process Command=".planAhead." Owner="ilkar" Host="ILIAS-PC2" Pid="20180">
->>>>>>> temp-branch
-    </Process>
-</ProcessHandle>

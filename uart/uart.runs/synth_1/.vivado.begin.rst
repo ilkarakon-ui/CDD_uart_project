@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-<<<<<<< HEAD
-    <Process Command="vivado.bat" Owner="ilkar" Host="ILIAS-PC2" Pid="4424" HostCore="22" HostMemory="016507727872">
-=======
-    <Process Command="vivado.bat" Owner="ilkar" Host="ILIAS-PC2" Pid="19464" HostCore="22" HostMemory="016507727872">
->>>>>>> temp-branch
-    </Process>
-</ProcessHandle>
