@@ -69,7 +69,7 @@ module uart_top #(
   // --- MP ADDER ---
   mp_adder #(
         .OPERAND_WIDTH(512),
-        .ADDER_WIDTH(16)
+        .ADDER_WIDTH(32)
         ) MP_ADDER_INST (
         .iClk   (iClk),
         .iRst   (iRst),
